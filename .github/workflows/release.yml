@@ -104,60 +104,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  publish-jsr:
-    name: Publish to JSR (Deno)
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: master
-
-      - name: Pull latest changes (with version bump)
-        run: git pull origin master
-
-      - name: Update jsr.json version
-        run: |
-          cat > jsr.json << EOF
-          {
-            "name": "@omisai/countries",
-            "version": "${{ github.event.inputs.version }}",
-            "description": "TypeScript package for country data with classes and interfaces",
-            "exports": "./src/index.ts",
-            "publish": {
-              "exclude": [
-                "node_modules",
-                "dist",
-                ".github",
-                "*.test.ts",
-                "coverage",
-                "rolldown.config.ts",
-                "tsconfig.json",
-                "vitest.config.ts"
-              ],
-              "include": [
-                "src/**/*.ts",
-                "README.md",
-                "LICENSE",
-                "deno.json"
-              ]
-            }
-          }
-          EOF
-
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.x
-
-      - name: Publish to JSR
-        run: deno publish --allow-dirty
-
   create-github-release:
     name: Create GitHub Release
     needs: [publish-npm, publish-jsr]
@@ -214,10 +160,6 @@ jobs:
             bun add @omisai/countries@${{ steps.get_version.outputs.VERSION }}
             ```
 
-            ### Deno
-            ```typescript
-            import { UnitedStates } from "jsr:@omisai/countries@${{ steps.get_version.outputs.VERSION }}";
-            ```
           files: |
             dist/**/*
           draft: false

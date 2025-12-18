@@ -26,8 +26,6 @@ check('package.json exists', existsSync('package.json'));
 check('tsconfig.json exists', existsSync('tsconfig.json'));
 check('rolldown.config.ts exists', existsSync('rolldown.config.ts'));
 check('vitest.config.ts exists', existsSync('vitest.config.ts'));
-check('deno.json exists', existsSync('deno.json'));
-check('jsr.json exists', existsSync('jsr.json'));
 check('LICENSE exists', existsSync('LICENSE'));
 check('README.md exists', existsSync('README.md'));
 

@@ -51,14 +51,12 @@
         "country-data",
         "iso-3166",
         "node",
-        "bun",
-        "deno"
+        "bun"
     ],
     "engines": {
         "node": ">=18.0.0",
         "bun": ">=1.0.0",
         "pnpm": ">=8.0.0",
-        "yarn": ">=1.22.0",
-        "deno": ">=2.6.0"
+        "yarn": ">=1.22.0"
     }
 }

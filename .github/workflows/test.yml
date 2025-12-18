@@ -7,31 +7,6 @@ on:
     branches: [master, develop]
 
 jobs:
-  test-bun-master:
-    name: Test with Bun
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-
-      - name: Install dependencies
-        run: bun install
-
-      - name: Run type check
-        run: bun run typecheck
-
-      - name: Run tests
-        run: bun test tests/*.test.ts
-
-      - name: Build
-        run: bun run build
-
   test-node-compatibility:
     name: Test Node.js Compatibility
     runs-on: ubuntu-latest
@@ -51,11 +26,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Run type check
+        run: npm run typecheck
 
       - name: Test with Node.js ${{ matrix.node-version }}
-        run: node -e "const { UnitedStates } = require('./dist/index.cjs'); const usa = new UnitedStates(); console.log('✅ Node.js', process.version, '- Works:', usa.en === 'United States');"
+        run: npm run test
 
   test-bun-compatibility:
     name: Test Bun Compatibility
@@ -73,30 +48,8 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Build
-        run: bun run build
-
       - name: Test with Bun ${{ matrix.node-version }}
-        run: bun test tests/*.test.ts
-
-  test-deno:
-    name: Test on Deno
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.x
-
-      - name: Check types
-        run: deno check src/index.ts
-
-      - name: Run tests with Deno
-        run: deno test --allow-read tests/*.test.ts
+        run: bun run test
 
   coverage:
     name: Code Coverage

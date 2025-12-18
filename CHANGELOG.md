@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rolldown bundler for optimal performance
 - Comprehensive test suite
 - GitHub Actions CI/CD
-- Support for Node.js, Bun, and Deno
+- Support for Node.js, Bun
 - NPM and JSR publishing
 
 ### Changed

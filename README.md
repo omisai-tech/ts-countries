@@ -19,7 +19,7 @@ TypeScript package for country data with classes and interfaces generated from I
 - Continent classification
 - Built with Rolldown for optimal bundle size
 - 100% functional test coverage
-- Compatible with Node.js, Bun, and Deno
+- Compatible with Node.js, Bun
 
 ## Installation
 
@@ -41,16 +41,6 @@ pnpm add @omisai/countries
 ### YARN
 ```bash
 yarn add @omisai/countries
-```
----
-
-### Deno
-```bash
-deno install jsr:@omisai/countries
-```
-
-```typescript
-import { UnitedStates } from "jsr:@omisai/countries";
 ```
 
 ## Quick Start
@@ -146,14 +136,9 @@ const { UnitedStates } = require("@omisai/countries");
 import { UnitedStates } from "@omisai/countries";
 ```
 
-### Deno
-```typescript
-import { UnitedStates } from "jsr:@omisai/countries";
-```
-
 ## Testing
 
-The package includes comprehensive tests that run on Node.js, Bun, and Deno:
+The package includes comprehensive tests that run on Node.js, Bun:
 
 ```bash
 # Node.js (Vitest)
@@ -162,15 +147,11 @@ npm test
 # Bun
 bun test tests/*.test.ts
 
-# Deno
-deno test --allow-read tests/*.test.ts
-```
-
 ## CI/CD
 
 This project uses GitHub Actions for:
 - ✅ Automated testing on Node.js 18, 20, 22
-- ✅ Automated testing on Bun and Deno
+- ✅ Automated testing on Bun
 - ✅ Code coverage reporting
 - ✅ Automated releases to NPM and JSR
 - ✅ Dependency updates via Dependabot

@@ -87,9 +87,6 @@ npm run test:watch
 
 # Bun (if installed)
 bun test tests/*.test.ts
-
-# Deno (if installed)
-deno test --allow-read tests/*.test.ts
 ```
 
 ### Building

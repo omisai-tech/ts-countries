@@ -49,6 +49,3 @@ Thumbs.db
 *.tmp
 *.temp
 .cache
-
-# Deno
-.deno
