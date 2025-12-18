@@ -33,7 +33,7 @@ jobs:
 
       - name: Update package.json version
         run: |
-          bun run --bun npm version ${{ github.event.inputs.version }} --no-git-tag-version
+          bun pm version ${{ github.event.inputs.version }} --no-git-tag-version
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
