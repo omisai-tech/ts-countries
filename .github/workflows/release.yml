@@ -106,7 +106,7 @@ jobs:
 
   create-github-release:
     name: Create GitHub Release
-    needs: [publish-npm, publish-jsr]
+    needs: publish-npm
     runs-on: ubuntu-latest
 
     steps:
@@ -178,4 +178,3 @@ jobs:
         run: |
           echo "🎉 Released v${{ github.event.inputs.version }}"
           echo "📦 NPM: https://www.npmjs.com/package/@omisai/countries"
-          echo "🦕 JSR: https://jsr.io/@omisai/countries"
