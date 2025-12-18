@@ -2,7 +2,6 @@
 
 [![Test](https://github.com/omisai-tech/ts-countries/actions/workflows/test.yml/badge.svg)](https://github.com/omisai/ts-countries/actions/workflows/test.yml)
 [![NPM Version](https://img.shields.io/npm/v/@omisai/countries.svg)](https://www.npmjs.com/package/@omisai/countries)
-[![JSR](https://jsr.io/badges/@omisai/countries)](https://jsr.io/@omisai/countries)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 TypeScript package for country data with classes and interfaces generated from ISO 3166-1 standard.
