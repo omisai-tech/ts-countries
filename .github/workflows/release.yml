@@ -1,0 +1,245 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release (e.g., 1.0.0 or 1.0.0-beta.1)"
+        required: true
+        type: string
+      prerelease:
+        description: "Mark as pre-release"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Update package.json version
+        run: |
+          bun run --bun npm version ${{ github.event.inputs.version }} --no-git-tag-version
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run compiler
+        run: bun run compiler.ts
+
+      - name: Run type check
+        run: bun run typecheck
+
+      - name: Run tests
+        run: bun test tests/*.test.ts
+
+      - name: Build package
+        run: bun run build
+
+      - name: Commit version bump
+        run: |
+          git add package.json package-lock.json
+          git commit -m "chore: bump version to ${{ github.event.inputs.version }}"
+
+      - name: Create and push tag
+        run: |
+          git tag -a "v${{ github.event.inputs.version }}" -m "Release v${{ github.event.inputs.version }}"
+          git push origin master
+          git push origin "v${{ github.event.inputs.version }}"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 7
+
+  publish-npm:
+    name: Publish to NPM
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup Node.js (for npm publish)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Rebuild (to ensure all files present)
+        run: bun run build
+
+      - name: Publish to NPM
+        run: bun publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  publish-jsr:
+    name: Publish to JSR (Deno)
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Pull latest changes (with version bump)
+        run: git pull origin master
+
+      - name: Update jsr.json version
+        run: |
+          cat > jsr.json << EOF
+          {
+            "name": "@omisai/countries",
+            "version": "${{ github.event.inputs.version }}",
+            "description": "TypeScript package for country data with classes and interfaces",
+            "exports": "./src/index.ts",
+            "publish": {
+              "exclude": [
+                "node_modules",
+                "dist",
+                ".github",
+                "*.test.ts",
+                "coverage",
+                "rolldown.config.ts",
+                "tsconfig.json",
+                "vitest.config.ts"
+              ],
+              "include": [
+                "src/**/*.ts",
+                "README.md",
+                "LICENSE",
+                "deno.json"
+              ]
+            }
+          }
+          EOF
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Run compiler for Deno
+        run: deno task compile
+
+      - name: Publish to JSR
+        run: deno publish --allow-dirty
+
+  create-github-release:
+    name: Create GitHub Release
+    needs: [publish-npm, publish-jsr]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Get version
+        id: get_version
+        run: echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          git fetch --tags
+          PREV_TAG=$(git describe --tags --abbrev=0 v${{ github.event.inputs.version }}^ 2>/dev/null || echo "")
+          if [ -z "$PREV_TAG" ]; then
+            CHANGELOG=$(git log --pretty=format:"- %s (%h)" v${{ github.event.inputs.version }})
+          else
+            CHANGELOG=$(git log --pretty=format:"- %s (%h)" $PREV_TAG..v${{ github.event.inputs.version }})
+          fi
+          echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGELOG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release v${{ steps.get_version.outputs.VERSION }}
+          body: |
+            ## What's Changed
+
+            ${{ steps.changelog.outputs.CHANGELOG }}
+
+            ## Installation
+
+            ### NPM
+            ```bash
+            npm install @omisai/countries@${{ steps.get_version.outputs.VERSION }}
+            ```
+
+            ### Bun
+            ```bash
+            bun add @omisai/countries@${{ steps.get_version.outputs.VERSION }}
+            ```
+
+            ### Deno
+            ```typescript
+            import { UnitedStates } from "jsr:@omisai/countries@${{ steps.get_version.outputs.VERSION }}";
+            ```
+          files: |
+            dist/**/*
+          draft: false
+          prerelease: ${{ github.event.inputs.prerelease }}
+          tag_name: v${{ github.event.inputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  announce:
+    name: Announce Release
+    needs: create-github-release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Announce on GitHub
+        run: |
+          echo "🎉 Released v${{ github.event.inputs.version }}"
+          echo "📦 NPM: https://www.npmjs.com/package/@omisai/countries"
+          echo "🦕 JSR: https://jsr.io/@omisai/countries"

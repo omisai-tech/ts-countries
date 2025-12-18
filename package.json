@@ -1,0 +1,64 @@
+{
+    "name": "@omisai/countries",
+    "version": "1.0.0",
+    "description": "JS/TS package for country data with classes and interfaces",
+    "type": "module",
+    "license": "MIT",
+    "repository": "omisai-tech/ts-countries",
+    "bugs": "https://github.com/omisai-tech/ts-countries/issues",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs",
+            "default": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "compile": "tsx compiler.ts",
+        "build": "rolldown --config rolldown.config.ts && bun run build:types",
+        "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap --outDir dist",
+        "dev": "rolldown --config rolldown.config.ts --watch",
+        "clean": "rm -rf dist src/models src/index.ts",
+        "rebuild": "bun run clean && bun run build",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage",
+        "typecheck": "tsc --noEmit",
+        "validate": "bun scripts/validate.mjs",
+        "prepublishOnly": "bun run build && bun run test"
+    },
+    "devDependencies": {
+        "@types/node": "^22.10.1",
+        "@vitest/coverage-v8": "^2.1.8",
+        "csv-parse": "^5.6.0",
+        "rolldown": "^1.0.0-beta.55",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2",
+        "vitest": "^2.1.8"
+    },
+    "keywords": [
+        "countries",
+        "typescript",
+        "country-data",
+        "iso-3166",
+        "node",
+        "bun",
+        "deno"
+    ],
+    "engines": {
+        "node": ">=18.0.0",
+        "bun": ">=1.0.0",
+        "pnpm": ">=8.0.0",
+        "yarn": ">=1.22.0",
+        "deno": ">=2.6.0"
+    }
+}

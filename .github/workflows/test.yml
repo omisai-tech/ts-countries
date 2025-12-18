@@ -1,0 +1,141 @@
+name: Test
+
+on:
+  push:
+    branches: [master, develop]
+  pull_request:
+    branches: [master, develop]
+
+jobs:
+  test-bun-master:
+    name: Test with Bun
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run compiler
+        run: bun run compiler.ts
+
+      - name: Run type check
+        run: bun run typecheck
+
+      - name: Run tests
+        run: bun test tests/*.test.ts
+
+      - name: Build
+        run: bun run build
+
+  test-node-compatibility:
+    name: Test Node.js Compatibility
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run compiler
+        run: npm run compiler.ts
+
+      - name: Build
+        run: npm run build
+
+      - name: Test with Node.js ${{ matrix.node-version }}
+        run: node -e "const { UnitedStates } = require('./dist/index.cjs'); const usa = new UnitedStates(); console.log('✅ Node.js', process.version, '- Works:', usa.en === 'United States');"
+
+  test-bun-compatibility:
+    name: Test Bun Compatibility
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run compiler
+        run: bun run compiler.ts
+
+      - name: Build
+        run: bun run build
+
+      - name: Test with Bun ${{ matrix.node-version }}
+        run: bun test tests/*.test.ts
+
+  test-deno:
+    name: Test on Deno
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Run compiler
+        run: deno task compile
+
+      - name: Check types
+        run: deno check src/index.ts
+
+      - name: Run tests with Deno
+        run: deno test --allow-read tests/*.test.ts
+
+  coverage:
+    name: Code Coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run compiler
+        run: bun run compiler.ts
+
+      - name: Run tests with coverage
+        run: bun run test:coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false

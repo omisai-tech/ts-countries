@@ -1,0 +1,24 @@
+{
+    "name": "@omisai/countries",
+    "version": "1.0.0",
+    "description": "TypeScript package for country data with classes and interfaces",
+    "exports": "./src/index.ts",
+    "publish": {
+        "exclude": [
+            "node_modules",
+            "dist",
+            ".github",
+            "*.test.ts",
+            "coverage",
+            "rolldown.config.ts",
+            "tsconfig.json",
+            "vitest.config.ts"
+        ],
+        "include": [
+            "src/**/*.ts",
+            "README.md",
+            "LICENSE",
+            "deno.json"
+        ]
+    }
+}
