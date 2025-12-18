@@ -40,9 +40,6 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Run compiler
-        run: bun run compiler.ts
-
       - name: Run type check
         run: bun run typecheck
 
@@ -157,9 +154,6 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-
-      - name: Run compiler for Deno
-        run: deno task compile
 
       - name: Publish to JSR
         run: deno publish --allow-dirty

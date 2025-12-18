@@ -23,9 +23,6 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Run compiler
-        run: bun run compiler.ts
-
       - name: Run type check
         run: bun run typecheck
 
@@ -54,9 +51,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run compiler
-        run: npm run compiler.ts
-
       - name: Build
         run: npm run build
 
@@ -79,9 +73,6 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Run compiler
-        run: bun run compiler.ts
-
       - name: Build
         run: bun run build
 
@@ -100,9 +91,6 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-
-      - name: Run compiler
-        run: deno task compile
 
       - name: Check types
         run: deno check src/index.ts
@@ -125,9 +113,6 @@ jobs:
 
       - name: Install dependencies
         run: bun install
-
-      - name: Run compiler
-        run: bun run compiler.ts
 
       - name: Run tests with coverage
         run: bun run test:coverage
