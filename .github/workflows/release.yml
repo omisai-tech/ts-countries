@@ -75,7 +75,7 @@ jobs:
           git push origin "v${{ github.event.inputs.version }}"
 
       - name: Publish to NPM
-        run: bunx npm publish --provenance --access public
+        run: npm publish --access public
 
   create-github-release:
     name: Create GitHub Release
