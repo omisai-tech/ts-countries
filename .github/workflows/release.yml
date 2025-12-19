@@ -31,11 +31,29 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Check current version
+        id: check_version
+        run: |
+          CURRENT_VERSION=$(grep '"version"' package.json | head -1 | awk -F'"' '{print $4}')
+          echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          if [ "$CURRENT_VERSION" = "${{ github.event.inputs.version }}" ]; then
+            echo "version_matches=true" >> $GITHUB_OUTPUT
+          else
+            echo "version_matches=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Update package.json version
+        if: steps.check_version.outputs.version_matches == 'false'
         run: |
           bun pm version ${{ github.event.inputs.version }} --no-git-tag-version
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit version bump
+        if: steps.check_version.outputs.version_matches == 'false'
+        run: |
+          git add package.json package-lock.json
+          git commit -m "chore: bump version to ${{ github.event.inputs.version }}"
 
       - name: Install dependencies
         run: bun install
@@ -49,12 +67,8 @@ jobs:
       - name: Build package
         run: bun run build
 
-      - name: Commit version bump
-        run: |
-          git add package.json package-lock.json
-          git commit -m "chore: bump version to ${{ github.event.inputs.version }}"
-
       - name: Create and push tag
+        if: steps.check_version.outputs.version_matches == 'false'
         run: |
           git tag -a "v${{ github.event.inputs.version }}" -m "Release v${{ github.event.inputs.version }}"
           git push origin master
