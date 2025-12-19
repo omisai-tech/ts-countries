@@ -75,7 +75,10 @@ jobs:
           git push origin "v${{ github.event.inputs.version }}"
 
       - name: Publish to NPM
-        run: npm publish
+        run: |
+          npm -v
+          node -v
+          npm publish
 
   create-github-release:
     name: Create GitHub Release
