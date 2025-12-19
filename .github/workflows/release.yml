@@ -75,7 +75,12 @@ jobs:
           git push origin "v${{ github.event.inputs.version }}"
 
       - name: Publish to NPM
-        run: bun publish --access public
+        run: |
+          echo "Starting NPM publish..."
+          if ! bun publish --access public --verbose 2>&1; then
+            echo "::error::NPM publish failed. Full error output above."
+            exit 1
+          fi
 
   create-github-release:
     name: Create GitHub Release
