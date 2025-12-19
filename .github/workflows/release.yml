@@ -44,7 +44,7 @@ jobs:
         run: bun run typecheck
 
       - name: Run tests
-        run: bun test tests/*.test.ts
+        run: bun run test
 
       - name: Build package
         run: bun run build
@@ -60,53 +60,12 @@ jobs:
           git push origin master
           git push origin "v${{ github.event.inputs.version }}"
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v6
-        with:
-          name: dist
-          path: dist/
-          retention-days: 7
-
-  publish-npm:
-    name: Publish to NPM
-    needs: build-and-test
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-
-      - name: Setup Node.js (for npm publish)
-        uses: actions/setup-node@v6
-        with:
-          node-version: 20
-          registry-url: "https://registry.npmjs.org"
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v7
-        with:
-          name: dist
-          path: dist/
-
-      - name: Install dependencies
-        run: bun install
-
-      - name: Rebuild (to ensure all files present)
-        run: bun run build
-
       - name: Publish to NPM
-        run: bun publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: bun publish --access public
 
   create-github-release:
     name: Create GitHub Release
-    needs: publish-npm
+    needs: build-and-test
     runs-on: ubuntu-latest
 
     steps:
@@ -114,12 +73,6 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v7
-        with:
-          name: dist
-          path: dist/
 
       - name: Get version
         id: get_version
@@ -139,42 +92,11 @@ jobs:
           echo "$CHANGELOG" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v2
-        with:
-          name: Release v${{ steps.get_version.outputs.VERSION }}
-          body: |
-            ## What's Changed
-
-            ${{ steps.changelog.outputs.CHANGELOG }}
-
-            ## Installation
-
-            ### NPM
-            ```bash
-            npm install @omisai/countries@${{ steps.get_version.outputs.VERSION }}
-            ```
-
-            ### Bun
-            ```bash
-            bun add @omisai/countries@${{ steps.get_version.outputs.VERSION }}
-            ```
-
-          files: |
-            dist/**/*
-          draft: false
-          prerelease: ${{ github.event.inputs.prerelease }}
-          tag_name: v${{ github.event.inputs.version }}
+      - name: Create GitHub release (auto notes)
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  announce:
-    name: Announce Release
-    needs: create-github-release
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Announce on GitHub
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "🎉 Released v${{ github.event.inputs.version }}"
-          echo "📦 NPM: https://www.npmjs.com/package/@omisai/countries"
+          gh release create v${{ github.event.inputs.version }} \
+            --generate-notes \
+            --title "v${{ github.event.inputs.version }}" \
+            --target master \
