@@ -31,6 +31,13 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+          scope: "@omisai-tech" # Replace with your actual scope if different
+
       - name: Check current version
         id: check_version
         run: |
