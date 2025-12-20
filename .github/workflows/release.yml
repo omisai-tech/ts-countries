@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
-          scope: "@omisai-tech" # Replace with your actual scope if different
+          scope: "@omisai-tech"
 
       - name: Check current version
         id: check_version
@@ -82,10 +82,7 @@ jobs:
           git push origin "v${{ github.event.inputs.version }}"
 
       - name: Publish to NPM
-        run: |
-          npm -v
-          node -v
-          npm publish
+        run: npm publish
 
   create-github-release:
     name: Create GitHub Release
