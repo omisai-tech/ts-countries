@@ -13,10 +13,10 @@ TypeScript package for country data with classes and interfaces generated from I
 - TypeScript with full type definitions
 - Individual class for each country
 - ISO 3166-1 codes (alpha-2, alpha-3, numeric)
+- FIPS code (Federal Information Processing Standard)
 - Telephone country codes
 - Capital cities
 - Continent classification
-- Built with Rolldown for optimal bundle size
 - 100% functional test coverage
 - Compatible with Node.js, Bun
 
@@ -144,28 +144,13 @@ The package includes comprehensive tests that run on Node.js, Bun:
 npm test
 
 # Bun
-bun test tests/*.test.ts
+bun test
+```
 
-## CI/CD
+## Roadmap
 
-This project uses GitHub Actions for:
-- ✅ Automated testing on Node.js 18, 20, 22
-- ✅ Automated testing on Bun
-- ✅ Code coverage reporting
-- ✅ Automated releases to NPM and JSR
-- ✅ Dependency updates via Dependabot
-
-## Releasing
-
-This project uses manual GitHub Actions workflow for releases. See [RELEASE.md](./RELEASE.md) for detailed instructions.
-
-**Quick release**:
-1. Go to Actions → Release workflow
-2. Click "Run workflow"
-3. Enter version (e.g., `1.0.0`)
-4. Run!
-
-The workflow automatically handles versioning, tagging, building, testing, and publishing to NPM and JSR.
+- Add more languages for country names
+- Include additional country data (e.g., currencies, time zones)
 
 ## Contributing
 
