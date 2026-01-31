@@ -1,6 +1,6 @@
 {
     "name": "@omisai/countries",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "JS/TS package for country data with classes and interfaces",
     "type": "module",
     "license": "MIT",
