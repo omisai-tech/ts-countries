@@ -32,9 +32,19 @@ export class Guadeloupe extends Country {
   callingCode = "590";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "590";
+
+  /**
    * Capital city
    */
   capital = "Basse-Terre";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,780.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Guadeloupe extends Country {
    * Portuguese name of the country
    */
   pt = "Guadalupe";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Guadeloupe";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Guadeloupe";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Guadeloupe";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Guadeloupe";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gwadelupa";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Guadeloupe";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Guadeloupe";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gvadalupe";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gvadalupa";
 }

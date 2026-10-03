@@ -32,9 +32,19 @@ export class Lebanon extends Country {
   callingCode = "961";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "961";
+
+  /**
    * Capital city
    */
   capital = "Beirut";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "10,400.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Lebanon extends Country {
    * Portuguese name of the country
    */
   pt = "Líbano";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Lebanon";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Libanon";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Libanon";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Libanon";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Liban";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Libanon";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Libanon";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Libanon";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Libanon";
 }

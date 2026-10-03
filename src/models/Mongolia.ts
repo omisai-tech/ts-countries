@@ -32,9 +32,19 @@ export class Mongolia extends Country {
   callingCode = "976";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "976";
+
+  /**
    * Capital city
    */
   capital = "Ulaanbaatar";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,565,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Mongolia extends Country {
    * Portuguese name of the country
    */
   pt = "Mongólia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Mongolia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Mongoliet";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "mongoliet";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Mongolia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Mongolia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Mongolsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Mongolsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Mongolija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Mongolija";
 }

@@ -32,9 +32,19 @@ export class Malaysia extends Country {
   callingCode = "60";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "60";
+
+  /**
    * Capital city
    */
   capital = "Kuala Lumpur";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "329,750.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Malaysia extends Country {
    * Portuguese name of the country
    */
   pt = "Malásia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Malaysia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Malaysia";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Malaysia";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Malaysia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Malezja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Malajsie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Malajzia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Malezija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Malezija";
 }

@@ -32,9 +32,19 @@ export class Rwanda extends Country {
   callingCode = "250";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "250";
+
+  /**
    * Capital city
    */
   capital = "Kigali";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "26,338.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Rwanda extends Country {
    * Portuguese name of the country
    */
   pt = "Ruanda";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Rwanda";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Rwanda";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Rwanda";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Rwanda";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Rwanda";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Rwanda";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Rwanda";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Ruanda";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Ruanda";
 }

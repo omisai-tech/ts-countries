@@ -32,9 +32,19 @@ export class Uruguay extends Country {
   callingCode = "598";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "598";
+
+  /**
    * Capital city
    */
   capital = "Montevideo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "176,220.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Uruguay extends Country {
    * Portuguese name of the country
    */
   pt = "Uruguai";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Uruguay";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Uruguay";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Uruguay";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Uruguay";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Urugwaj";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Uruguay";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Uruguaj";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Urugvaj";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Urugvaj";
 }

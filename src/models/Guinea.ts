@@ -32,9 +32,19 @@ export class Guinea extends Country {
   callingCode = "224";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "224";
+
+  /**
    * Capital city
    */
   capital = "Conakry";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "245,857.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Guinea extends Country {
    * Portuguese name of the country
    */
   pt = "Guiné";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Guinea";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Guinea";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Guinea";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Guinea";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gwinea";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Guinea";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Guinea";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gvineja";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gvineja";
 }

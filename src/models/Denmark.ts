@@ -32,9 +32,19 @@ export class Denmark extends Country {
   callingCode = "45";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "45";
+
+  /**
    * Capital city
    */
   capital = "Copenhagen";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "43,094.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Denmark extends Country {
    * Portuguese name of the country
    */
   pt = "Dinamarca";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Denmark";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Danmark";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Danmark";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Danmark";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Dania";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Dánsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Dánsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Danska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Danska";
 }

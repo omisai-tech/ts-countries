@@ -32,9 +32,19 @@ export class Togo extends Country {
   callingCode = "228";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "228";
+
+  /**
    * Capital city
    */
   capital = "Lome";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "56,785.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Togo extends Country {
    * Portuguese name of the country
    */
   pt = "Ir";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Togo";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Togo";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Togo";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Togo";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Togo";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Togo";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Togo";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Togo";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Togo";
 }

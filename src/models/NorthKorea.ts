@@ -32,9 +32,19 @@ export class NorthKorea extends Country {
   callingCode = "850";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "850";
+
+  /**
    * Capital city
    */
   capital = "Pyongyang";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "120,540.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class NorthKorea extends Country {
    * Portuguese name of the country
    */
   pt = "Coréia do Norte";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "North Korea";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Nordkorea";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Nordkorea";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Nord-Korea";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Korea Północna";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Severní Korea";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Severná Kórea";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Severna Koreja";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sjeverna Koreja";
 }

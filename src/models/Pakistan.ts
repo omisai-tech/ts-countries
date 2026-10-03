@@ -32,9 +32,19 @@ export class Pakistan extends Country {
   callingCode = "92";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "92";
+
+  /**
    * Capital city
    */
   capital = "Islamabad";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "803,940.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Pakistan extends Country {
    * Portuguese name of the country
    */
   pt = "Paquistão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Pakistan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Pakistan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Pakistan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Pakistan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Pakistan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Pákistán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Pakistan";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Pakistan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Pakistan";
 }

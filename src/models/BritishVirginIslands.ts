@@ -32,9 +32,19 @@ export class BritishVirginIslands extends Country {
   callingCode = "1-284";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-284";
+
+  /**
    * Capital city
    */
   capital = "Road Town";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "153.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class BritishVirginIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Virgens Britânicas";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "British Virgin Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "De Britiske Jomfruøer";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Brittiska Jungfruöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "De britiske Jomfruøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Brytyjskie Wyspy Dziewicze";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Britské Panenské ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Britské Panenské ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Britanski Deviški otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Britanski Djevičanski otoci";
 }

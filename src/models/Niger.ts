@@ -32,9 +32,19 @@ export class Niger extends Country {
   callingCode = "227";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "227";
+
+  /**
    * Capital city
    */
   capital = "Niamey";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,267,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Niger extends Country {
    * Portuguese name of the country
    */
   pt = "Níger";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Niger";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Niger";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Niger";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Niger";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Niger";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Niger";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Niger";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Niger";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Niger";
 }

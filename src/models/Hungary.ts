@@ -32,9 +32,19 @@ export class Hungary extends Country {
   callingCode = "36";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "36";
+
+  /**
    * Capital city
    */
   capital = "Budapest";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "93,030.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Hungary extends Country {
    * Portuguese name of the country
    */
   pt = "Hungria";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Hungary";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Ungarn";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Ungern";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Ungarn";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Węgry";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Maďarsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Maďarsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Madžarska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Mađarska";
 }

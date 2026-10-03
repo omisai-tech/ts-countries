@@ -32,9 +32,19 @@ export class Poland extends Country {
   callingCode = "48";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "48";
+
+  /**
    * Capital city
    */
   capital = "Warsaw";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "312,685.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Poland extends Country {
    * Portuguese name of the country
    */
   pt = "Polônia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Poland";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Polen";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Polen";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Polen";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Polska";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Polsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Poľsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Poljska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Poljska";
 }

@@ -32,9 +32,19 @@ export class Liberia extends Country {
   callingCode = "231";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "231";
+
+  /**
    * Capital city
    */
   capital = "Monrovia";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "111,370.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Liberia extends Country {
    * Portuguese name of the country
    */
   pt = "Libéria";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Liberia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Liberia";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Liberia";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Liberia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Liberia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Libérie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Libéria";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Liberija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Liberija";
 }

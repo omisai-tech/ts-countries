@@ -32,9 +32,19 @@ export class Uzbekistan extends Country {
   callingCode = "998";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "998";
+
+  /**
    * Capital city
    */
   capital = "Tashkent";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "447,400.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Uzbekistan extends Country {
    * Portuguese name of the country
    */
   pt = "Uzbequistão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Uzbekistan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Usbekistan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Uzbekistan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Usbekistan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Uzbekistan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Uzbekistán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Uzbekistan";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Uzbekistan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Uzbekistan";
 }

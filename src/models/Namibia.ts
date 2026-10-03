@@ -32,9 +32,19 @@ export class Namibia extends Country {
   callingCode = "264";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "264";
+
+  /**
    * Capital city
    */
   capital = "Windhoek";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "825,418.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Namibia extends Country {
    * Portuguese name of the country
    */
   pt = "Namíbia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Namibia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Namibia";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Namibia";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Namibia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Namibia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Namibie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Namíbia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Namibija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Namibija";
 }

@@ -32,9 +32,19 @@ export class Jordan extends Country {
   callingCode = "962";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "962";
+
+  /**
    * Capital city
    */
   capital = "Amman";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "92,300.0";
 
   /**
    * Continent
@@ -67,7 +77,7 @@ export class Jordan extends Country {
   /**
    * Spanish name of the country
    */
-  es = "Jordán";
+  es = "Jordania";
 
   /**
    * Italian name of the country
@@ -77,10 +87,55 @@ export class Jordan extends Country {
   /**
    * French name of the country
    */
-  fr = "Jordan";
+  fr = "Jordanie";
 
   /**
    * Portuguese name of the country
    */
   pt = "Jordânia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Jordan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Jordan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Jordanien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Jordan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Jordania";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Jordánsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Jordánsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Jordanija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Jordan";
 }

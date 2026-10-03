@@ -32,9 +32,19 @@ export class Venezuela extends Country {
   callingCode = "58";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "58";
+
+  /**
    * Capital city
    */
   capital = "Caracas";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "912,050.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Venezuela extends Country {
    * Portuguese name of the country
    */
   pt = "Venezuela";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Venezuela";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Venezuela";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Venezuela";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Venezuela";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wenezuela";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Venezuela";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Venezuela";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Venezuela";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Venezuela";
 }

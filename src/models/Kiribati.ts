@@ -32,9 +32,19 @@ export class Kiribati extends Country {
   callingCode = "686";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "686";
+
+  /**
    * Capital city
    */
   capital = "Tarawa";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "811.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Kiribati extends Country {
    * Portuguese name of the country
    */
   pt = "Quiribáti";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Kiribati";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kiribati";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kiribati";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kiribati";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kiribati";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kiribati";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kiribati";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kiribati";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kiribati";
 }

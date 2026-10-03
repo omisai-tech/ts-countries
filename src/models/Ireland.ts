@@ -32,9 +32,19 @@ export class Ireland extends Country {
   callingCode = "353";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "353";
+
+  /**
    * Capital city
    */
   capital = "Dublin";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "70,280.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Ireland extends Country {
    * Portuguese name of the country
    */
   pt = "Irlanda";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Ireland";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Irland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Irland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Irland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Irlandia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Irsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Írsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Irska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Irska";
 }

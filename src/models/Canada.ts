@@ -32,9 +32,19 @@ export class Canada extends Country {
   callingCode = "1";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1";
+
+  /**
    * Capital city
    */
   capital = "Ottawa";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "9,984,670.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Canada extends Country {
    * Portuguese name of the country
    */
   pt = "Canadá";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Canada";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Canada";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kanada";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Canada";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kanada";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kanada";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kanada";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kanada";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kanada";
 }

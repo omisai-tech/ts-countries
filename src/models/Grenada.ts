@@ -32,9 +32,19 @@ export class Grenada extends Country {
   callingCode = "1-473";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-473";
+
+  /**
    * Capital city
    */
   capital = "St. George's";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "344.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Grenada extends Country {
    * Portuguese name of the country
    */
   pt = "Granada";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Grenada";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Grenada";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Grenada";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Grenada";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Grenada";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Grenada";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Grenada";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Grenada";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Grenada";
 }

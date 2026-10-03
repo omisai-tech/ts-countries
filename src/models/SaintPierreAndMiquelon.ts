@@ -32,9 +32,19 @@ export class SaintPierreAndMiquelon extends Country {
   callingCode = "508";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "508";
+
+  /**
    * Capital city
    */
   capital = "Saint-Pierre";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "242.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SaintPierreAndMiquelon extends Country {
    * Portuguese name of the country
    */
   pt = "São Pedro e Miquelon";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Saint Pierre and Miquelon";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Saint-Pierre og Miquelon";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Saint Pierre och Miquelon";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Saint-Pierre og Miquelon";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Saint-Pierre i Miquelon";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Saint-Pierre a Miquelon";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Saint-Pierre a Miquelon";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Saint Pierre in Miquelon";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Saint Pierre i Miquelon";
 }

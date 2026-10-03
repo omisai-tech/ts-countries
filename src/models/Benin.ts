@@ -32,9 +32,19 @@ export class Benin extends Country {
   callingCode = "229";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "229";
+
+  /**
    * Capital city
    */
   capital = "Porto-Novo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "112,620.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Benin extends Country {
    * Portuguese name of the country
    */
   pt = "Benim";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Benin";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Benin";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Benin";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Benin";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Benin";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Benin";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Benin";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Benin";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Benin";
 }

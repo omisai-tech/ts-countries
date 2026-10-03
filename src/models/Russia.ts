@@ -32,9 +32,19 @@ export class Russia extends Country {
   callingCode = "7";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "7";
+
+  /**
    * Capital city
    */
   capital = "Moscow";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "17,100,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Russia extends Country {
    * Portuguese name of the country
    */
   pt = "Rússia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Russia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Rusland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Ryssland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Russland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Rosja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Rusko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Rusko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Rusija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Rusija";
 }

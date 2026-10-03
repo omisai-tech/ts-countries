@@ -32,9 +32,19 @@ export class SaudiArabia extends Country {
   callingCode = "966";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "966";
+
+  /**
    * Capital city
    */
   capital = "Riyadh";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,960,582.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SaudiArabia extends Country {
    * Portuguese name of the country
    */
   pt = "Arábia Saudita";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Saudi Arabia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Saudi-Arabien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "saudi-arabien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Saudi-Arabia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Arabia Saudyjska";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Saúdská Arábie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Saudská Arábia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Savdska Arabija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Saudijska Arabija";
 }

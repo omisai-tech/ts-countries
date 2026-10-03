@@ -32,9 +32,19 @@ export class FrenchPolynesia extends Country {
   callingCode = "689";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "689";
+
+  /**
    * Capital city
    */
   capital = "Papeete";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "4,167.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class FrenchPolynesia extends Country {
    * Portuguese name of the country
    */
   pt = "Polinésia Francesa";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "French Polynesia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Fransk Polynesien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Franska Polynesien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Fransk Polynesia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Polinezja Francuska";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Francouzská Polynésie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Francúzska Polynézia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Francoska Polinezija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Francuska Polinezija";
 }

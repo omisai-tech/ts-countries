@@ -32,9 +32,19 @@ export class NorfolkIsland extends Country {
   callingCode = "672";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "672";
+
+  /**
    * Capital city
    */
   capital = "Kingston";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "34.6";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class NorfolkIsland extends Country {
    * Portuguese name of the country
    */
   pt = "Ilha Norfolk";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Norfolk Island";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Norfolkøen";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Norfolkön";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Norfolkøya";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspa Norfolk";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Norfolkský ostrov";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Norfolkský ostrov";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Norfolški otok";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Otok Norfolk";
 }

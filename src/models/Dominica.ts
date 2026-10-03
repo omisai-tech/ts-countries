@@ -32,9 +32,19 @@ export class Dominica extends Country {
   callingCode = "1-767";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-767";
+
+  /**
    * Capital city
    */
   capital = "Roseau";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "754.0";
 
   /**
    * Continent
@@ -67,7 +77,7 @@ export class Dominica extends Country {
   /**
    * Spanish name of the country
    */
-  es = "república dominicana";
+  es = "Dominica";
 
   /**
    * Italian name of the country
@@ -83,4 +93,49 @@ export class Dominica extends Country {
    * Portuguese name of the country
    */
   pt = "Domínica";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Dominica";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Dominica";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Dominica";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Dominica";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Dominika";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Dominika";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Dominika";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Dominika";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Dominika";
 }

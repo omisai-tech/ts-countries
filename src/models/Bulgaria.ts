@@ -32,9 +32,19 @@ export class Bulgaria extends Country {
   callingCode = "359";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "359";
+
+  /**
    * Capital city
    */
   capital = "Sofia";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "110,910.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Bulgaria extends Country {
    * Portuguese name of the country
    */
   pt = "Bulgária";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Bulgaria";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Bulgarien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Bulgarien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Bulgaria";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Bułgaria";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Bulharsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Bulharsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Bolgarija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Bugarska";
 }

@@ -32,9 +32,19 @@ export class Eswatini extends Country {
   callingCode = "268";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "268";
+
+  /**
    * Capital city
    */
   capital = "Mbabane";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "17,363.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Eswatini extends Country {
    * Portuguese name of the country
    */
   pt = "Essuatíni";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Eswatini";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Eswatini";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Eswatini";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Eswatini";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Eswatini";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Svazijsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Eswatini";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Esvatini";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Esvatini";
 }

@@ -32,9 +32,19 @@ export class NewZealand extends Country {
   callingCode = "64";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "64";
+
+  /**
    * Capital city
    */
   capital = "Wellington";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "268,680.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class NewZealand extends Country {
    * Portuguese name of the country
    */
   pt = "Nova Zelândia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "New Zealand";
+
+  /**
+   * Danish name of the country
+   */
+  da = "New Zealand";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Nya Zeeland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "New Zealand";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Nowa Zelandia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Nový Zéland";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Nový Zéland";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Nova Zelandija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Novi Zeland";
 }

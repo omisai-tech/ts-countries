@@ -32,9 +32,19 @@ export class Turkey extends Country {
   callingCode = "90";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "90";
+
+  /**
    * Capital city
    */
   capital = "Ankara";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "780,580.0";
 
   /**
    * Continent
@@ -62,17 +72,17 @@ export class Turkey extends Country {
   /**
    * German name of the country
    */
-  de = "Truthahn";
+  de = "Türkei";
 
   /**
    * Spanish name of the country
    */
-  es = "Pavo";
+  es = "Turquía";
 
   /**
    * Italian name of the country
    */
-  it = "Tacchino";
+  it = "Turchia";
 
   /**
    * French name of the country
@@ -82,5 +92,50 @@ export class Turkey extends Country {
   /**
    * Portuguese name of the country
    */
-  pt = "Peru";
+  pt = "Turquia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Turkije";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tyrkiet";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Turkiet";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tyrkia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Turcja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Turecko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Turecko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Turčija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Turska";
 }

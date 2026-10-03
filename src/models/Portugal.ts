@@ -32,9 +32,19 @@ export class Portugal extends Country {
   callingCode = "351";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "351";
+
+  /**
    * Capital city
    */
   capital = "Lisbon";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "92,391.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Portugal extends Country {
    * Portuguese name of the country
    */
   pt = "Portugal";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Portugal";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Portugal";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Portugal";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Portugal";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Portugalia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Portugalsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Portugalsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Portugalska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Portugal";
 }

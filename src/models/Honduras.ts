@@ -32,9 +32,19 @@ export class Honduras extends Country {
   callingCode = "504";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "504";
+
+  /**
    * Capital city
    */
   capital = "Tegucigalpa";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "112,090.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Honduras extends Country {
    * Portuguese name of the country
    */
   pt = "Honduras";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Honduras";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Honduras";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Honduras";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Honduras";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Honduras";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Honduras";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Honduras";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Honduras";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Honduras";
 }

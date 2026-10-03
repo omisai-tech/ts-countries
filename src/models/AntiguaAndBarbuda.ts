@@ -32,9 +32,19 @@ export class AntiguaAndBarbuda extends Country {
   callingCode = "1-268";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-268";
+
+  /**
    * Capital city
    */
   capital = "St. John's";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "443.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class AntiguaAndBarbuda extends Country {
    * Portuguese name of the country
    */
   pt = "Antígua e Barbuda";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Antigua and Barbuda";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Antigua og Barbuda";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Antigua och Barbuda";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Antigua og Barbuda";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Antigua i Barbuda";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Antigua a Barbuda";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Antigua a Barbuda";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Antigva in Barbuda";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Antigva i Barbuda";
 }

@@ -32,9 +32,19 @@ export class UnitedStates extends Country {
   callingCode = "1";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1";
+
+  /**
    * Capital city
    */
   capital = "Washington";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "9,629,091.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class UnitedStates extends Country {
    * Portuguese name of the country
    */
   pt = "Estados Unidos";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "United States";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Forenede Stater";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Förenta staterna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "USA";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Stany Zjednoczone";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Spojené státy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Spojené štáty";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Združene države Amerike";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sjedinjene Države";
 }

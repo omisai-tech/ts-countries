@@ -32,9 +32,19 @@ export class Luxembourg extends Country {
   callingCode = "352";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "352";
+
+  /**
    * Capital city
    */
   capital = "Luxembourg";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,586.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Luxembourg extends Country {
    * Portuguese name of the country
    */
   pt = "Luxemburgo";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Luxembourg";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Luxembourg";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Luxemburg";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Luxembourg";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Luksemburg";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Lucembursko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Luxembursko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Luksemburg";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Luksemburg";
 }

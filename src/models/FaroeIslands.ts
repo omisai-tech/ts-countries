@@ -32,9 +32,19 @@ export class FaroeIslands extends Country {
   callingCode = "298";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "298";
+
+  /**
    * Capital city
    */
   capital = "Torshavn";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,399.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class FaroeIslands extends Country {
    * Portuguese name of the country
    */
   pt = "ilhas Faroe";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Faroe Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Færøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Färöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Færøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Owcze";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Faerské ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Faerské ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Ferski otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Farski otoci";
 }

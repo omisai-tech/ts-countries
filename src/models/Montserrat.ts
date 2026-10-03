@@ -32,9 +32,19 @@ export class Montserrat extends Country {
   callingCode = "1-664";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-664";
+
+  /**
    * Capital city
    */
   capital = "Plymouth";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "102.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Montserrat extends Country {
    * Portuguese name of the country
    */
   pt = "Montserrate";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Montserrat";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Montserrat";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Montserrat";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Montserrat";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Montserrat";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Montserrat";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Montserrat";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Montserrat";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Montserrat";
 }

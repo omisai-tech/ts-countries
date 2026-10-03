@@ -32,9 +32,19 @@ export class Finland extends Country {
   callingCode = "358";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "358";
+
+  /**
    * Capital city
    */
   capital = "Helsinki";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "337,030.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Finland extends Country {
    * Portuguese name of the country
    */
   pt = "Finlândia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Finland";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Finland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Finland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Finland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Finlandia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Finsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Fínsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Finska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Finska";
 }

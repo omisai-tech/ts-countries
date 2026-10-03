@@ -32,9 +32,19 @@ export class Jersey extends Country {
   callingCode = "44";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "44";
+
+  /**
    * Capital city
    */
   capital = "Saint Helier";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "116.0";
 
   /**
    * Continent
@@ -72,7 +82,7 @@ export class Jersey extends Country {
   /**
    * Italian name of the country
    */
-  it = "Maglia";
+  it = "Jersey";
 
   /**
    * French name of the country
@@ -83,4 +93,49 @@ export class Jersey extends Country {
    * Portuguese name of the country
    */
   pt = "Jersey";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Jersey";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Jersey";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Jersey";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Jersey";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Jersey";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Jersey";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Jersey";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Jersey";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Jersey";
 }

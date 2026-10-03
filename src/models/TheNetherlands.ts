@@ -32,9 +32,19 @@ export class TheNetherlands extends Country {
   callingCode = "31";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "31";
+
+  /**
    * Capital city
    */
   capital = "Amsterdam";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "41,526.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class TheNetherlands extends Country {
    * Portuguese name of the country
    */
   pt = "Os Países Baixos";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "The Netherlands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Holland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Nederländerna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Nederland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Holandia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Nizozemsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Holandsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Nizozemska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Nizozemska";
 }

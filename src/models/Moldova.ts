@@ -32,9 +32,19 @@ export class Moldova extends Country {
   callingCode = "373";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "373";
+
+  /**
    * Capital city
    */
   capital = "Chisinau";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "33,843.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Moldova extends Country {
    * Portuguese name of the country
    */
   pt = "Moldávia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Moldova";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Moldova";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Moldavien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Moldova";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Moldova";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Moldavsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Moldavsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Moldavija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Moldavija";
 }

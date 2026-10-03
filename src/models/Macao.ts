@@ -32,9 +32,19 @@ export class Macao extends Country {
   callingCode = "853";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "853";
+
+  /**
    * Capital city
    */
   capital = "Macao";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "254.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Macao extends Country {
    * Portuguese name of the country
    */
   pt = "Macau";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Macao";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Macao";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Macao";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Macao";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Makao";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Macao";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Macao";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Macao";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Makao";
 }

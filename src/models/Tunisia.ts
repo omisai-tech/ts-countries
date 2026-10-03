@@ -32,9 +32,19 @@ export class Tunisia extends Country {
   callingCode = "216";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "216";
+
+  /**
    * Capital city
    */
   capital = "Tunis";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "163,610.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Tunisia extends Country {
    * Portuguese name of the country
    */
   pt = "Tunísia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Tunisia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tunesien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Tunisien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tunisia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Tunezja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Tunisko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Tunisko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Tunizija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Tunis";
 }

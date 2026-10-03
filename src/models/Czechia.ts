@@ -32,9 +32,19 @@ export class Czechia extends Country {
   callingCode = "420";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "420";
+
+  /**
    * Capital city
    */
   capital = "Prague";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "78,866.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Czechia extends Country {
    * Portuguese name of the country
    */
   pt = "Tcheca";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Czechia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tjekkiet";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Tjeckien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tsjekkia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Czechy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Česko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Česko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Češka";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Češka";
 }

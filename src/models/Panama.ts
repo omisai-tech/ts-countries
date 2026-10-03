@@ -32,9 +32,19 @@ export class Panama extends Country {
   callingCode = "507";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "507";
+
+  /**
    * Capital city
    */
   capital = "Panama City";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "78,200.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Panama extends Country {
    * Portuguese name of the country
    */
   pt = "Panamá";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Panama";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Panama";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Panama";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Panama";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Panama";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Panama";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Panama";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Panama";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Panama";
 }

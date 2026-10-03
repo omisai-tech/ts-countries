@@ -32,9 +32,19 @@ export class Guernsey extends Country {
   callingCode = "44";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "44";
+
+  /**
    * Capital city
    */
   capital = "St Peter Port";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "78.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Guernsey extends Country {
    * Portuguese name of the country
    */
   pt = "Guernsey";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Guernsey";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Guernsey";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Guernsey";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Guernsey";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Guernsey";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Guernsey";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Guernsey";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Guernsey";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Guernsey";
 }

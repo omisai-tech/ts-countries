@@ -32,9 +32,19 @@ export class Sudan extends Country {
   callingCode = "249";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "249";
+
+  /**
    * Capital city
    */
   capital = "Khartoum";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,861,484.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Sudan extends Country {
    * Portuguese name of the country
    */
   pt = "Sudão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Sudan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sudan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sudan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sudan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Sudan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Súdán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Sudán";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Sudan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sudan";
 }

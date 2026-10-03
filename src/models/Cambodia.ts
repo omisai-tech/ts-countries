@@ -32,9 +32,19 @@ export class Cambodia extends Country {
   callingCode = "855";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "855";
+
+  /**
    * Capital city
    */
   capital = "Phnom Penh";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "181,040.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Cambodia extends Country {
    * Portuguese name of the country
    */
   pt = "Camboja";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Cambodia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Cambodja";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kambodja";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kambodsja";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kambodża";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kambodža";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kambodža";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kambodža";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kambodža";
 }

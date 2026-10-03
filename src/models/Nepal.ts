@@ -32,9 +32,19 @@ export class Nepal extends Country {
   callingCode = "977";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "977";
+
+  /**
    * Capital city
    */
   capital = "Kathmandu";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "140,800.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Nepal extends Country {
    * Portuguese name of the country
    */
   pt = "Nepal";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Nepal";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Nepal";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Nepal";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Nepal";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Nepal";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Nepál";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Nepál";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Nepal";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Nepal";
 }

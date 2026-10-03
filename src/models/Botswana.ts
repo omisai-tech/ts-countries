@@ -32,9 +32,19 @@ export class Botswana extends Country {
   callingCode = "267";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "267";
+
+  /**
    * Capital city
    */
   capital = "Gaborone";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "600,370.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Botswana extends Country {
    * Portuguese name of the country
    */
   pt = "Botsuana";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Botswana";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Botswana";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Botswana";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Botswana";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Botswana";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Botswana";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Botswana";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Bocvana";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Bocvana";
 }

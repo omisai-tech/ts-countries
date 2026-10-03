@@ -32,9 +32,19 @@ export class Guatemala extends Country {
   callingCode = "502";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "502";
+
+  /**
    * Capital city
    */
   capital = "Guatemala City";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "108,890.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Guatemala extends Country {
    * Portuguese name of the country
    */
   pt = "Guatemala";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Guatemala";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Guatemala";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Guatemala";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Guatemala";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gwatemala";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Guatemala";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Guatemala";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gvatemala";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gvatemala";
 }

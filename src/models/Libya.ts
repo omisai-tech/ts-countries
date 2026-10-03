@@ -32,9 +32,19 @@ export class Libya extends Country {
   callingCode = "218";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "218";
+
+  /**
    * Capital city
    */
   capital = "Tripoli";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,759,540.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Libya extends Country {
    * Portuguese name of the country
    */
   pt = "Líbia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Libya";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Libyen";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Libyen";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Libya";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Libia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Libye";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Líbya";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Libija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Libija";
 }

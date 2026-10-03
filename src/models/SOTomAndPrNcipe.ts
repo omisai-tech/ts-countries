@@ -32,9 +32,19 @@ export class SOTomAndPrNcipe extends Country {
   callingCode = "239";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "239";
+
+  /**
    * Capital city
    */
   capital = "Sao Tome";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,001.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SOTomAndPrNcipe extends Country {
    * Portuguese name of the country
    */
   pt = "São Tomé e Príncipe";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "São Tomé and Príncipe";
+
+  /**
+   * Danish name of the country
+   */
+  da = "São Tomé og Príncipe";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "São Tomé och Príncipe";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "São Tomé og Príncipe";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Świętego Tomasza i Książęca";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Svatý Tomáš a Princův ostrov";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Svätý Tomáš a Princov ostrov";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Sao Tomé in Principe";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sveti Toma i Prinsipe";
 }

@@ -32,9 +32,19 @@ export class Cameroon extends Country {
   callingCode = "237";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "237";
+
+  /**
    * Capital city
    */
   capital = "Yaounde";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "475,440.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Cameroon extends Country {
    * Portuguese name of the country
    */
   pt = "Camarões";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Cameroon";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Cameroun";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kamerun";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kamerun";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kamerun";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kamerun";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kamerun";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kamerun";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kamerun";
 }

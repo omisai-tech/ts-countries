@@ -32,9 +32,19 @@ export class Nicaragua extends Country {
   callingCode = "505";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "505";
+
+  /**
    * Capital city
    */
   capital = "Managua";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "129,494.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Nicaragua extends Country {
    * Portuguese name of the country
    */
   pt = "Nicarágua";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Nicaragua";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Nicaragua";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Nicaragua";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Nicaragua";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Nikaragua";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Nikaragua";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Nikaragua";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Nikaragva";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Nikaragva";
 }

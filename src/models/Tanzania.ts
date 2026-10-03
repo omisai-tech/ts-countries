@@ -32,9 +32,19 @@ export class Tanzania extends Country {
   callingCode = "255";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "255";
+
+  /**
    * Capital city
    */
   capital = "Dodoma";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "945,087.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Tanzania extends Country {
    * Portuguese name of the country
    */
   pt = "Tanzânia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Tanzania";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tanzania";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Tanzania";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tanzania";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Tanzania";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Tanzanie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Tanzánia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Tanzanija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Tanzanija";
 }

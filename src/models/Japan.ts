@@ -32,9 +32,19 @@ export class Japan extends Country {
   callingCode = "81";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "81";
+
+  /**
    * Capital city
    */
   capital = "Tokyo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "377,835.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Japan extends Country {
    * Portuguese name of the country
    */
   pt = "Japão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Japan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Japan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Japan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Japan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Japonia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Japonsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Japonsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Japonska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Japan";
 }

@@ -32,9 +32,19 @@ export class Greenland extends Country {
   callingCode = "299";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "299";
+
+  /**
    * Capital city
    */
   capital = "Nuuk";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,166,086.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Greenland extends Country {
    * Portuguese name of the country
    */
   pt = "Groenlândia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Greenland";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Grønland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Grönland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Grønland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Grenlandia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Grónsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Grónsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Grenlandija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Grenland";
 }

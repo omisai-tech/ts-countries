@@ -32,9 +32,19 @@ export class Lesotho extends Country {
   callingCode = "266";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "266";
+
+  /**
    * Capital city
    */
   capital = "Maseru";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "30,355.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Lesotho extends Country {
    * Portuguese name of the country
    */
   pt = "Lesoto";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Lesotho";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Lesotho";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Lesotho";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Lesotho";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Lesotho";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Lesotho";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Lesotho";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Lesoto";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Lesoto";
 }

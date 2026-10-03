@@ -32,9 +32,19 @@ export class Lithuania extends Country {
   callingCode = "370";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "370";
+
+  /**
    * Capital city
    */
   capital = "Vilnius";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "65,200.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Lithuania extends Country {
    * Portuguese name of the country
    */
   pt = "Lituânia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Lithuania";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Litauen";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Litauen";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Litauen";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Litwa";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Litva";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Litva";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Litva";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Litva";
 }

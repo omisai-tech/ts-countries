@@ -32,9 +32,19 @@ export class CongoRepublic extends Country {
   callingCode = "242";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "242";
+
+  /**
    * Capital city
    */
   capital = "Brazzaville";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "342,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class CongoRepublic extends Country {
    * Portuguese name of the country
    */
   pt = "República do Congo";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Congo Republic";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Republikken Congo";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Republiken Kongo";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Republikken Kongo";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Republika Konga";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Konžská republika";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Konžská republika";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Republika Kongo";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Republika Kongo";
 }

@@ -32,9 +32,19 @@ export class Kenya extends Country {
   callingCode = "254";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "254";
+
+  /**
    * Capital city
    */
   capital = "Nairobi";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "582,650.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Kenya extends Country {
    * Portuguese name of the country
    */
   pt = "Quênia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Kenya";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kenya";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kenya";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kenya";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kenia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Keňa";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Keňa";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kenija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kenija";
 }

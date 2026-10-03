@@ -32,9 +32,19 @@ export class Bolivia extends Country {
   callingCode = "591";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "591";
+
+  /**
    * Capital city
    */
   capital = "Sucre";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,098,580.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Bolivia extends Country {
    * Portuguese name of the country
    */
   pt = "Bolívia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Bolivia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Bolivia";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Bolivia";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Bolivia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Boliwia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Bolívie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Bolívia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Bolivija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Bolivija";
 }

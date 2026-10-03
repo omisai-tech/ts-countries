@@ -32,9 +32,19 @@ export class Montenegro extends Country {
   callingCode = "382";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "382";
+
+  /**
    * Capital city
    */
   capital = "Podgorica";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "14,026.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Montenegro extends Country {
    * Portuguese name of the country
    */
   pt = "Montenegro";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Montenegro";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Montenegro";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Montenegro";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Montenegro";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Czarnogóra";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Černá Hora";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Čierna Hora";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Črna gora";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Crna Gora";
 }

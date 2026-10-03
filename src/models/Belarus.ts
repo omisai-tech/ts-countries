@@ -32,9 +32,19 @@ export class Belarus extends Country {
   callingCode = "375";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "375";
+
+  /**
    * Capital city
    */
   capital = "Minsk";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "207,600.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Belarus extends Country {
    * Portuguese name of the country
    */
   pt = "Bielorrússia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Belarus";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Hviderusland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Belarus";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Hviterussland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Białoruś";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Bělorusko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Bielorusko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Belorusija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Bjelorusija";
 }

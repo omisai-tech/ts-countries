@@ -32,9 +32,19 @@ export class SriLanka extends Country {
   callingCode = "94";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "94";
+
+  /**
    * Capital city
    */
   capital = "Colombo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "65,610.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SriLanka extends Country {
    * Portuguese name of the country
    */
   pt = "Sri Lanka";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Sri Lanka";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sri Lanka";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sri Lanka";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sri Lanka";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Sri Lanka";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Srí Lanka";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Srí Lanka";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Šrilanka";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Šri Lanka";
 }

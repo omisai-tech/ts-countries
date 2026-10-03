@@ -32,9 +32,19 @@ export class NorthMacedonia extends Country {
   callingCode = "389";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "389";
+
+  /**
    * Capital city
    */
   capital = "Skopje";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "25,333.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class NorthMacedonia extends Country {
    * Portuguese name of the country
    */
   pt = "Macedônia do Norte";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "North Macedonia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Nordmakedonien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Nordmakedonien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Nord-Makedonia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Macedonia Północna";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Severní Makedonie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Severné Macedónsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Severna Makedonija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sjeverna Makedonija";
 }

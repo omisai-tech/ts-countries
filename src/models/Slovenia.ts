@@ -32,9 +32,19 @@ export class Slovenia extends Country {
   callingCode = "386";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "386";
+
+  /**
    * Capital city
    */
   capital = "Ljubljana";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "20,273.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Slovenia extends Country {
    * Portuguese name of the country
    */
   pt = "Eslovênia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Slovenia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Slovenien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Slovenien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Slovenia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Słowenia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Slovinsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Slovinsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Slovenija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Slovenija";
 }

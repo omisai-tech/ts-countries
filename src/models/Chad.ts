@@ -32,9 +32,19 @@ export class Chad extends Country {
   callingCode = "235";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "235";
+
+  /**
    * Capital city
    */
   capital = "N'Djamena";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,284,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Chad extends Country {
    * Portuguese name of the country
    */
   pt = "Chade";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Chad";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tchad";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Tchad";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tsjad";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Czad";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Čad";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Čad";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Čad";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Čad";
 }

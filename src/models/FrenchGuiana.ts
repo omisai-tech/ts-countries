@@ -32,9 +32,19 @@ export class FrenchGuiana extends Country {
   callingCode = "594";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "594";
+
+  /**
    * Capital city
    */
   capital = "Cayenne";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "91,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class FrenchGuiana extends Country {
    * Portuguese name of the country
    */
   pt = "Guiana Francesa";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "French Guiana";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Fransk Guyana";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Franska Guyana";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Fransk Guyana";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gujana Francuska";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Francouzská Guyana";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Francúzska Guyana";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Francoska Gvajana";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Francuska Gvajana";
 }

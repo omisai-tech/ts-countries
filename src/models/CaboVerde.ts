@@ -32,9 +32,19 @@ export class CaboVerde extends Country {
   callingCode = "238";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "238";
+
+  /**
    * Capital city
    */
   capital = "Praia";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "4,033.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class CaboVerde extends Country {
    * Portuguese name of the country
    */
   pt = "Cabo Verde";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Cabo Verde";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kap Verde";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kap Verde";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kapp Verde";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Republika Zielonego Przylądka";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kapverdy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kapverdy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Zelenortski otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Zelenortski Otoci";
 }

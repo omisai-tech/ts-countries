@@ -32,9 +32,19 @@ export class BritishIndianOceanTerritory extends Country {
   callingCode = "246";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "246";
+
+  /**
    * Capital city
    */
   capital = "Diego Garcia";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "60.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class BritishIndianOceanTerritory extends Country {
    * Portuguese name of the country
    */
   pt = "Território Britânico do Oceano Índico";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "British Indian Ocean Territory";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Britisk territorium i Det Indiske Ocean";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Brittiska territoriet i Indiska oceanen";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Det britiske territoriet i Indiahavet";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Brytyjskie Terytorium Oceanu Indyjskiego";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Britské indickooceánské území";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Britské indickooceánske územie";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Britansko ozemlje v Indijskem oceanu";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Britanski teritorij Indijskog oceana";
 }

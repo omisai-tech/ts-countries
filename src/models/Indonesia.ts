@@ -32,9 +32,19 @@ export class Indonesia extends Country {
   callingCode = "62";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "62";
+
+  /**
    * Capital city
    */
   capital = "Jakarta";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,919,440.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Indonesia extends Country {
    * Portuguese name of the country
    */
   pt = "Indonésia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Indonesia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Indonesien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Indonesien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Indonesia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Indonezja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Indonésie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Indonézia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Indonezija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Indonezija";
 }

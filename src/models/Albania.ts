@@ -32,9 +32,19 @@ export class Albania extends Country {
   callingCode = "355";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "355";
+
+  /**
    * Capital city
    */
   capital = "Tirana";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "28,748.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Albania extends Country {
    * Portuguese name of the country
    */
   pt = "Albânia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Albania";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Albanien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Albanien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Albania";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Albania";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Albánie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Albánsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Albanija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Albanija";
 }

@@ -32,9 +32,19 @@ export class Spain extends Country {
   callingCode = "34";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "34";
+
+  /**
    * Capital city
    */
   capital = "Madrid";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "504,782.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Spain extends Country {
    * Portuguese name of the country
    */
   pt = "Espanha";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Spain";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Spanien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Spanien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Spania";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Hiszpania";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Španělsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Španielsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Španija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Španjolska";
 }

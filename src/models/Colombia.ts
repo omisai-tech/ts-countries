@@ -32,9 +32,19 @@ export class Colombia extends Country {
   callingCode = "57";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "57";
+
+  /**
    * Capital city
    */
   capital = "Bogota";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,138,910.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Colombia extends Country {
    * Portuguese name of the country
    */
   pt = "Colômbia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Colombia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Colombia";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Colombia";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Colombia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kolumbia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kolumbie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kolumbia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kolumbija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kolumbija";
 }

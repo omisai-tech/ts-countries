@@ -32,9 +32,19 @@ export class Algeria extends Country {
   callingCode = "213";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "213";
+
+  /**
    * Capital city
    */
   capital = "Algiers";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,381,740.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Algeria extends Country {
    * Portuguese name of the country
    */
   pt = "Argélia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Algeria";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Algeriet";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Algeriet";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Algerie";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Algieria";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Alžírsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Alžírsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Alžirija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Alžir";
 }

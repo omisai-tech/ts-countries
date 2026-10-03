@@ -32,9 +32,19 @@ export class WallisAndFutuna extends Country {
   callingCode = "681";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "681";
+
+  /**
    * Capital city
    */
   capital = "Mata Utu";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "274.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class WallisAndFutuna extends Country {
    * Portuguese name of the country
    */
   pt = "Wallis e Futuna";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Wallis and Futuna";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Wallis- og Futunaøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Wallis- och Futunaöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Wallis- og Futunaøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wallis i Futuna";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Wallis a Futuna";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Wallis a Futuna";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Wallis in Futuna";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Wallis i Futuna";
 }

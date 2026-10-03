@@ -32,9 +32,19 @@ export class Serbia extends Country {
   callingCode = "381";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "381";
+
+  /**
    * Capital city
    */
   capital = "Belgrade";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "88,361.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Serbia extends Country {
    * Portuguese name of the country
    */
   pt = "Sérvia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Serbia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Serbien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Serbien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Serbia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Serbia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Srbsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Srbsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Srbija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Srbija";
 }

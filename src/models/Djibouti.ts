@@ -32,9 +32,19 @@ export class Djibouti extends Country {
   callingCode = "253";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "253";
+
+  /**
    * Capital city
    */
   capital = "Djibouti";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "23,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Djibouti extends Country {
    * Portuguese name of the country
    */
   pt = "Djibuti";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Djibouti";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Djibouti";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Djibouti";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Djibouti";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Dżibuti";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Džibutsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Džibutsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Džibuti";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Džibuti";
 }

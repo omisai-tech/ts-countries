@@ -32,9 +32,19 @@ export class Iraq extends Country {
   callingCode = "964";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "964";
+
+  /**
    * Capital city
    */
   capital = "Baghdad";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "437,072.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Iraq extends Country {
    * Portuguese name of the country
    */
   pt = "Iraque";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Iraq";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Irak";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Irak";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Irak";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Irak";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Irák";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Irak";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Irak";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Irak";
 }

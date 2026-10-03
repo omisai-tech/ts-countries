@@ -32,9 +32,19 @@ export class IsleOfMan extends Country {
   callingCode = "44";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "44";
+
+  /**
    * Capital city
    */
   capital = "Douglas";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "572.0";
 
   /**
    * Continent
@@ -67,7 +77,7 @@ export class IsleOfMan extends Country {
   /**
    * Spanish name of the country
    */
-  es = "Isla del hombre";
+  es = "Isla de Man";
 
   /**
    * Italian name of the country
@@ -83,4 +93,49 @@ export class IsleOfMan extends Country {
    * Portuguese name of the country
    */
   pt = "Ilha de Man";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Isle of Man";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Isle of Man";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Isle of Man";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Isle of Man";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspa Man";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Ostrov Man";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Ostrov Man";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Otok Man";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Otok Man";
 }

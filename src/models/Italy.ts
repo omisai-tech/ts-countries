@@ -32,9 +32,19 @@ export class Italy extends Country {
   callingCode = "39";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "39";
+
+  /**
    * Capital city
    */
   capital = "Rome";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "301,230.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Italy extends Country {
    * Portuguese name of the country
    */
   pt = "Itália";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Italy";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Italien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Italien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Italia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Włochy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Itálie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Taliansko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Italija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Italija";
 }

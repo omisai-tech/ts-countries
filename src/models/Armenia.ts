@@ -32,9 +32,19 @@ export class Armenia extends Country {
   callingCode = "374";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "374";
+
+  /**
    * Capital city
    */
   capital = "Yerevan";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "29,800.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Armenia extends Country {
    * Portuguese name of the country
    */
   pt = "Armênia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Armenia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Armenien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Armenien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Armenia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Armenia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Arménie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Arménsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Armenija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Armenija";
 }

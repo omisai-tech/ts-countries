@@ -32,9 +32,19 @@ export class SvalbardAndJanMayen extends Country {
   callingCode = "47";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "47";
+
+  /**
    * Capital city
    */
   capital = "Longyearbyen";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "62,049.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SvalbardAndJanMayen extends Country {
    * Portuguese name of the country
    */
   pt = "Svalbard e Jan Mayen";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Svalbard and Jan Mayen";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Svalbard og Jan Mayen";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Svalbard och Jan Mayen";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Svalbard og Jan Mayen";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Svalbard i Jan Mayen";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Špicberky a Jan Mayen";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Svalbard a Jan Mayen";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Svalbard in Jan Mayen";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Svalbard i Jan Mayen";
 }

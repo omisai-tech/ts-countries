@@ -32,9 +32,19 @@ export class Ethiopia extends Country {
   callingCode = "251";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "251";
+
+  /**
    * Capital city
    */
   capital = "Addis Ababa";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,127,127.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Ethiopia extends Country {
    * Portuguese name of the country
    */
   pt = "Etiópia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Ethiopia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Etiopien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Etiopien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Etiopia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Etiopia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Etiopie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Etiópia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Etiopija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Etiopija";
 }

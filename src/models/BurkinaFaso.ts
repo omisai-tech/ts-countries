@@ -32,9 +32,19 @@ export class BurkinaFaso extends Country {
   callingCode = "226";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "226";
+
+  /**
    * Capital city
    */
   capital = "Ouagadougou";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "274,200.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class BurkinaFaso extends Country {
    * Portuguese name of the country
    */
   pt = "Burkina Faso";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Burkina Faso";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Burkina Faso";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Burkina Faso";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Burkina Faso";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Burkina Faso";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Burkina Faso";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Burkina Faso";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Burkina Faso";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Burkina Faso";
 }

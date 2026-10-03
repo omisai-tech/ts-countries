@@ -32,9 +32,19 @@ export class Micronesia extends Country {
   callingCode = "691";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "691";
+
+  /**
    * Capital city
    */
   capital = "Palikir";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "702.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Micronesia extends Country {
    * Portuguese name of the country
    */
   pt = "Micronésia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Micronesia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Mikronesien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Mikronesien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Mikronesia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Mikronezja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Mikronésie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Mikronézia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Mikronezija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Mikronezija";
 }

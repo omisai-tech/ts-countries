@@ -32,9 +32,19 @@ export class Ghana extends Country {
   callingCode = "233";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "233";
+
+  /**
    * Capital city
    */
   capital = "Accra";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "239,460.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Ghana extends Country {
    * Portuguese name of the country
    */
   pt = "Gana";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Ghana";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Ghana";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Ghana";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Ghana";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Ghana";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Ghana";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Ghana";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gana";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gana";
 }

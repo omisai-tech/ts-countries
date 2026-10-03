@@ -32,9 +32,19 @@ export class TurksAndCaicosIslands extends Country {
   callingCode = "1-649";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-649";
+
+  /**
    * Capital city
    */
   capital = "Cockburn Town";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "430.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class TurksAndCaicosIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Turcas e Caicos";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Turks and Caicos Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Turks- og Caicosøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Turks- och Caicosöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Turks- og Caicosøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Turks i Caicos";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Ostrovy Turks a Caicos";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Ostrovy Turks a Caicos";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Otoki Turks in Caicos";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Otoci Turks i Caicos";
 }

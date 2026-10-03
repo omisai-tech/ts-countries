@@ -32,9 +32,19 @@ export class Qatar extends Country {
   callingCode = "974";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "974";
+
+  /**
    * Capital city
    */
   capital = "Doha";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "11,437.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Qatar extends Country {
    * Portuguese name of the country
    */
   pt = "Catar";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Qatar";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Qatar";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Qatar";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Qatar";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Katar";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Katar";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Katar";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Katar";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Katar";
 }

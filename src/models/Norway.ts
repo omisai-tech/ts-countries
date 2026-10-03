@@ -32,9 +32,19 @@ export class Norway extends Country {
   callingCode = "47";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "47";
+
+  /**
    * Capital city
    */
   capital = "Oslo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "324,220.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Norway extends Country {
    * Portuguese name of the country
    */
   pt = "Noruega";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Norway";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Norge";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Norge";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Norge";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Norwegia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Norsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Nórsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Norveška";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Norveška";
 }

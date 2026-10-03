@@ -32,9 +32,19 @@ export class SouthAfrica extends Country {
   callingCode = "27";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "27";
+
+  /**
    * Capital city
    */
   capital = "Pretoria";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,219,912.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SouthAfrica extends Country {
    * Portuguese name of the country
    */
   pt = "África do Sul";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "South Africa";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sydafrika";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sydafrika";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sør-Afrika";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Republika Południowej Afryki";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Jižní Afrika";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Južná Afrika";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Južna Afrika";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Južna Afrika";
 }

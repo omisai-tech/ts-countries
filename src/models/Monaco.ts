@@ -32,9 +32,19 @@ export class Monaco extends Country {
   callingCode = "377";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "377";
+
+  /**
    * Capital city
    */
   capital = "Monaco";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1.9";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Monaco extends Country {
    * Portuguese name of the country
    */
   pt = "Mônaco";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Monaco";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Monaco";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Monaco";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Monaco";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Monako";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Monako";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Monako";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Monako";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Monako";
 }

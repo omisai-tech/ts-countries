@@ -32,9 +32,19 @@ export class FalklandIslands extends Country {
   callingCode = "500";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "500";
+
+  /**
    * Capital city
    */
   capital = "Stanley";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "12,173.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class FalklandIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Malvinas";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Falkland Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Falklandsøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Falklandsöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Falklandsøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Falklandy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Falklandské ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Falklandské ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Falklandski otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Falklandski otoci";
 }

@@ -32,9 +32,19 @@ export class DrCongo extends Country {
   callingCode = "243";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "243";
+
+  /**
    * Capital city
    */
   capital = "Kinshasa";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,345,410.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class DrCongo extends Country {
    * Portuguese name of the country
    */
   pt = "RD Congo";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "DR Congo";
+
+  /**
+   * Danish name of the country
+   */
+  da = "DR Congo";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "DR Kongo";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "DR Kongo";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Demokratyczna Republika Konga";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "DR Kongo";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "DR Kongo";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "DR Kongo";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "DR Kongo";
 }

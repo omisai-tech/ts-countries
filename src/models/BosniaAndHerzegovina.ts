@@ -32,9 +32,19 @@ export class BosniaAndHerzegovina extends Country {
   callingCode = "387";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "387";
+
+  /**
    * Capital city
    */
   capital = "Sarajevo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "51,129.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class BosniaAndHerzegovina extends Country {
    * Portuguese name of the country
    */
   pt = "Bósnia e Herzegovina";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Bosnia and Herzegovina";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Bosnien-Hercegovina";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Bosnien och Hercegovina";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Bosnia-Hercegovina";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Bośnia i Hercegowina";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Bosna a Hercegovina";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Bosna a Hercegovina";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Bosna in Hercegovina";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Bosna i Hercegovina";
 }

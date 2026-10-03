@@ -32,9 +32,19 @@ export class SanMarino extends Country {
   callingCode = "378";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "378";
+
+  /**
    * Capital city
    */
   capital = "San Marino";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "61.2";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SanMarino extends Country {
    * Portuguese name of the country
    */
   pt = "São Marino";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "San Marino";
+
+  /**
+   * Danish name of the country
+   */
+  da = "San Marino";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "San Marino";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "San Marino";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "San Marino";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "San Marino";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "San Maríno";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "San Marino";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "San Marino";
 }

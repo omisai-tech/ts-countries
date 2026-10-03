@@ -32,9 +32,19 @@ export class HongKong extends Country {
   callingCode = "852";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "852";
+
+  /**
    * Capital city
    */
   capital = "Hong Kong";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,092.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class HongKong extends Country {
    * Portuguese name of the country
    */
   pt = "Hong Kong";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Hong Kong";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Hongkong";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Hongkong";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Hongkong";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Hongkong";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Hongkong";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Hongkong";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Hongkong";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Hong Kong";
 }

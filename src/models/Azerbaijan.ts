@@ -32,9 +32,19 @@ export class Azerbaijan extends Country {
   callingCode = "994";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "994";
+
+  /**
    * Capital city
    */
   capital = "Baku";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "86,600.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Azerbaijan extends Country {
    * Portuguese name of the country
    */
   pt = "Azerbaijão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Azerbaijan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Aserbajdsjan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Azerbajdzjan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Aserbajdsjan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Azerbejdżan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Ázerbajdžán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Azerbajdžan";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Azerbajdžan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Azerbejdžan";
 }

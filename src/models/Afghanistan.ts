@@ -32,9 +32,19 @@ export class Afghanistan extends Country {
   callingCode = "93";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "93";
+
+  /**
    * Capital city
    */
   capital = "Kabul";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "647,500.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Afghanistan extends Country {
    * Portuguese name of the country
    */
   pt = "Afeganistão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Afghanistan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Afghanistan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Afghanistan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Afghanistan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Afganistan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Afghánistán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Afganistan";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Afganistan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Afganistan";
 }

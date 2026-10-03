@@ -32,9 +32,19 @@ export class Comoros extends Country {
   callingCode = "269";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "269";
+
+  /**
    * Capital city
    */
   capital = "Moroni";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,170.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Comoros extends Country {
    * Portuguese name of the country
    */
   pt = "Comores";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Comoros";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Comorerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Komorerna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Komorene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Komory";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Komory";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Komory";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Komori";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Komori";
 }

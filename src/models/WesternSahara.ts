@@ -32,9 +32,19 @@ export class WesternSahara extends Country {
   callingCode = "212";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "212";
+
+  /**
    * Capital city
    */
   capital = "El-Aaiun";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "266,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class WesternSahara extends Country {
    * Portuguese name of the country
    */
   pt = "Saara Ocidental";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Western Sahara";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Vestsahara";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Västsahara";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Vest-Sahara";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Sahara Zachodnia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Západní Sahara";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Západná Sahara";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Zahodna Sahara";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Zapadna Sahara";
 }

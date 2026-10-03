@@ -32,9 +32,19 @@ export class Malta extends Country {
   callingCode = "356";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "356";
+
+  /**
    * Capital city
    */
   capital = "Valletta";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "316.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Malta extends Country {
    * Portuguese name of the country
    */
   pt = "Malta";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Malta";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Malta";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Malta";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Malta";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Malta";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Malta";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Malta";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Malta";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Malta";
 }

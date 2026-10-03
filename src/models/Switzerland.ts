@@ -32,9 +32,19 @@ export class Switzerland extends Country {
   callingCode = "41";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "41";
+
+  /**
    * Capital city
    */
   capital = "Bern";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "41,290.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Switzerland extends Country {
    * Portuguese name of the country
    */
   pt = "Suíça";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Switzerland";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Schweiz";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Schweiz";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sveits";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Szwajcaria";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Švýcarsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Švajčiarsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Švica";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Švicarska";
 }

@@ -32,9 +32,19 @@ export class HeardAndMcdonaldIslands extends Country {
   callingCode = "672";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "672";
+
+  /**
    * Capital city
    */
   capital = "";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "412.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class HeardAndMcdonaldIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Heard e McDonald";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Heard and McDonald Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Heard- og McDonaldøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Heard- och McDonaldöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Heard- og McDonaldøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Heard i McDonalda";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Heardovy a McDonaldovy ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Heardove a McDonaldove ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Heardovi in ​​McDonaldovi otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Otoci Heard i McDonald";
 }

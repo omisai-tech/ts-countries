@@ -32,9 +32,19 @@ export class Eritrea extends Country {
   callingCode = "291";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "291";
+
+  /**
    * Capital city
    */
   capital = "Asmara";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "121,320.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Eritrea extends Country {
    * Portuguese name of the country
    */
   pt = "Eritreia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Eritrea";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Eritrea";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Eritrea";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Eritrea";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Erytrea";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Eritrea";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Eritrea";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Eritreja";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Eritreja";
 }

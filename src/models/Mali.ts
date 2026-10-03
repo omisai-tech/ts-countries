@@ -32,9 +32,19 @@ export class Mali extends Country {
   callingCode = "223";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "223";
+
+  /**
    * Capital city
    */
   capital = "Bamako";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,240,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Mali extends Country {
    * Portuguese name of the country
    */
   pt = "Mali";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Mali";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Mali";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Mali";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Mali";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Mali";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Mali";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Mali";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Mali";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Mali";
 }

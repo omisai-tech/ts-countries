@@ -32,9 +32,19 @@ export class CostaRica extends Country {
   callingCode = "506";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "506";
+
+  /**
    * Capital city
    */
   capital = "San Jose";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "51,100.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class CostaRica extends Country {
    * Portuguese name of the country
    */
   pt = "Costa Rica";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Costa Rica";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Costa Rica";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Costa Rica";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Costa Rica";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kostaryka";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kostarika";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kostarika";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kostarika";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kostarika";
 }

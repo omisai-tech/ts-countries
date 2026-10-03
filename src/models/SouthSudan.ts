@@ -32,9 +32,19 @@ export class SouthSudan extends Country {
   callingCode = "211";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "211";
+
+  /**
    * Capital city
    */
   capital = "Juba";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "644,329.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SouthSudan extends Country {
    * Portuguese name of the country
    */
   pt = "Sudão do Sul";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "South Sudan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sydsudan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sydsudan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sør-Sudan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Sudan Południowy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Jižní Súdán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Južný Sudán";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Južni Sudan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Južni Sudan";
 }

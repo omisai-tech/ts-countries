@@ -32,9 +32,19 @@ export class Taiwan extends Country {
   callingCode = "886";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "886";
+
+  /**
    * Capital city
    */
   capital = "Taipei";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "35,980.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Taiwan extends Country {
    * Portuguese name of the country
    */
   pt = "Taiwan";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Taiwan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Taiwan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Taiwan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Taiwan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Tajwan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Tchaj-wan";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Taiwan";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Tajvan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Tajvan";
 }

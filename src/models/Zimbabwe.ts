@@ -32,9 +32,19 @@ export class Zimbabwe extends Country {
   callingCode = "263";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "263";
+
+  /**
    * Capital city
    */
   capital = "Harare";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "390,580.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Zimbabwe extends Country {
    * Portuguese name of the country
    */
   pt = "Zimbábue";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Zimbabwe";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Zimbabwe";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Zimbabwe";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Zimbabwe";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Zimbabwe";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Zimbabwe";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Zimbabwe";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Zimbabve";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Zimbabve";
 }

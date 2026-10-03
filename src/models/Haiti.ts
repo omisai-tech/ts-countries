@@ -32,9 +32,19 @@ export class Haiti extends Country {
   callingCode = "509";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "509";
+
+  /**
    * Capital city
    */
   capital = "Port-au-Prince";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "27,750.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Haiti extends Country {
    * Portuguese name of the country
    */
   pt = "Haiti";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Haiti";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Haiti";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Haiti";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Haiti";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Haiti";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Haiti";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Haiti";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Haiti";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Haiti";
 }

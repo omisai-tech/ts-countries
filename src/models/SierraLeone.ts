@@ -32,9 +32,19 @@ export class SierraLeone extends Country {
   callingCode = "232";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "232";
+
+  /**
    * Capital city
    */
   capital = "Freetown";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "71,740.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SierraLeone extends Country {
    * Portuguese name of the country
    */
   pt = "Serra Leoa";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Sierra Leone";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sierra Leone";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sierra Leone";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sierra Leone";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Sierra Leone";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Sierra Leone";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Sierra Leone";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Sierra Leone";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sijera Leone";
 }

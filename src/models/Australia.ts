@@ -32,9 +32,19 @@ export class Australia extends Country {
   callingCode = "61";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "61";
+
+  /**
    * Capital city
    */
   capital = "Canberra";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "7,686,850.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Australia extends Country {
    * Portuguese name of the country
    */
   pt = "Austrália";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Australia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Australien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Australien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Australia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Australia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Austrálie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Austrália";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Avstralija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Australija";
 }

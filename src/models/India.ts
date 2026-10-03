@@ -32,9 +32,19 @@ export class India extends Country {
   callingCode = "91";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "91";
+
+  /**
    * Capital city
    */
   capital = "New Delhi";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "3,287,590.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class India extends Country {
    * Portuguese name of the country
    */
   pt = "Índia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "India";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Indien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Indien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "India";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Indie";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Indie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "India";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Indija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Indija";
 }

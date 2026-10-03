@@ -32,9 +32,19 @@ export class Malawi extends Country {
   callingCode = "265";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "265";
+
+  /**
    * Capital city
    */
   capital = "Lilongwe";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "118,480.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Malawi extends Country {
    * Portuguese name of the country
    */
   pt = "Maláui";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Malawi";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Malawi";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Malawi";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Malawi";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Malawi";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Malawi";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Malawi";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Malavi";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Malavi";
 }

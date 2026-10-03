@@ -32,9 +32,19 @@ export class SaintMartin extends Country {
   callingCode = "590";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "590";
+
+  /**
    * Capital city
    */
   capital = "Marigot";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "53.0";
 
   /**
    * Continent
@@ -82,5 +92,50 @@ export class SaintMartin extends Country {
   /**
    * Portuguese name of the country
    */
-  pt = "são Martinho";
+  pt = "São Martinho";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Saint Martin";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sankt Martin";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sankt Martin";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Saint Martin";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Święty Marcin";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Svatý Martin (Francie)";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Svätý Martin (fr.)";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Francoski Sveti Martin";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sveti Martin";
 }

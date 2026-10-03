@@ -32,9 +32,19 @@ export class ElSalvador extends Country {
   callingCode = "503";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "503";
+
+  /**
    * Capital city
    */
   capital = "San Salvador";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "21,040.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class ElSalvador extends Country {
    * Portuguese name of the country
    */
   pt = "El Salvador";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "El Salvador";
+
+  /**
+   * Danish name of the country
+   */
+  da = "El Salvador";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "El Salvador";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "El Salvador";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Salwador";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Salvador";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Salvádor";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Salvador";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Salvador";
 }

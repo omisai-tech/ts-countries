@@ -32,9 +32,19 @@ export class Aland extends Country {
   callingCode = "358";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "358";
+
+  /**
    * Capital city
    */
   capital = "Mariehamn";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,580.0";
 
   /**
    * Continent
@@ -62,25 +72,70 @@ export class Aland extends Country {
   /**
    * German name of the country
    */
-  de = "Ein Land";
+  de = "Ålandinseln";
 
   /**
    * Spanish name of the country
    */
-  es = "Una tierra";
+  es = "Islas Åland";
 
   /**
    * Italian name of the country
    */
-  it = "Una terra";
+  it = "Isole Åland";
 
   /**
    * French name of the country
    */
-  fr = "Un terrain";
+  fr = "Îles Åland";
 
   /**
    * Portuguese name of the country
    */
-  pt = "Uma terra";
+  pt = "Ilhas Åland";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Aland";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Åland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Åland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Åland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Aland";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Åland";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Åland";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Åland";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Åland";
 }

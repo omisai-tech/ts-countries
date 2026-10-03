@@ -32,9 +32,19 @@ export class Mauritius extends Country {
   callingCode = "230";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "230";
+
+  /**
    * Capital city
    */
   capital = "Port Louis";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,040.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Mauritius extends Country {
    * Portuguese name of the country
    */
   pt = "Maurício";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Mauritius";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Mauritius";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Mauritius";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Mauritius";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Mauritius";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Mauricius";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Maurícius";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Mauritius";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Mauricijus";
 }

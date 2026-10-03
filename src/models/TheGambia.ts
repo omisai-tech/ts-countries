@@ -32,9 +32,19 @@ export class TheGambia extends Country {
   callingCode = "220";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "220";
+
+  /**
    * Capital city
    */
   capital = "Banjul";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "11,300.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class TheGambia extends Country {
    * Portuguese name of the country
    */
   pt = "A Gâmbia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "The Gambia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Gambia";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Gambia";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Gambia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gambia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Gambie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Gambia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gambija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gambija";
 }

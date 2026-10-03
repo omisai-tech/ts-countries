@@ -32,9 +32,19 @@ export class UnitedKingdom extends Country {
   callingCode = "44";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "44";
+
+  /**
    * Capital city
    */
   capital = "London";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "244,820.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class UnitedKingdom extends Country {
    * Portuguese name of the country
    */
   pt = "Reino Unido";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "United Kingdom";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Storbritannien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Storbritannien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Storbritannia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Zjednoczone Królestwo";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Spojené království";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Spojené kráľovstvo";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Združeno kraljestvo";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Ujedinjeno Kraljevstvo";
 }

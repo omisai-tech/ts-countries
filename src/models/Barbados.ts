@@ -32,9 +32,19 @@ export class Barbados extends Country {
   callingCode = "1-246";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-246";
+
+  /**
    * Capital city
    */
   capital = "Bridgetown";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "431.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Barbados extends Country {
    * Portuguese name of the country
    */
   pt = "Barbados";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Barbados";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Barbados";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Barbados";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Barbados";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Barbados";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Barbados";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Barbados";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Barbados";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Barbados";
 }

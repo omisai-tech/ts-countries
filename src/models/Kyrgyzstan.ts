@@ -32,9 +32,19 @@ export class Kyrgyzstan extends Country {
   callingCode = "996";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "996";
+
+  /**
    * Capital city
    */
   capital = "Bishkek";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "198,500.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Kyrgyzstan extends Country {
    * Portuguese name of the country
    */
   pt = "Quirguistão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Kyrgyzstan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kirgisistan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kirgizistan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kirgisistan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kirgistan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kyrgyzstán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kirgizsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kirgizistan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kirgistan";
 }

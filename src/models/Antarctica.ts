@@ -32,9 +32,19 @@ export class Antarctica extends Country {
   callingCode = "672";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "672";
+
+  /**
    * Capital city
    */
   capital = "";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "14,000,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Antarctica extends Country {
    * Portuguese name of the country
    */
   pt = "Antártica";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Antarctica";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Antarktis";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Antarktis";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Antarktis";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Antarktyda";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Antarktida";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Antarktída";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Antarktika";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Antarktika";
 }

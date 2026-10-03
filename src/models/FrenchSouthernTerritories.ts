@@ -32,9 +32,19 @@ export class FrenchSouthernTerritories extends Country {
   callingCode = "262";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "262";
+
+  /**
    * Capital city
    */
   capital = "Port-aux-Francais";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "7,829.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class FrenchSouthernTerritories extends Country {
    * Portuguese name of the country
    */
   pt = "Territórios Franceses do Sul";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "French Southern Territories";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Franske sydlige territorier";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Franska sydterritorierna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Franske sørlige territorier";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Francuskie Terytoria Południowe";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Francouzská jižní území";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Francúzske južné územia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Francoska južna ozemlja";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Francuski južni teritoriji";
 }

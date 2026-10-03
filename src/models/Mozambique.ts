@@ -32,9 +32,19 @@ export class Mozambique extends Country {
   callingCode = "258";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "258";
+
+  /**
    * Capital city
    */
   capital = "Maputo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "801,590.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Mozambique extends Country {
    * Portuguese name of the country
    */
   pt = "Moçambique";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Mozambique";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Mozambique";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Moçambique";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Mosambik";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Mozambik";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Mosambik";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Mozambik";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Mozambik";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Mozambik";
 }

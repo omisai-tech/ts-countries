@@ -32,9 +32,19 @@ export class Anguilla extends Country {
   callingCode = "1-264";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-264";
+
+  /**
    * Capital city
    */
   capital = "The Valley";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "102.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Anguilla extends Country {
    * Portuguese name of the country
    */
   pt = "Anguila";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Anguilla";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Anguilla";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Anguilla";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Anguilla";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Anguilla";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Anguilla";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Anguilla";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Angvila";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Angvila";
 }

@@ -32,9 +32,19 @@ export class Gabon extends Country {
   callingCode = "241";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "241";
+
+  /**
    * Capital city
    */
   capital = "Libreville";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "267,667.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Gabon extends Country {
    * Portuguese name of the country
    */
   pt = "Gabão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Gabon";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Gabon";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Gabon";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Gabon";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gabon";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Gabon";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Gabon";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gabon";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gabon";
 }

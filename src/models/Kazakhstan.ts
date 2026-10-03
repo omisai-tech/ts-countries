@@ -32,9 +32,19 @@ export class Kazakhstan extends Country {
   callingCode = "7";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "7";
+
+  /**
    * Capital city
    */
   capital = "Nur-Sultan";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,717,300.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Kazakhstan extends Country {
    * Portuguese name of the country
    */
   pt = "Cazaquistão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Kazakhstan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kasakhstan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kazakstan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kasakhstan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kazachstan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kazachstán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kazachstan";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kazahstan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kazahstan";
 }

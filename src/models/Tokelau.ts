@@ -32,9 +32,19 @@ export class Tokelau extends Country {
   callingCode = "690";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "690";
+
+  /**
    * Capital city
    */
   capital = "";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "10.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Tokelau extends Country {
    * Portuguese name of the country
    */
   pt = "Toquelau";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Tokelau";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tokelau";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Tokelauöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tokelau";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Tokelau";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Tokelau";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Tokelau";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Tokelau";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Tokelau";
 }

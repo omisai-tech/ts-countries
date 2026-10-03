@@ -32,9 +32,19 @@ export class Syria extends Country {
   callingCode = "963";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "963";
+
+  /**
    * Capital city
    */
   capital = "Damascus";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "185,180.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Syria extends Country {
    * Portuguese name of the country
    */
   pt = "Síria";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Syria";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Syrien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Syrien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Syria";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Syria";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Sýrie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Sýria";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Sirija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sirija";
 }

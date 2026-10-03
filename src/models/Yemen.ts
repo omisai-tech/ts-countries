@@ -32,9 +32,19 @@ export class Yemen extends Country {
   callingCode = "967";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "967";
+
+  /**
    * Capital city
    */
   capital = "Sanaa";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "527,970.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Yemen extends Country {
    * Portuguese name of the country
    */
   pt = "Iémen";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Yemen";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Yemen";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Jemen";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Jemen";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Jemen";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Jemen";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Jemen";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Jemen";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Jemen";
 }

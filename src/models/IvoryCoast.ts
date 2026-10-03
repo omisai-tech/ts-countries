@@ -32,9 +32,19 @@ export class IvoryCoast extends Country {
   callingCode = "225";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "225";
+
+  /**
    * Capital city
    */
   capital = "Yamoussoukro";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "322,460.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class IvoryCoast extends Country {
    * Portuguese name of the country
    */
   pt = "Costa do Marfim";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Ivory Coast";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Elfenbenskysten";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Elfenbenskusten";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Elfenbenskysten";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wybrzeże Kości Słoniowej";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Pobřeží slonoviny";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Pobrežie Slonoviny";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Slonokoščena obala";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Obala Bjelokosti";
 }

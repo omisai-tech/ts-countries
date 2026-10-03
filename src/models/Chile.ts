@@ -32,9 +32,19 @@ export class Chile extends Country {
   callingCode = "56";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "56";
+
+  /**
    * Capital city
    */
   capital = "Santiago";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "756,950.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Chile extends Country {
    * Portuguese name of the country
    */
   pt = "Chile";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Chile";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Chile";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Chile";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Chile";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Chile";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Chile";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Čile";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Čile";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Čile";
 }

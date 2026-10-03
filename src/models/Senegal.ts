@@ -32,9 +32,19 @@ export class Senegal extends Country {
   callingCode = "221";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "221";
+
+  /**
    * Capital city
    */
   capital = "Dakar";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "196,190.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Senegal extends Country {
    * Portuguese name of the country
    */
   pt = "Senegal";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Senegal";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Senegal";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Senegal";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Senegal";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Senegal";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Senegal";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Senegal";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Senegal";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Senegal";
 }

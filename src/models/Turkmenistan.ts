@@ -32,9 +32,19 @@ export class Turkmenistan extends Country {
   callingCode = "993";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "993";
+
+  /**
    * Capital city
    */
   capital = "Ashgabat";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "488,100.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Turkmenistan extends Country {
    * Portuguese name of the country
    */
   pt = "Turcomenistão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Turkmenistan";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Turkmenistan";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Turkmenistan";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Turkmenistan";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Turkmenia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Turkmenistán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Turkménsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Turkmenistan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Turkmenistan";
 }

@@ -32,9 +32,19 @@ export class Slovakia extends Country {
   callingCode = "421";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "421";
+
+  /**
    * Capital city
    */
   capital = "Bratislava";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "48,845.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Slovakia extends Country {
    * Portuguese name of the country
    */
   pt = "Eslováquia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Slovakia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Slovakiet";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Slovakien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Slovakia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Słowacja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Slovensko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Slovensko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Slovaška";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Slovačka";
 }

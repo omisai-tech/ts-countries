@@ -32,9 +32,19 @@ export class Belize extends Country {
   callingCode = "501";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "501";
+
+  /**
    * Capital city
    */
   capital = "Belmopan";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "22,966.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Belize extends Country {
    * Portuguese name of the country
    */
   pt = "Belize";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Belize";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Belize";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Belize";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Belize";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Belize";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Belize";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Belize";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Belize";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Belize";
 }

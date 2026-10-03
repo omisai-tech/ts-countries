@@ -32,9 +32,19 @@ export class Brunei extends Country {
   callingCode = "673";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "673";
+
+  /**
    * Capital city
    */
   capital = "Bandar Seri Begawan";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "5,770.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Brunei extends Country {
    * Portuguese name of the country
    */
   pt = "Brunei";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Brunei";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Brunei";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Brunei";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Brunei";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Brunei";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Brunej";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Brunej";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Brunej";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Brunej";
 }

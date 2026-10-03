@@ -32,9 +32,19 @@ export class Paraguay extends Country {
   callingCode = "595";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "595";
+
+  /**
    * Capital city
    */
   capital = "Asuncion";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "406,750.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Paraguay extends Country {
    * Portuguese name of the country
    */
   pt = "Paraguai";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Paraguay";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Paraguay";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Paraguay";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Paraguay";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Paragwaj";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Paraguay";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Paraguaj";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Paragvaj";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Paragvaj";
 }

@@ -32,9 +32,19 @@ export class TrinidadAndTobago extends Country {
   callingCode = "1-868";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-868";
+
+  /**
    * Capital city
    */
   capital = "Port of Spain";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "5,128.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class TrinidadAndTobago extends Country {
    * Portuguese name of the country
    */
   pt = "Trinidad e Tobago";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Trinidad and Tobago";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Trinidad og Tobago";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Trinidad och Tobago";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Trinidad og Tobago";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Trynidad i Tobago";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Trinidad a Tobago";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Trinidad a Tobago";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Trinidad in Tobago";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Trinidad i Tobago";
 }

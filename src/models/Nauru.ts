@@ -32,9 +32,19 @@ export class Nauru extends Country {
   callingCode = "674";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "674";
+
+  /**
    * Capital city
    */
   capital = "Yaren";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "21.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Nauru extends Country {
    * Portuguese name of the country
    */
   pt = "Nauru";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Nauru";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Nauru";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Nauru";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Nauru";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Nauru";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Nauru";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Nauru";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Nauru";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Nauru";
 }

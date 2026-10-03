@@ -32,9 +32,19 @@ export class PuertoRico extends Country {
   callingCode = "1";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1";
+
+  /**
    * Capital city
    */
   capital = "San Juan";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "9,104.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class PuertoRico extends Country {
    * Portuguese name of the country
    */
   pt = "Porto Rico";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Puerto Rico";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Puerto Rico";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Puerto Rico";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Puerto Rico";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Portoryko";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Portoriko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Portoriko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Portoriko";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Portoriko";
 }

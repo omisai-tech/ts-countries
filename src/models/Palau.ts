@@ -32,9 +32,19 @@ export class Palau extends Country {
   callingCode = "680";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "680";
+
+  /**
    * Capital city
    */
   capital = "Melekeok";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "458.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Palau extends Country {
    * Portuguese name of the country
    */
   pt = "Palau";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Palau";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Palau";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Palau";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Palau";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Palau";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Palau";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Palau";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Palau";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Palau";
 }

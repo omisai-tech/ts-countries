@@ -32,9 +32,19 @@ export class Myanmar extends Country {
   callingCode = "95";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "95";
+
+  /**
    * Capital city
    */
   capital = "Nay Pyi Taw";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "678,500.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Myanmar extends Country {
    * Portuguese name of the country
    */
   pt = "Mianmar";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Myanmar";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Myanmar";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Myanmar";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Myanmar";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Myanmar";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Myanmar";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Mjanmarsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Mjanmar";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Mjanmar";
 }

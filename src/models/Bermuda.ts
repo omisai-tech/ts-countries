@@ -32,9 +32,19 @@ export class Bermuda extends Country {
   callingCode = "1-441";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-441";
+
+  /**
    * Capital city
    */
   capital = "Hamilton";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "53.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Bermuda extends Country {
    * Portuguese name of the country
    */
   pt = "Bermudas";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Bermuda";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Bermuda";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Bermuda";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Bermuda";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Bermudy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Bermudy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Bermudy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Bermudi";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Bermuda";
 }

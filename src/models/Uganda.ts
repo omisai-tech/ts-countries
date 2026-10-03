@@ -32,9 +32,19 @@ export class Uganda extends Country {
   callingCode = "256";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "256";
+
+  /**
    * Capital city
    */
   capital = "Kampala";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "236,040.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Uganda extends Country {
    * Portuguese name of the country
    */
   pt = "Uganda";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Uganda";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Uganda";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Uganda";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Uganda";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Uganda";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Uganda";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Uganda";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Uganda";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Uganda";
 }

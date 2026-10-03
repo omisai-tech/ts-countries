@@ -32,9 +32,19 @@ export class Ukraine extends Country {
   callingCode = "380";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "380";
+
+  /**
    * Capital city
    */
   capital = "Kyiv";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "603,700.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Ukraine extends Country {
    * Portuguese name of the country
    */
   pt = "Ucrânia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Ukraine";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Ukraine";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Ukraina";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Ukraina";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Ukraina";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Ukrajina";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Ukrajina";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Ukrajina";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Ukrajina";
 }

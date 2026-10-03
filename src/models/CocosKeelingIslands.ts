@@ -32,9 +32,19 @@ export class CocosKeelingIslands extends Country {
   callingCode = "61";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "61";
+
+  /**
    * Capital city
    */
   capital = "West Island";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "14.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class CocosKeelingIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Cocos (Keeling)";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Cocos (Keeling) Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kokosøerne (Keelingøerne)";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kokosöarna (Keelingöarna)";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kokosøyene (Keelingøyene)";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Kokosowe (Keelinga)";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kokosové (Keelingovy) ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kokosové (Keelingove) ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kokosovi (Keelingovi) otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kokosovi (Keelingovi) otoci";
 }

@@ -32,9 +32,19 @@ export class Peru extends Country {
   callingCode = "51";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "51";
+
+  /**
    * Capital city
    */
   capital = "Lima";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,285,220.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Peru extends Country {
    * Portuguese name of the country
    */
   pt = "Peru";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Peru";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Peru";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Peru";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Peru";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Peru";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Peru";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Peru";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Peru";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Peru";
 }

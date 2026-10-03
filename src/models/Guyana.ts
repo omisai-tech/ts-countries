@@ -32,9 +32,19 @@ export class Guyana extends Country {
   callingCode = "592";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "592";
+
+  /**
    * Capital city
    */
   capital = "Georgetown";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "214,970.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Guyana extends Country {
    * Portuguese name of the country
    */
   pt = "Guiana";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Guyana";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Guyana";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Guyana";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Guyana";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gujana";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Guyana";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Guyana";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gvajana";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gvajana";
 }

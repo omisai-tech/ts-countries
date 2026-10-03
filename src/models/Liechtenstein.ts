@@ -32,9 +32,19 @@ export class Liechtenstein extends Country {
   callingCode = "423";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "423";
+
+  /**
    * Capital city
    */
   capital = "Vaduz";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "160.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Liechtenstein extends Country {
    * Portuguese name of the country
    */
   pt = "Liechtenstein";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Liechtenstein";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Liechtenstein";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Liechtenstein";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Liechtenstein";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Liechtenstein";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Lichtenštejnsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Lichtenštajnsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Lihtenštajn";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Lihtenštajn";
 }

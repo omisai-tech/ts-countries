@@ -32,9 +32,19 @@ export class Madagascar extends Country {
   callingCode = "261";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "261";
+
+  /**
    * Capital city
    */
   capital = "Antananarivo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "587,040.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Madagascar extends Country {
    * Portuguese name of the country
    */
   pt = "Madagáscar";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Madagascar";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Madagaskar";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Madagaskar";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Madagaskar";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Madagaskar";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Madagaskar";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Madagaskar";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Madagaskar";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Madagaskar";
 }

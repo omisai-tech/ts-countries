@@ -32,9 +32,19 @@ export class Cuba extends Country {
   callingCode = "53";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "53";
+
+  /**
    * Capital city
    */
   capital = "Havana";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "110,860.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Cuba extends Country {
    * Portuguese name of the country
    */
   pt = "Cuba";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Cuba";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Cuba";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kuba";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Cuba";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kuba";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kuba";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kuba";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kuba";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kuba";
 }

@@ -32,9 +32,19 @@ export class Guam extends Country {
   callingCode = "1-671";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-671";
+
+  /**
    * Capital city
    */
   capital = "Hagatna";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "549.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Guam extends Country {
    * Portuguese name of the country
    */
   pt = "Guam";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Guam";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Guam";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Guam";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Guam";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Guam";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Guam";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Guam";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Guam";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Guam";
 }

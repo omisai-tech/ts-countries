@@ -32,9 +32,19 @@ export class Mexico extends Country {
   callingCode = "52";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "52";
+
+  /**
    * Capital city
    */
   capital = "Mexico City";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,972,550.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Mexico extends Country {
    * Portuguese name of the country
    */
   pt = "México";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Mexico";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Mexico";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Mexiko";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Mexico";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Meksyk";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Mexiko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Mexiko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Mehika";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Meksiko";
 }

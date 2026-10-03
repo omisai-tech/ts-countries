@@ -32,9 +32,19 @@ export class China extends Country {
   callingCode = "86";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "86";
+
+  /**
    * Capital city
    */
   capital = "Beijing";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "9,596,960.0";
 
   /**
    * Continent
@@ -67,7 +77,7 @@ export class China extends Country {
   /**
    * Spanish name of the country
    */
-  es = "Porcelana";
+  es = "China";
 
   /**
    * Italian name of the country
@@ -83,4 +93,49 @@ export class China extends Country {
    * Portuguese name of the country
    */
   pt = "China";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "China";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kina";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kina";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kina";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Chiny";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Čína";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Čína";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kitajska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kina";
 }

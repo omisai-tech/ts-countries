@@ -32,9 +32,19 @@ export class Ecuador extends Country {
   callingCode = "593";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "593";
+
+  /**
    * Capital city
    */
   capital = "Quito";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "283,560.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Ecuador extends Country {
    * Portuguese name of the country
    */
   pt = "Equador";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Ecuador";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Ecuador";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Ecuador";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Ecuador";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Ekwador";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Ekvádor";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Ekvádor";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Ekvador";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Ekvador";
 }

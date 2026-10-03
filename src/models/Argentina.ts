@@ -32,9 +32,19 @@ export class Argentina extends Country {
   callingCode = "54";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "54";
+
+  /**
    * Capital city
    */
   capital = "Buenos Aires";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,766,890.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Argentina extends Country {
    * Portuguese name of the country
    */
   pt = "Argentina";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Argentina";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Argentina";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Argentina";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Argentina";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Argentyna";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Argentina";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Argentína";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Argentina";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Argentina";
 }

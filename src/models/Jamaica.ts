@@ -32,9 +32,19 @@ export class Jamaica extends Country {
   callingCode = "1-876";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-876";
+
+  /**
    * Capital city
    */
   capital = "Kingston";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "10,991.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Jamaica extends Country {
    * Portuguese name of the country
    */
   pt = "Jamaica";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Jamaica";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Jamaica";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Jamaica";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Jamaica";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Jamajka";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Jamaica";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Jamajka";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Jamajka";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Jamajka";
 }

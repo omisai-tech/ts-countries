@@ -32,9 +32,19 @@ export class Cyprus extends Country {
   callingCode = "357";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "357";
+
+  /**
    * Capital city
    */
   capital = "Nicosia";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "9,250.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Cyprus extends Country {
    * Portuguese name of the country
    */
   pt = "Chipre";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Cyprus";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Cypern";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Cypern";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kypros";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Cypr";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kypr";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Cyprus";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Ciper";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Cipar";
 }

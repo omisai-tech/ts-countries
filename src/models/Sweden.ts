@@ -32,9 +32,19 @@ export class Sweden extends Country {
   callingCode = "46";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "46";
+
+  /**
    * Capital city
    */
   capital = "Stockholm";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "449,964.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Sweden extends Country {
    * Portuguese name of the country
    */
   pt = "Suécia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Sweden";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sverige";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sverige";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sverige";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Szwecja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Švédsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Švédsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Švedska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Švedska";
 }

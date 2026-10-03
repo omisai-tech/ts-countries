@@ -32,9 +32,19 @@ export class Thailand extends Country {
   callingCode = "66";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "66";
+
+  /**
    * Capital city
    */
   capital = "Bangkok";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "514,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Thailand extends Country {
    * Portuguese name of the country
    */
   pt = "Tailândia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Thailand";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Thailand";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Thailand";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Thailand";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Tajlandia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Thajsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Thajsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Tajska";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Tajland";
 }

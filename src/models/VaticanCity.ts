@@ -32,9 +32,19 @@ export class VaticanCity extends Country {
   callingCode = "39-06";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "39-06";
+
+  /**
    * Capital city
    */
   capital = "Vatican City";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "0.4";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class VaticanCity extends Country {
    * Portuguese name of the country
    */
   pt = "Cidade do Vaticano";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Vatican City";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Vatikanstaten";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Vatikanstaten";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Vatikanstaten";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Watykan";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Vatikán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Vatikán";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Vatikan";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Vatikan";
 }

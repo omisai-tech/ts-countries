@@ -32,9 +32,19 @@ export class Angola extends Country {
   callingCode = "244";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "244";
+
+  /**
    * Capital city
    */
   capital = "Luanda";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,246,700.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Angola extends Country {
    * Portuguese name of the country
    */
   pt = "Angola";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Angola";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Angola";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Angola";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Angola";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Angola";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Angola";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Angola";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Angola";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Angola";
 }

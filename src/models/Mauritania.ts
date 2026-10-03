@@ -32,9 +32,19 @@ export class Mauritania extends Country {
   callingCode = "222";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "222";
+
+  /**
    * Capital city
    */
   capital = "Nouakchott";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,030,700.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Mauritania extends Country {
    * Portuguese name of the country
    */
   pt = "Mauritânia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Mauritania";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Mauretanien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Mauretanien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Mauritania";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Mauretania";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Mauritánie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Mauritánia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Mavretanija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Mauritanija";
 }

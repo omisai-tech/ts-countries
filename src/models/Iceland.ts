@@ -32,9 +32,19 @@ export class Iceland extends Country {
   callingCode = "354";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "354";
+
+  /**
    * Capital city
    */
   capital = "Reykjavik";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "103,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Iceland extends Country {
    * Portuguese name of the country
    */
   pt = "Islândia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Iceland";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Island";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Island";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Island";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Islandia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Island";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Island";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Islandija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Island";
 }

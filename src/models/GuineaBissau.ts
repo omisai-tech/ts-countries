@@ -32,9 +32,19 @@ export class GuineaBissau extends Country {
   callingCode = "245";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "245";
+
+  /**
    * Capital city
    */
   capital = "Bissau";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "36,120.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class GuineaBissau extends Country {
    * Portuguese name of the country
    */
   pt = "Guiné-Bissau";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Guinea-Bissau";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Guinea-Bissau";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Guinea-Bissau";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Guinea-Bissau";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gwinea Bissau";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Guinea-Bissau";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Guinea-Bissau";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gvineja Bissau";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gvineja Bisau";
 }

@@ -32,9 +32,19 @@ export class Estonia extends Country {
   callingCode = "372";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "372";
+
+  /**
    * Capital city
    */
   capital = "Tallinn";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "45,226.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Estonia extends Country {
    * Portuguese name of the country
    */
   pt = "Estônia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Estonia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Estland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Estland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Estland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Estonia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Estonsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Estónsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Estonija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Estonija";
 }

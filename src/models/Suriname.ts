@@ -32,9 +32,19 @@ export class Suriname extends Country {
   callingCode = "597";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "597";
+
+  /**
    * Capital city
    */
   capital = "Paramaribo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "163,270.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Suriname extends Country {
    * Portuguese name of the country
    */
   pt = "Suriname";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Suriname";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Surinam";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Surinam";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Surinam";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Surinam";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Surinam";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Surinam";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Surinam";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Surinam";
 }

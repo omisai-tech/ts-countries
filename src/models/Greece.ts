@@ -32,9 +32,19 @@ export class Greece extends Country {
   callingCode = "30";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "30";
+
+  /**
    * Capital city
    */
   capital = "Athens";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "131,940.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Greece extends Country {
    * Portuguese name of the country
    */
   pt = "Grécia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Greece";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Grækenland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Grekland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Hellas";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Grecja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Řecko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Grécko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Grčija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Grčka";
 }

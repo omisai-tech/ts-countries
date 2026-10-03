@@ -32,9 +32,19 @@ export class StKittsAndNevis extends Country {
   callingCode = "1-869";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-869";
+
+  /**
    * Capital city
    */
   capital = "Basseterre";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "261.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class StKittsAndNevis extends Country {
    * Portuguese name of the country
    */
   pt = "São Cristóvão e Nevis";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "St Kitts and Nevis";
+
+  /**
+   * Danish name of the country
+   */
+  da = "St. Kitts og Nevis";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "St Kitts och Nevis";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "St. Kitts og Nevis";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Saint Kitts i Nevis";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Svatý Kryštof a Nevis";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Svätý Krištof a Nevis";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Sveti Krištof in Nevis";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sveti Kitts i Nevis";
 }

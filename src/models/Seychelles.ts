@@ -32,9 +32,19 @@ export class Seychelles extends Country {
   callingCode = "248";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "248";
+
+  /**
    * Capital city
    */
   capital = "Victoria";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "455.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Seychelles extends Country {
    * Portuguese name of the country
    */
   pt = "Seicheles";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Seychelles";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Seychellerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Seychellerna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Seychellene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Seszele";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Seychely";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Seychely";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Sejšeli";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sejšeli";
 }

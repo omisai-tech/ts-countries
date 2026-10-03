@@ -32,9 +32,19 @@ export class Tuvalu extends Country {
   callingCode = "688";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "688";
+
+  /**
    * Capital city
    */
   capital = "Funafuti";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "26.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Tuvalu extends Country {
    * Portuguese name of the country
    */
   pt = "Tuvalu";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Tuvalu";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tuvalu";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Tuvalu";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tuvalu";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Tuvalu";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Tuvalu";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Tuvalu";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Tuvalu";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Tuvalu";
 }

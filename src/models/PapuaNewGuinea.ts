@@ -32,9 +32,19 @@ export class PapuaNewGuinea extends Country {
   callingCode = "675";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "675";
+
+  /**
    * Capital city
    */
   capital = "Port Moresby";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "462,840.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class PapuaNewGuinea extends Country {
    * Portuguese name of the country
    */
   pt = "Papua Nova Guiné";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Papua New Guinea";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Papua Ny Guinea";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Papua Nya Guinea";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Papua Ny-Guinea";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Papua-Nowa Gwinea";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Papua Nová Guinea";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Papua-Nová Guinea";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Papua Nova Gvineja";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Papua Nova Gvineja";
 }

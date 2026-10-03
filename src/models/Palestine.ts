@@ -32,9 +32,19 @@ export class Palestine extends Country {
   callingCode = "970";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "970";
+
+  /**
    * Capital city
    */
   capital = "East Jerusalem";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "5,970.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Palestine extends Country {
    * Portuguese name of the country
    */
   pt = "Palestina";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Palestine";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Palæstina";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Palestina";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Palestina";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Palestyna";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Palestina";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Palestína";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Palestina";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Palestina";
 }

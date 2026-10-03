@@ -32,9 +32,19 @@ export class BouvetIsland extends Country {
   callingCode = "47";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "47";
+
+  /**
    * Capital city
    */
   capital = "";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "49.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class BouvetIsland extends Country {
    * Portuguese name of the country
    */
   pt = "Ilha Bouvet";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Bouvet Island";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Bouvetøen";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Bouvetön";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Bouvetøya";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspa Bouveta";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Bouvetův ostrov";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Bouvetov ostrov";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Otok Bouvet";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Otok Bouvet";
 }

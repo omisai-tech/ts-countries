@@ -32,9 +32,19 @@ export class France extends Country {
   callingCode = "33";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "33";
+
+  /**
    * Capital city
    */
   capital = "Paris";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "547,030.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class France extends Country {
    * Portuguese name of the country
    */
   pt = "França";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "France";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Frankrig";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Frankrike";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Frankrike";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Francja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Francie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Francúzsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Francija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Francuska";
 }

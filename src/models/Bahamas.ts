@@ -32,9 +32,19 @@ export class Bahamas extends Country {
   callingCode = "1-242";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-242";
+
+  /**
    * Capital city
    */
   capital = "Nassau";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "13,940.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Bahamas extends Country {
    * Portuguese name of the country
    */
   pt = "Bahamas";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Bahamas";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Bahamas";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Bahamas";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Bahamas";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Bahamy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Bahamy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Bahamy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Bahami";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Bahami";
 }

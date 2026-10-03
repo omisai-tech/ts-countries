@@ -32,9 +32,19 @@ export class Belgium extends Country {
   callingCode = "32";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "32";
+
+  /**
    * Capital city
    */
   capital = "Brussels";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "30,510.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Belgium extends Country {
    * Portuguese name of the country
    */
   pt = "Bélgica";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Belgium";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Belgien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Belgien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Belgia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Belgia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Belgie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Belgicko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Belgija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Belgija";
 }

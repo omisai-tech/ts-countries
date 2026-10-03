@@ -32,9 +32,19 @@ export class Kuwait extends Country {
   callingCode = "965";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "965";
+
+  /**
    * Capital city
    */
   capital = "Kuwait City";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "17,820.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Kuwait extends Country {
    * Portuguese name of the country
    */
   pt = "Kuwait";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Kuwait";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kuwait";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kuwait";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kuwait";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Kuwejt";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kuvajt";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kuvajt";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kuvajt";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kuvajt";
 }

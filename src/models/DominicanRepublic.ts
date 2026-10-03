@@ -32,9 +32,19 @@ export class DominicanRepublic extends Country {
   callingCode = "1-809,1-829,1-849";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-809,1-829,1-849";
+
+  /**
    * Capital city
    */
   capital = "Santo Domingo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "48,730.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class DominicanRepublic extends Country {
    * Portuguese name of the country
    */
   pt = "República Dominicana";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Dominican Republic";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Den Dominikanske Republik";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Dominikanska republiken";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Den dominikanske republikk";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Republika Dominikańska";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Dominikánská republika";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Dominikánska republika";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Dominikanska republika";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Dominikanska Republika";
 }

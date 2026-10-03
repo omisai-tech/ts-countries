@@ -32,9 +32,19 @@ export class Bangladesh extends Country {
   callingCode = "880";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "880";
+
+  /**
    * Capital city
    */
   capital = "Dhaka";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "144,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Bangladesh extends Country {
    * Portuguese name of the country
    */
   pt = "Bangladesh";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Bangladesh";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Bangladesh";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Bangladesh";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Bangladesh";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Bangladesz";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Bangladéš";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Bangladéš";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Bangladeš";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Bangladeš";
 }

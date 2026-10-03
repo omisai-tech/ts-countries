@@ -32,9 +32,19 @@ export class Somalia extends Country {
   callingCode = "252";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "252";
+
+  /**
    * Capital city
    */
   capital = "Mogadishu";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "637,657.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Somalia extends Country {
    * Portuguese name of the country
    */
   pt = "Somália";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Somalia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Somalia";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Somalia";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Somalia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Somali";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Somálsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Somálsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Somalija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Somalija";
 }

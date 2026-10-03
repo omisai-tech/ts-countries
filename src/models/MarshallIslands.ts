@@ -32,9 +32,19 @@ export class MarshallIslands extends Country {
   callingCode = "692";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "692";
+
+  /**
    * Capital city
    */
   capital = "Majuro";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "181.3";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class MarshallIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Marshall";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Marshall Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Marshalløerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Marshallöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Marshalløyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Marshalla";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Marshallovy ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Marshallove ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Marshallovi otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Maršalovi Otoci";
 }

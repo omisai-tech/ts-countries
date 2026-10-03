@@ -32,9 +32,19 @@ export class SolomonIslands extends Country {
   callingCode = "677";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "677";
+
+  /**
    * Capital city
    */
   capital = "Honiara";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "28,450.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SolomonIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Salomão";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Solomon Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Salomonøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Salomonöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Salomonøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Salomona";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Šalamounovy ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Šalamúnove ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Salomonovi otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Salomonski Otoci";
 }

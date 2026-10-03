@@ -32,9 +32,19 @@ export class Germany extends Country {
   callingCode = "49";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "49";
+
+  /**
    * Capital city
    */
   capital = "Berlin";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "357,021.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Germany extends Country {
    * Portuguese name of the country
    */
   pt = "Alemanha";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Germany";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tyskland";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Tyskland";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tyskland";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Niemcy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Německo";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Nemecko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Nemčija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Njemačka";
 }

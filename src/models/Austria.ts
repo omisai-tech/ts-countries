@@ -32,9 +32,19 @@ export class Austria extends Country {
   callingCode = "43";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "43";
+
+  /**
    * Capital city
    */
   capital = "Vienna";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "83,858.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Austria extends Country {
    * Portuguese name of the country
    */
   pt = "Áustria";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Austria";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Østrig";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Österrike";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Østerrike";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Austria";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Rakousko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Rakúsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Avstrija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Austrija";
 }

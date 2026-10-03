@@ -32,9 +32,19 @@ export class AmericanSamoa extends Country {
   callingCode = "1-684";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-684";
+
+  /**
    * Capital city
    */
   capital = "Pago Pago";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "199.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class AmericanSamoa extends Country {
    * Portuguese name of the country
    */
   pt = "Samoa Americana";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "American Samoa";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Amerikansk Samoa";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Amerikanska Samoa";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Amerikansk Samoa";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Samoa Amerykańskie";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Americká Samoa";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Americká Samoa";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Ameriška Samoa";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Američka Samoa";
 }

@@ -32,9 +32,19 @@ export class CentralAfricanRepublic extends Country {
   callingCode = "236";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "236";
+
+  /**
    * Capital city
    */
   capital = "Bangui";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "622,984.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class CentralAfricanRepublic extends Country {
    * Portuguese name of the country
    */
   pt = "República Centro-Africana";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Central African Republic";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Centralafrikanske Republik";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Centralafrikanska republiken";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Den sentralafrikanske republikk";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Republika Środkowoafrykańska";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Středoafrická republika";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Stredoafrická republika";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Srednjeafriška republika";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Srednjoafrička Republika";
 }

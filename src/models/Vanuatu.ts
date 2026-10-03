@@ -32,9 +32,19 @@ export class Vanuatu extends Country {
   callingCode = "678";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "678";
+
+  /**
    * Capital city
    */
   capital = "Port Vila";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "12,200.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Vanuatu extends Country {
    * Portuguese name of the country
    */
   pt = "Vanuatu";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Vanuatu";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Vanuatu";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Vanuatu";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Vanuatu";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Vanuatu";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Vanuatu";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Vanuatu";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Vanuatu";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Vanuatu";
 }

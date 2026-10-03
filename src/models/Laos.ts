@@ -32,9 +32,19 @@ export class Laos extends Country {
   callingCode = "856";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "856";
+
+  /**
    * Capital city
    */
   capital = "Vientiane";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "236,800.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Laos extends Country {
    * Portuguese name of the country
    */
   pt = "Laos";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Laos";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Laos";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Laos";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Laos";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Laos";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Laos";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Laos";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Laos";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Laos";
 }

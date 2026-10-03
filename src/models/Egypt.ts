@@ -32,9 +32,19 @@ export class Egypt extends Country {
   callingCode = "20";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "20";
+
+  /**
    * Capital city
    */
   capital = "Cairo";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,001,450.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Egypt extends Country {
    * Portuguese name of the country
    */
   pt = "Egito";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Egypt";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Egypten";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Egypten";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Egypt";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Egipt";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Egypt";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Egypt";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Egipt";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Egipat";
 }

@@ -32,9 +32,19 @@ export class Philippines extends Country {
   callingCode = "63";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "63";
+
+  /**
    * Capital city
    */
   capital = "Manila";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "300,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Philippines extends Country {
    * Portuguese name of the country
    */
   pt = "Filipinas";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Philippines";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Filippinerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Filippinerna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Filippinene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Filipiny";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Filipíny";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Filipíny";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Filipini";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Filipini";
 }

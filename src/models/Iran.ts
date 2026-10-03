@@ -32,9 +32,19 @@ export class Iran extends Country {
   callingCode = "98";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "98";
+
+  /**
    * Capital city
    */
   capital = "Tehran";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,648,000.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Iran extends Country {
    * Portuguese name of the country
    */
   pt = "Irã";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Iran";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Iran";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Iran";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Iran";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Iran";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Írán";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Irán";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Iran";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Iran";
 }

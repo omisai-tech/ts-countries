@@ -32,9 +32,19 @@ export class SouthKorea extends Country {
   callingCode = "82";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "82";
+
+  /**
    * Capital city
    */
   capital = "Seoul";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "98,480.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SouthKorea extends Country {
    * Portuguese name of the country
    */
   pt = "Coreia do Sul";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "South Korea";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sydkorea";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sydkorea";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sør-Korea";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Korea Południowa";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Jižní Korea";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Južná Kórea";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Južna Koreja";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Južna Koreja";
 }

@@ -32,9 +32,19 @@ export class Gibraltar extends Country {
   callingCode = "350";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "350";
+
+  /**
    * Capital city
    */
   capital = "Gibraltar";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "6.5";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Gibraltar extends Country {
    * Portuguese name of the country
    */
   pt = "Gibraltar";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Gibraltar";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Gibraltar";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Gibraltar";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Gibraltar";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gibraltar";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Gibraltar";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Gibraltár";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gibraltar";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gibraltar";
 }

@@ -32,9 +32,19 @@ export class CuraAo extends Country {
   callingCode = "599";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "599";
+
+  /**
    * Capital city
    */
   capital = "Willemstad";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "444.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class CuraAo extends Country {
    * Portuguese name of the country
    */
   pt = "Curaçau";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Curaçao";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Curaçao";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Curaçao";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Curaçao";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Curaçao";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Curaçao";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Curaçao";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Curaçao";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Curaçao";
 }

@@ -32,9 +32,19 @@ export class NewCaledonia extends Country {
   callingCode = "687";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "687";
+
+  /**
    * Capital city
    */
   capital = "Noumea";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "19,060.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class NewCaledonia extends Country {
    * Portuguese name of the country
    */
   pt = "Nova Caledônia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "New Caledonia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Ny Kaledonien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Nya Kaledonien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Ny-Caledonia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Nowa Kaledonia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Nová Kaledonie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Nová Kaledónia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Nova Kaledonija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Nova Kaledonija";
 }

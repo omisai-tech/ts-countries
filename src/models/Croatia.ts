@@ -32,9 +32,19 @@ export class Croatia extends Country {
   callingCode = "385";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "385";
+
+  /**
    * Capital city
    */
   capital = "Zagreb";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "56,542.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Croatia extends Country {
    * Portuguese name of the country
    */
   pt = "Croácia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Croatia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Kroatien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Kroatien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Kroatia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Chorwacja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Chorvatsko";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Chorvátsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Hrvaška";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Hrvatska";
 }

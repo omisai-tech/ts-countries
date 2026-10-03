@@ -32,9 +32,19 @@ export class Zambia extends Country {
   callingCode = "260";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "260";
+
+  /**
    * Capital city
    */
   capital = "Lusaka";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "752,614.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Zambia extends Country {
    * Portuguese name of the country
    */
   pt = "Zâmbia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Zambia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Zambia";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Zambia";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Zambia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Zambia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Zambie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Zambia";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Zambija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Zambija";
 }

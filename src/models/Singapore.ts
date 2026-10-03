@@ -32,9 +32,19 @@ export class Singapore extends Country {
   callingCode = "65";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "65";
+
+  /**
    * Capital city
    */
   capital = "Singapore";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "692.7";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Singapore extends Country {
    * Portuguese name of the country
    */
   pt = "Cingapura";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Singapore";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Singapore";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Singapore";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Singapore";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Singapur";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Singapur";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Singapur";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Singapur";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Singapur";
 }

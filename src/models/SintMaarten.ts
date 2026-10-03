@@ -32,9 +32,19 @@ export class SintMaarten extends Country {
   callingCode = "1-721";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-721";
+
+  /**
    * Capital city
    */
   capital = "Philipsburg";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "21.0";
 
   /**
    * Continent
@@ -67,7 +77,7 @@ export class SintMaarten extends Country {
   /**
    * Spanish name of the country
    */
-  es = "San Martín";
+  es = "Sint Maarten";
 
   /**
    * Italian name of the country
@@ -77,10 +87,55 @@ export class SintMaarten extends Country {
   /**
    * French name of the country
    */
-  fr = "Saint-Martin";
+  fr = "Sint Maarten";
 
   /**
    * Portuguese name of the country
    */
-  pt = "São Martinho";
+  pt = "Sint Maarten";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Sint Maarten";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sint Maarten";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sint Maarten";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sint Maarten";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Sint Maarten";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Svatý Martin (Nizozemsko)";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Svätý Martin (hol.)";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Nizozemski Sveti Martin";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sint Maarten";
 }

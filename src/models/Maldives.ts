@@ -32,9 +32,19 @@ export class Maldives extends Country {
   callingCode = "960";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "960";
+
+  /**
    * Capital city
    */
   capital = "Male";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "300.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Maldives extends Country {
    * Portuguese name of the country
    */
   pt = "Maldivas";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Maldives";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Maldiverne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Maldiverna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Maldivene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Malediwy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Maledivy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Maldivy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Maldivi";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Maldivi";
 }

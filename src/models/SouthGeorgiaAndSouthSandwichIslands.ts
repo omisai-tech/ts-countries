@@ -32,9 +32,19 @@ export class SouthGeorgiaAndSouthSandwichIslands extends Country {
   callingCode = "500";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "500";
+
+  /**
    * Capital city
    */
   capital = "Grytviken";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "3,903.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SouthGeorgiaAndSouthSandwichIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Geórgia do Sul e Sandwich do Sul";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "South Georgia and South Sandwich Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Sydgeorgien og Sydsandwichøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Sydgeorgien och Sydsandwichöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Sør-Georgia og Sør-Sandwichøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Georgia Południowa i Sandwich Południowy";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Jižní Georgie a Jižní Sandwichovy ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Južná Georgia a Južné Sandwichove ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Južna Georgia in Južni Sendvičevi otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Južna Georgija i Južni Sendvički Otoci";
 }

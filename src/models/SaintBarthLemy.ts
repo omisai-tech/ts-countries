@@ -32,9 +32,19 @@ export class SaintBarthLemy extends Country {
   callingCode = "590";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "590";
+
+  /**
    * Capital city
    */
   capital = "Gustavia";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "21.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class SaintBarthLemy extends Country {
    * Portuguese name of the country
    */
   pt = "São Bartolomeu";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Saint Barthélemy";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Saint-Barthélemy";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Saint Barthélemy";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Saint-Barthélemy";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Święty Bartłomiej";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Svatý Bartoloměj";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Svätý Bartolomej";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Sveti Bartolomej";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Sveti Bartolomej";
 }

@@ -32,9 +32,19 @@ export class Martinique extends Country {
   callingCode = "596";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "596";
+
+  /**
    * Capital city
    */
   capital = "Fort-de-France";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "1,100.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Martinique extends Country {
    * Portuguese name of the country
    */
   pt = "Martinica";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Martinique";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Martinique";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Martinique";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Martinique";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Martynika";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Martinik";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Martinik";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Martinik";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Martinik";
 }

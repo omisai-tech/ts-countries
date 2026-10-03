@@ -32,9 +32,19 @@ export class RUnion extends Country {
   callingCode = "262";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "262";
+
+  /**
    * Capital city
    */
   capital = "Saint-Denis";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "2,517.0";
 
   /**
    * Continent
@@ -62,7 +72,7 @@ export class RUnion extends Country {
   /**
    * German name of the country
    */
-  de = "Wiedervereinigung";
+  de = "Réunion";
 
   /**
    * Spanish name of the country
@@ -83,4 +93,49 @@ export class RUnion extends Country {
    * Portuguese name of the country
    */
   pt = "Reunião";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Réunion";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Réunion";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Réunion";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Réunion";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Reunion";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Réunion";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Réunion";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Reunion";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Réunion";
 }

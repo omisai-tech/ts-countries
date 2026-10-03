@@ -32,9 +32,19 @@ export class Brazil extends Country {
   callingCode = "55";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "55";
+
+  /**
    * Capital city
    */
   capital = "Brasilia";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "8,511,965.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Brazil extends Country {
    * Portuguese name of the country
    */
   pt = "Brasil";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Brazil";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Brasilien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Brasilien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Brasil";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Brazylia";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Brazílie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Brazília";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Brazilija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Brazil";
 }

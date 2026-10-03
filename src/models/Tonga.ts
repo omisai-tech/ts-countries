@@ -32,9 +32,19 @@ export class Tonga extends Country {
   callingCode = "676";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "676";
+
+  /**
    * Capital city
    */
   capital = "Nuku'alofa";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "748.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Tonga extends Country {
    * Portuguese name of the country
    */
   pt = "Tonga";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Tonga";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Tonga";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Tonga";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Tonga";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Tonga";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Tonga";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Tonga";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Tonga";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Laka dvokolica";
 }

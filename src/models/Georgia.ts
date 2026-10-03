@@ -32,9 +32,19 @@ export class Georgia extends Country {
   callingCode = "995";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "995";
+
+  /**
    * Capital city
    */
   capital = "Tbilisi";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "69,700.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Georgia extends Country {
    * Portuguese name of the country
    */
   pt = "Geórgia";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Georgia";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Georgien";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Georgien";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Georgia";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Gruzja";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Gruzie";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Gruzínsko";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Gruzija";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Gruzija";
 }

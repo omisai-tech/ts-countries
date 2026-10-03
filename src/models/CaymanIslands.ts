@@ -32,9 +32,19 @@ export class CaymanIslands extends Country {
   callingCode = "1-345";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "1-345";
+
+  /**
    * Capital city
    */
   capital = "George Town";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "262.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class CaymanIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Cayman";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Cayman Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Caymanøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Caymanöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Caymanøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Kajmany";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Kajmanské ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Kajmanské ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Kajmanski otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Kajmanski otoci";
 }

@@ -32,9 +32,19 @@ export class PitcairnIslands extends Country {
   callingCode = "870";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "870";
+
+  /**
    * Capital city
    */
   capital = "Adamstown";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "47.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class PitcairnIslands extends Country {
    * Portuguese name of the country
    */
   pt = "Ilhas Pitcairn";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Pitcairn Islands";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Pitcairnøerne";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Pitcairnöarna";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Pitcairnøyene";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Wyspy Pitcairn";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Pitcairnovy ostrovy";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Pitcairnove ostrovy";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Pitcairnovi otoki";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Pitcairnovi otoci";
 }

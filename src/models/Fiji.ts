@@ -32,9 +32,19 @@ export class Fiji extends Country {
   callingCode = "679";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "679";
+
+  /**
    * Capital city
    */
   capital = "Suva";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "18,270.0";
 
   /**
    * Continent
@@ -83,4 +93,49 @@ export class Fiji extends Country {
    * Portuguese name of the country
    */
   pt = "Fiji";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "Fiji";
+
+  /**
+   * Danish name of the country
+   */
+  da = "Fiji";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "Fiji";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "Fiji";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "Fidżi";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "Fidži";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "Fidži";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "Fidži";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "Fidži";
 }
