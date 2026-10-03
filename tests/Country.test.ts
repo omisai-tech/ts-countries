@@ -9,7 +9,9 @@ class TestCountry extends Country {
   numeric = '840';
   fipCode = 'US';
   callingCode = '1';
+  dial = '1';
   capital = 'Washington';
+  area = '9,629,091.0';
   continent = Continent.NA;
   en = 'United States';
   hu = 'Egyesült Államok';
@@ -18,6 +20,15 @@ class TestCountry extends Country {
   it = 'stati Uniti';
   fr = 'États-Unis';
   pt = 'Estados Unidos';
+  nl = 'Verenigde Staten';
+  da = 'Forenede Stater';
+  sv = 'Förenta staterna';
+  no = 'USA';
+  pl = 'Stany Zjednoczone';
+  cs = 'Spojené státy';
+  sk = 'Spojené štáty';
+  sl = 'Združene države Amerike';
+  hr = 'Sjedinjene Države';
 }
 
 describe('Country', () => {
@@ -36,6 +47,15 @@ describe('Country', () => {
       expect(country.getName('it')).toBe('stati Uniti');
       expect(country.getName('fr')).toBe('États-Unis');
       expect(country.getName('pt')).toBe('Estados Unidos');
+      expect(country.getName('nl')).toBe('Verenigde Staten');
+      expect(country.getName('da')).toBe('Forenede Stater');
+      expect(country.getName('sv')).toBe('Förenta staterna');
+      expect(country.getName('no')).toBe('USA');
+      expect(country.getName('pl')).toBe('Stany Zjednoczone');
+      expect(country.getName('cs')).toBe('Spojené státy');
+      expect(country.getName('sk')).toBe('Spojené štáty');
+      expect(country.getName('sl')).toBe('Združene države Amerike');
+      expect(country.getName('hr')).toBe('Sjedinjene Države');
     });
   });
 
@@ -50,7 +70,9 @@ describe('Country', () => {
         numeric: '840',
         fipCode: 'US',
         callingCode: '1',
+        dial: '1',
         capital: 'Washington',
+        area: '9,629,091.0',
         continent: Continent.NA,
         en: 'United States',
         hu: 'Egyesült Államok',
@@ -59,6 +81,15 @@ describe('Country', () => {
         it: 'stati Uniti',
         fr: 'États-Unis',
         pt: 'Estados Unidos',
+        nl: 'Verenigde Staten',
+        da: 'Forenede Stater',
+        sv: 'Förenta staterna',
+        no: 'USA',
+        pl: 'Stany Zjednoczone',
+        cs: 'Spojené státy',
+        sk: 'Spojené štáty',
+        sl: 'Združene države Amerike',
+        hr: 'Sjedinjene Države',
       });
     });
 
@@ -84,7 +115,9 @@ describe('Country', () => {
       const country = new TestCountry();
       expect(country.fipCode).toBe('US');
       expect(country.callingCode).toBe('1');
+      expect(country.dial).toBe('1');
       expect(country.capital).toBe('Washington');
+      expect(country.area).toBe('9,629,091.0');
       expect(country.continent).toBe(Continent.NA);
     });
   });
