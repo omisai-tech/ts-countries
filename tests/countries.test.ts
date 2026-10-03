@@ -91,7 +91,9 @@ describe('Generated Country Classes', () => {
       expect(usa).toHaveProperty('numeric');
       expect(usa).toHaveProperty('fipCode');
       expect(usa).toHaveProperty('callingCode');
+      expect(usa).toHaveProperty('dial');
       expect(usa).toHaveProperty('capital');
+      expect(usa).toHaveProperty('area');
       expect(usa).toHaveProperty('continent');
       expect(usa).toHaveProperty('en');
       expect(usa).toHaveProperty('hu');
@@ -100,6 +102,35 @@ describe('Generated Country Classes', () => {
       expect(usa).toHaveProperty('it');
       expect(usa).toHaveProperty('fr');
       expect(usa).toHaveProperty('pt');
+      expect(usa).toHaveProperty('nl');
+      expect(usa).toHaveProperty('da');
+      expect(usa).toHaveProperty('sv');
+      expect(usa).toHaveProperty('no');
+      expect(usa).toHaveProperty('pl');
+      expect(usa).toHaveProperty('cs');
+      expect(usa).toHaveProperty('sk');
+      expect(usa).toHaveProperty('sl');
+      expect(usa).toHaveProperty('hr');
+    });
+
+    it('should preserve formatted and fractional area values from the CSV', async () => {
+      const { UnitedStates, VaticanCity } = await import('../src/index');
+
+      expect(new UnitedStates().area).toBe('9,629,091.0');
+      expect(new VaticanCity().area).toBe('0.4');
+    });
+
+    it('should retain dial as a deprecated telephone country code', async () => {
+      const { UnitedStates, AntiguaAndBarbuda } = await import('../src/index');
+
+      for (const [country, code] of [
+        [new UnitedStates(), '1'],
+        [new AntiguaAndBarbuda(), '1-268'],
+      ] as const) {
+        expect(country.callingCode).toBe(code);
+        expect(country.dial).toBe(code);
+        expect(country.toJSON()).toMatchObject({ callingCode: code, dial: code });
+      }
     });
 
     it('should inherit from Country class', async () => {
@@ -130,17 +161,33 @@ describe('Generated Country Classes', () => {
   });
 
   describe('Multi-language Support', () => {
-    it('should have names in all 7 languages', async () => {
-      const { France } = await import('../src/index');
-      const france = new France();
+    it('should expose all 16 CSV language values through properties, getName and JSON', async () => {
+      const { Turkey } = await import('../src/index');
+      const turkey = new Turkey();
+      const json = turkey.toJSON();
 
-      expect(france.en).toBeTruthy();
-      expect(france.hu).toBeTruthy();
-      expect(france.de).toBeTruthy();
-      expect(france.es).toBeTruthy();
-      expect(france.it).toBeTruthy();
-      expect(france.fr).toBeTruthy();
-      expect(france.pt).toBeTruthy();
+      for (const [language, name] of [
+        ['en', 'Turkey'],
+        ['hu', 'Törökország'],
+        ['de', 'Türkei'],
+        ['es', 'Turquía'],
+        ['it', 'Turchia'],
+        ['fr', 'Turquie'],
+        ['pt', 'Turquia'],
+        ['nl', 'Turkije'],
+        ['da', 'Tyrkiet'],
+        ['sv', 'Turkiet'],
+        ['no', 'Tyrkia'],
+        ['pl', 'Turcja'],
+        ['cs', 'Turecko'],
+        ['sk', 'Turecko'],
+        ['sl', 'Turčija'],
+        ['hr', 'Turska'],
+      ] as const) {
+        expect(turkey[language]).toBe(name);
+        expect(turkey.getName(language)).toBe(name);
+        expect(json[language]).toBe(name);
+      }
     });
 
     it('should return correct language using getName', async () => {
