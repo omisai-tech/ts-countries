@@ -21,8 +21,14 @@ export abstract class Country implements ICountry {
   /** Telephone country code */
   abstract callingCode: string;
 
+  /** @deprecated Will be removed in the next major version. Use callingCode instead. */
+  abstract dial: string;
+
   /** Capital city */
   abstract capital: string;
+
+  /** Total area in square kilometers */
+  abstract area: string;
 
   /** Continent code */
   abstract continent: Continent;
@@ -48,12 +54,57 @@ export abstract class Country implements ICountry {
   /** Portuguese name of the country */
   abstract pt: string;
 
+  /** Dutch name of the country */
+  abstract nl: string;
+
+  /** Danish name of the country */
+  abstract da: string;
+
+  /** Swedish name of the country */
+  abstract sv: string;
+
+  /** Norwegian name of the country */
+  abstract no: string;
+
+  /** Polish name of the country */
+  abstract pl: string;
+
+  /** Czech name of the country */
+  abstract cs: string;
+
+  /** Slovak name of the country */
+  abstract sk: string;
+
+  /** Slovenian name of the country */
+  abstract sl: string;
+
+  /** Croatian name of the country */
+  abstract hr: string;
+
   /**
    * Get the country name in a specific language
-   * @param lang Language code (en, hu, de, es, it, fr, pt)
+   * @param lang Language code (en, hu, de, es, it, fr, pt, nl, da, sv, no, pl, cs, sk, sl, hr)
    * @returns Country name in the specified language
    */
-  getName(lang: "en" | "hu" | "de" | "es" | "it" | "fr" | "pt" = "en"): string {
+  getName(
+    lang:
+      | "en"
+      | "hu"
+      | "de"
+      | "es"
+      | "it"
+      | "fr"
+      | "pt"
+      | "nl"
+      | "da"
+      | "sv"
+      | "no"
+      | "pl"
+      | "cs"
+      | "sk"
+      | "sl"
+      | "hr" = "en",
+  ): string {
     return this[lang];
   }
 
@@ -67,7 +118,9 @@ export abstract class Country implements ICountry {
       numeric: this.numeric,
       fipCode: this.fipCode,
       callingCode: this.callingCode,
+      dial: this.dial,
       capital: this.capital,
+      area: this.area,
       continent: this.continent,
       en: this.en,
       hu: this.hu,
@@ -76,6 +129,15 @@ export abstract class Country implements ICountry {
       it: this.it,
       fr: this.fr,
       pt: this.pt,
+      nl: this.nl,
+      da: this.da,
+      sv: this.sv,
+      no: this.no,
+      pl: this.pl,
+      cs: this.cs,
+      sk: this.sk,
+      sl: this.sl,
+      hr: this.hr,
     };
   }
 }
