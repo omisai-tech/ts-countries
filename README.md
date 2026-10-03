@@ -9,13 +9,14 @@ TypeScript package for country data with classes and interfaces generated from I
 ## Features
 
 - Fairly complete country data with 250+ countries
-- Multi-language support (EN, HU, DE, ES, IT, FR, PT)
+- Multi-language support (EN, HU, DE, ES, IT, FR, PT, NL, DA, SV, NO, PL, CS, SK, SL, HR)
 - TypeScript with full type definitions
 - Individual class for each country
 - ISO 3166-1 codes (alpha-2, alpha-3, numeric)
 - FIPS code (Federal Information Processing Standard)
 - Telephone country codes
 - Capital cities
+- Total area in square kilometers
 - Continent classification
 - 100% functional test coverage
 - Compatible with Node.js, Bun
@@ -64,17 +65,23 @@ console.log(usa.en); // "United States"
 console.log(usa.alpha2); // "US"
 console.log(usa.callingCode); // "1"
 console.log(usa.capital); // "Washington"
+console.log(usa.area); // "9,629,091.0" (square kilometers, stored as a string)
 
 // Get name in different languages
 const germany = new Germany();
 console.log(germany.getName("en")); // "Germany"
 console.log(germany.getName("de")); // "Deutschland"
 console.log(germany.getName("fr")); // "Allemagne"
+console.log(germany.getName("pl")); // "Niemcy"
 
 // Convert to JSON
 const japanData = new Japan().toJSON();
 console.log(japanData);
 ```
+
+Country names are available as properties and through `getName()` in English (`en`), Hungarian (`hu`), German (`de`), Spanish (`es`), Italian (`it`), French (`fr`), Portuguese (`pt`), Dutch (`nl`), Danish (`da`), Swedish (`sv`), Norwegian (`no`), Polish (`pl`), Czech (`cs`), Slovak (`sk`), Slovenian (`sl`), and Croatian (`hr`). Values are preserved from the source CSV, including the formatting of `area`. `toJSON()` includes all country properties.
+
+Use `callingCode` for the telephone country code. The legacy `dial` property contains the same CSV value and is deprecated; it will be removed in the next major version.
 
 ## Project Structure
 
