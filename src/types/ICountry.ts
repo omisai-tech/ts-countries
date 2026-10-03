@@ -19,8 +19,14 @@ export interface ICountry {
   /** Telephone country code */
   callingCode: string;
 
+  /** @deprecated Will be removed in the next major version. Use callingCode instead. */
+  dial: string;
+
   /** Capital city */
   capital: string;
+
+  /** Total area in square kilometers */
+  area: string;
 
   /** Continent code */
   continent: Continent;
@@ -45,4 +51,31 @@ export interface ICountry {
 
   /** Portuguese name of the country */
   pt: string;
+
+  /** Dutch name of the country */
+  nl: string;
+
+  /** Danish name of the country */
+  da: string;
+
+  /** Swedish name of the country */
+  sv: string;
+
+  /** Norwegian name of the country */
+  no: string;
+
+  /** Polish name of the country */
+  pl: string;
+
+  /** Czech name of the country */
+  cs: string;
+
+  /** Slovak name of the country */
+  sk: string;
+
+  /** Slovenian name of the country */
+  sl: string;
+
+  /** Croatian name of the country */
+  hr: string;
 }
