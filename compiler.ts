@@ -61,6 +61,15 @@ records.forEach((data: string[], index: number) => {
     it,
     fr,
     pt,
+    nl,
+    da,
+    sv,
+    no,
+    pl,
+    cs,
+    sk,
+    sl,
+    hr,
   ] = data;
 
   const className = getClassName(en);
@@ -99,9 +108,19 @@ export class ${className} extends Country {
   callingCode = "${escapeString(callingCode)}";
 
   /**
+   * @deprecated Will be removed in the next major version. Use callingCode instead.
+   */
+  dial = "${escapeString(callingCode)}";
+
+  /**
    * Capital city
    */
   capital = "${escapeString(capital)}";
+
+  /**
+   * Total area in square kilometers
+   */
+  area = "${escapeString(area)}";
 
   /**
    * Continent
@@ -150,6 +169,51 @@ export class ${className} extends Country {
    * Portuguese name of the country
    */
   pt = "${escapeString(pt)}";
+
+  /**
+   * Dutch name of the country
+   */
+  nl = "${escapeString(nl)}";
+
+  /**
+   * Danish name of the country
+   */
+  da = "${escapeString(da)}";
+
+  /**
+   * Swedish name of the country
+   */
+  sv = "${escapeString(sv)}";
+
+  /**
+   * Norwegian name of the country
+   */
+  no = "${escapeString(no)}";
+
+  /**
+   * Polish name of the country
+   */
+  pl = "${escapeString(pl)}";
+
+  /**
+   * Czech name of the country
+   */
+  cs = "${escapeString(cs)}";
+
+  /**
+   * Slovak name of the country
+   */
+  sk = "${escapeString(sk)}";
+
+  /**
+   * Slovenian name of the country
+   */
+  sl = "${escapeString(sl)}";
+
+  /**
+   * Croatian name of the country
+   */
+  hr = "${escapeString(hr)}";
 }
 `;
 
