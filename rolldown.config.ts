@@ -2,7 +2,6 @@ import { defineConfig, type MinifyOptions } from "rolldown";
 import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
-import { inlineStringEnum } from "./scripts/inline-string-enum";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -27,7 +26,6 @@ export default defineConfig([
   // ESM build
   {
     input: "src/index.ts",
-    plugins: [inlineStringEnum(join(__dirname, "src/types/Continent.ts"))],
     output: {
       file: "dist/index.js",
       format: "esm",
@@ -41,7 +39,6 @@ export default defineConfig([
   // CommonJS build
   {
     input: "src/index.ts",
-    plugins: [inlineStringEnum(join(__dirname, "src/types/Continent.ts"))],
     output: {
       file: "dist/index.cjs",
       format: "cjs",
