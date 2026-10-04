@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Compact generated country data with shared initialization and serialization, preserving country properties and JSON output
 - Minified ESM and CommonJS release files while preserving class names and downstream tree shaking
 
+### Fixed
+
+- Type-check CI failures caused by legacy Node module resolution, using ESNext modules and bundler resolution for the Rolldown build
+
 ## [1.1.0]
 
 ### Added
