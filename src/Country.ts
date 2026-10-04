@@ -1,5 +1,6 @@
-import { Continent } from "./types/Continent";
-import { ICountry } from "./types/ICountry";
+import type { Continent } from "./types/Continent";
+import type { ICountry } from "./types/ICountry";
+import { countryFields } from "./internal/countryData";
 
 /**
  * Abstract base Country class
@@ -112,32 +113,8 @@ export abstract class Country implements ICountry {
    * Get country data as a plain object
    */
   toJSON(): ICountry {
-    return {
-      alpha2: this.alpha2,
-      alpha3: this.alpha3,
-      numeric: this.numeric,
-      fipCode: this.fipCode,
-      callingCode: this.callingCode,
-      dial: this.dial,
-      capital: this.capital,
-      area: this.area,
-      continent: this.continent,
-      en: this.en,
-      hu: this.hu,
-      de: this.de,
-      es: this.es,
-      it: this.it,
-      fr: this.fr,
-      pt: this.pt,
-      nl: this.nl,
-      da: this.da,
-      sv: this.sv,
-      no: this.no,
-      pl: this.pl,
-      cs: this.cs,
-      sk: this.sk,
-      sl: this.sl,
-      hr: this.hr,
-    };
+    return Object.fromEntries(
+      countryFields.map((field) => [field, this[field]]),
+    ) as unknown as ICountry;
   }
 }
