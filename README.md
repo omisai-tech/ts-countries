@@ -13,6 +13,7 @@ TypeScript package for country data with classes and interfaces generated from I
 - TypeScript with full type definitions
 - Individual class for each country
 - Tree-shakeable ESM exports
+- Compact country data and minified ESM/CommonJS builds
 - ISO 3166-1 codes (alpha-2, alpha-3, numeric)
 - FIPS code (Federal Information Processing Standard)
 - Telephone country codes
@@ -25,21 +26,25 @@ TypeScript package for country data with classes and interfaces generated from I
 ## Installation
 
 ### Bun
+
 ```bash
 bun add @omisai/countries
 ```
 
 ### NPM
+
 ```bash
 npm install @omisai/countries
 ```
 
 ### PNPM
+
 ```bash
 pnpm add @omisai/countries
 ```
 
 ### YARN
+
 ```bash
 yarn add @omisai/countries
 ```
@@ -50,9 +55,9 @@ yarn add @omisai/countries
 import { UnitedStates } from "@omisai/countries";
 
 const usa = new UnitedStates();
-console.log(usa.en);        // "United States"
-console.log(usa.alpha2);    // "US"
-console.log(usa.callingCode);      // "1"
+console.log(usa.en); // "United States"
+console.log(usa.alpha2); // "US"
+console.log(usa.callingCode); // "1"
 ```
 
 ## Usage
@@ -98,6 +103,10 @@ Production bundlers can remove unused country classes and shared exports, includ
 
 Tree shaking happens in your bundler. Direct Node.js or Bun imports load the package as built; CommonJS (`require`) optimizations depend on the consumer's bundler. Enumerating all exports through a module namespace keeps those exports in the bundle.
 
+Both builds store country data compactly and share initialization and serialization code. All country properties remain own, writable properties, and repeated values remain independent when you change them. Class names, language values, and JSON output are preserved.
+
+Run `npm run size` to build and measure the published files and consumer bundles, including their gzip and Brotli sizes. The report distinguishes a tree-shaken single-country ESM import from full-data ESM and CommonJS bundles.
+
 ## Project Structure
 
 ```
@@ -127,6 +136,9 @@ bun run compile
 # Build for production (ESM + CJS)
 bun run build
 
+# Build and measure package and consumer bundle sizes
+npm run size
+
 # Run tests
 bun test
 
@@ -135,6 +147,15 @@ bun run test:coverage
 
 # Type check
 bun run typecheck
+
+# Lint with oxlint (use lint:fix to apply automatic fixes)
+bun run lint
+
+# Format with oxfmt
+bun run format
+
+# Check formatting without changing files
+bun run format:check
 
 # Clean generated files
 bun run clean
@@ -146,6 +167,7 @@ bun run rebuild
 ## Runtime Compatibility
 
 ### Node.js
+
 ```typescript
 import { UnitedStates } from "@omisai/countries";
 // or
@@ -153,6 +175,7 @@ const { UnitedStates } = require("@omisai/countries");
 ```
 
 ### Bun
+
 ```typescript
 import { UnitedStates } from "@omisai/countries";
 ```
