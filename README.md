@@ -129,6 +129,9 @@ ts-countries/
 
 ## Development Scripts
 
+Vitest 5 requires Node.js 22.12+ on the 22.x line, 24.x, or 26+. Install dependencies
+with `npm ci` or `bun install --frozen-lockfile` before running the development scripts.
+
 ```bash
 # Generate country classes from CSV
 bun run compile
@@ -140,7 +143,7 @@ bun run build
 npm run size
 
 # Run tests
-bun test
+bun run test
 
 # Run tests with coverage
 bun run test:coverage
@@ -189,7 +192,7 @@ The package includes comprehensive tests that run on Node.js, Bun:
 npm test
 
 # Bun
-bun test
+bun run test
 ```
 
 ## Roadmap
