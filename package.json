@@ -58,7 +58,7 @@
     "oxlint": "^1.86.0",
     "rolldown": "^1.0.0-beta.55",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
+    "typescript": "^7.0.2",
     "vitest": "^4.0.16"
   },
   "engines": {
