@@ -1,6 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 import { existsSync } from 'fs';
-import { join } from 'path';
 
 describe('Generated Country Classes', () => {
   beforeAll(async () => {
