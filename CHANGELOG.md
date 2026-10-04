@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Side-effect-free package metadata and tree shaking for unused country classes and shared exports in ESM bundles
+- Bundle-size reporting for published ESM/CommonJS files and consumer bundles, including gzip and Brotli sizes
+- Oxfmt and oxlint development dependencies, shared formatting and lint configurations, and CI checks
+
+### Changed
+
+- Compact generated country data with shared initialization and serialization, preserving country properties and JSON output
+- Minified ESM and CommonJS release files while preserving class names and downstream tree shaking
 
 ## [1.1.0]
 
