@@ -6,7 +6,6 @@ import {
   Australia,
   France,
   Canada,
-  Continent,
   ContinentNames,
 } from "./src/index";
 
