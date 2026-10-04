@@ -5,12 +5,14 @@ Thank you for your interest in contributing! 🎉
 ## Development Setup
 
 1. **Fork and clone the repository**
+
    ```bash
    git clone https://github.com/omisai-tech/ts-countries.git
    cd ts-countries
    ```
 
 2. **Install dependencies**
+
    ```bash
       # BUN
       bun add @omisai/countries
@@ -23,6 +25,7 @@ Thank you for your interest in contributing! 🎉
    ```
 
 3. **Generate country classes**
+
    ```bash
    bun run compile
    ```
@@ -37,6 +40,7 @@ Thank you for your interest in contributing! 🎉
 ### Making Changes
 
 1. Create a new branch for your feature or fix:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -45,6 +49,8 @@ Thank you for your interest in contributing! 🎉
    - Code follows TypeScript best practices
    - All tests pass: `bun test`
    - Type checking passes: `bun run typecheck`
+   - Linting passes: `bun run lint`
+   - Formatting passes: `bun run format:check`
    - Code builds successfully: `bun run build`
 
 3. Write or update tests for your changes
@@ -121,12 +127,18 @@ If you need to update the `countries.csv` file:
 
 - [ ] Tests added/updated and passing
 - [ ] Type checking passes (`bun run typecheck`)
+- [ ] Linting and formatting pass (`bun run lint` and `bun run format:check`)
 - [ ] Documentation updated
 - [ ] Commit messages follow convention
 - [ ] No unnecessary files committed
 - [ ] Branch is up to date with main
 
 ## Code Style
+
+Run `bun run format` to apply oxfmt formatting and `bun run lint:fix` to apply
+oxlint's automatic fixes. The configuration files `.oxfmtrc.json` and `.oxlintrc.json`
+are shared by local commands and CI. Country generation also formats its output.
+Use Node.js 20.19+ or 22.12+ when running these development tools with Node.js.
 
 - Use TypeScript strict mode
 - Follow existing code patterns
@@ -137,6 +149,7 @@ If you need to update the `countries.csv` file:
 ## Questions?
 
 Feel free to open an issue for:
+
 - Bug reports
 - Feature requests
 - Questions about the codebase
