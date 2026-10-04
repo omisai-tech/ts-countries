@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Nauru (NR)
@@ -8,43 +9,43 @@ export class Nauru extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NRU";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "520";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "674";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "674";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Yaren";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "21.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Nauru extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Nauru";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Nauru";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Nauru";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Nauru";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Nauru";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Nauru";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Nauru";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Nauru";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Nauru";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nauru";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Nauru";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Nauru";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Nauru";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Nauru";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Nauru";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Nauru";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NR",
+      "NRU",
+      "520",
+      0,
+      "674",
+      4,
+      "Yaren",
+      "21.0",
+      "OC",
+      "Nauru",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Guam (GU)
@@ -8,43 +9,43 @@ export class Guam extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GU";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GUM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "316";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GQ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-671";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-671";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Hagatna";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "549.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Guam extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Guam";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Guam";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Guam";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Guam";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Guam";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Guam";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Guam";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Guam";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Guam";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Guam";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Guam";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Guam";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Guam";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Guam";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Guam";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Guam";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GU",
+      "GUM",
+      "316",
+      "GQ",
+      "1-671",
+      4,
+      "Hagatna",
+      "549.0",
+      "OC",
+      "Guam",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

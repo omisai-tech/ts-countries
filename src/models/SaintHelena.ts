@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Saint Helena (SH)
@@ -8,43 +9,43 @@ export class SaintHelena extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SH";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SHN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "654";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SH";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "290";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "290";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Jamestown";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "410.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SaintHelena extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Saint Helena";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szent Ilona";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "St. Helena";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "santa elena";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Sant'Elena";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Sainte-Hélène";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Santa Helena";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Saint Helena";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sankt Helena";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sankta Helena";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "St. Helena";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Święta Helena";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Svatá Helena";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Svätá Helena";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sveta Helena";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sveta Helena";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SH",
+      "SHN",
+      "654",
+      0,
+      "290",
+      4,
+      "Jamestown",
+      "410.0",
+      "AF",
+      "Saint Helena",
+      "Szent Ilona",
+      "St. Helena",
+      "santa elena",
+      "Sant'Elena",
+      "Sainte-Hélène",
+      "Santa Helena",
+      9,
+      "Sankt Helena",
+      "Sankta Helena",
+      11,
+      "Święta Helena",
+      "Svatá Helena",
+      "Svätá Helena",
+      "Sveta Helena",
+      23,
+    ]);
+  }
 }

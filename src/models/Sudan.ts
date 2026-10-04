@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Sudan (SD)
@@ -8,43 +9,43 @@ export class Sudan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SD";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SDN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "729";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "249";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "249";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Khartoum";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,861,484.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Sudan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Sudan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szudán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Sudan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Sudán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Sudan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Soudan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Sudão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Sudan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sudan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sudan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sudan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Sudan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Súdán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Sudán";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sudan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sudan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SD",
+      "SDN",
+      "729",
+      "SU",
+      "249",
+      4,
+      "Khartoum",
+      "1,861,484.0",
+      "AF",
+      "Sudan",
+      "Szudán",
+      9,
+      "Sudán",
+      9,
+      "Soudan",
+      "Sudão",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Súdán",
+      12,
+      9,
+      9,
+    ]);
+  }
 }

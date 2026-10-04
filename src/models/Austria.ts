@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Austria (AT)
@@ -8,43 +9,43 @@ export class Austria extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AT";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "AUT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "40";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "43";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "43";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Vienna";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "83,858.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Austria extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Austria";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Ausztria";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Österreich";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Austria";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Austria";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "L'Autriche";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Áustria";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Austria";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Østrig";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Österrike";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Østerrike";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Austria";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Rakousko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Rakúsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Avstrija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Austrija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AT",
+      "AUT",
+      "40",
+      "AU",
+      "43",
+      4,
+      "Vienna",
+      "83,858.0",
+      "EU",
+      "Austria",
+      "Ausztria",
+      "Österreich",
+      9,
+      9,
+      "L'Autriche",
+      "Áustria",
+      9,
+      "Østrig",
+      "Österrike",
+      "Østerrike",
+      9,
+      "Rakousko",
+      "Rakúsko",
+      "Avstrija",
+      "Austrija",
+    ]);
+  }
 }

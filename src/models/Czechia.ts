@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Czechia (CZ)
@@ -8,43 +9,43 @@ export class Czechia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CZE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "203";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "EZ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "420";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "420";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Prague";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "78,866.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Czechia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Czechia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Csehország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Tschechien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "República Checa";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Repubblica Ceca";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "République tchèque";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Tcheca";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Czechia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tjekkiet";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tjeckien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tsjekkia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Czechy";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Česko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Česko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Češka";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Češka";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CZ",
+      "CZE",
+      "203",
+      "EZ",
+      "420",
+      4,
+      "Prague",
+      "78,866.0",
+      "EU",
+      "Czechia",
+      "Csehország",
+      "Tschechien",
+      "República Checa",
+      "Repubblica Ceca",
+      "République tchèque",
+      "Tcheca",
+      9,
+      "Tjekkiet",
+      "Tjeckien",
+      "Tsjekkia",
+      "Czechy",
+      "Česko",
+      21,
+      "Češka",
+      23,
+    ]);
+  }
 }

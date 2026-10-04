@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Ecuador (EC)
@@ -8,43 +9,43 @@ export class Ecuador extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "EC";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ECU";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "218";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "EC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "593";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "593";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Quito";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "283,560.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Ecuador extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Ecuador";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Ecuador";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Ecuador";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Ecuador";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Ecuador";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Équateur";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Equador";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Ecuador";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Ecuador";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Ecuador";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Ecuador";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Ekwador";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Ekvádor";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Ekvádor";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Ekvador";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Ekvador";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "EC",
+      "ECU",
+      "218",
+      0,
+      "593",
+      4,
+      "Quito",
+      "283,560.0",
+      "SA",
+      "Ecuador",
+      9,
+      9,
+      9,
+      9,
+      "Équateur",
+      "Equador",
+      9,
+      9,
+      9,
+      9,
+      "Ekwador",
+      "Ekvádor",
+      21,
+      "Ekvador",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * St Vincent and Grenadines (VC)
@@ -8,43 +9,43 @@ export class StVincentAndGrenadines extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "VC";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "VCT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "670";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "VC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-784";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-784";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kingstown";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "389.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class StVincentAndGrenadines extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "St Vincent and Grenadines";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "St Vincent és Grenadine-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "St. Vincent und die Grenadinen";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "San Vicente y las Granadinas";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Saint Vincent e Grenadine";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Saint-Vincent-et-les Grenadines";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "São Vicente e Granadinas";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "St Vincent and Grenadines";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "St. Vincent og Grenadinerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "St Vincent och Grenadinerna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "St. Vincent og Grenadinene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Saint Vincent i Grenadyny";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Svatý Vincenc a Grenadiny";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Svätý Vincent a Grenadíny";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sveti Vincent in Grenadine";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sveti Vincent i Grenadini";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "VC",
+      "VCT",
+      "670",
+      0,
+      "1-784",
+      4,
+      "Kingstown",
+      "389.0",
+      "NA",
+      "St Vincent and Grenadines",
+      "St Vincent és Grenadine-szigetek",
+      "St. Vincent und die Grenadinen",
+      "San Vicente y las Granadinas",
+      "Saint Vincent e Grenadine",
+      "Saint-Vincent-et-les Grenadines",
+      "São Vicente e Granadinas",
+      9,
+      "St. Vincent og Grenadinerne",
+      "St Vincent och Grenadinerna",
+      "St. Vincent og Grenadinene",
+      "Saint Vincent i Grenadyny",
+      "Svatý Vincenc a Grenadiny",
+      "Svätý Vincent a Grenadíny",
+      "Sveti Vincent in Grenadine",
+      "Sveti Vincent i Grenadini",
+    ]);
+  }
 }

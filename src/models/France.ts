@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * France (FR)
@@ -8,43 +9,43 @@ export class France extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "FR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "FRA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "250";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "FR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "33";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "33";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Paris";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "547,030.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class France extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "France";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Franciaország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Frankreich";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Francia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Francia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "France";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "França";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "France";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Frankrig";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Frankrike";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Frankrike";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Francja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Francie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Francúzsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Francija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Francuska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "FR",
+      "FRA",
+      "250",
+      0,
+      "33",
+      4,
+      "Paris",
+      "547,030.0",
+      "EU",
+      "France",
+      "Franciaország",
+      "Frankreich",
+      "Francia",
+      12,
+      9,
+      "França",
+      9,
+      "Frankrig",
+      "Frankrike",
+      18,
+      "Francja",
+      "Francie",
+      "Francúzsko",
+      "Francija",
+      "Francuska",
+    ]);
+  }
 }

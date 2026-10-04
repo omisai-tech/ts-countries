@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Jersey (JE)
@@ -8,43 +9,43 @@ export class Jersey extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "JE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "JEY";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "832";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "JE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "44";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "44";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Saint Helier";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "116.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Jersey extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Jersey";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Jersey";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Jersey";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Jersey";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Jersey";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Jersey";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Jersey";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Jersey";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Jersey";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Jersey";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Jersey";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Jersey";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Jersey";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Jersey";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Jersey";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Jersey";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "JE",
+      "JEY",
+      "832",
+      0,
+      "44",
+      4,
+      "Saint Helier",
+      "116.0",
+      "EU",
+      "Jersey",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

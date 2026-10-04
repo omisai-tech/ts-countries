@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Curaçao (CW)
@@ -8,43 +9,43 @@ export class CuraAo extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CW";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CUW";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "531";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "UC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "599";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "599";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Willemstad";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "444.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class CuraAo extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Curaçao";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Curaçao";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Curacao";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Curazao";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Curacao";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Curacao";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Curaçau";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Curaçao";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Curaçao";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Curaçao";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Curaçao";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Curaçao";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Curaçao";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Curaçao";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Curaçao";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Curaçao";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CW",
+      "CUW",
+      "531",
+      "UC",
+      "599",
+      4,
+      "Willemstad",
+      "444.0",
+      "NA",
+      "Curaçao",
+      9,
+      "Curacao",
+      "Curazao",
+      11,
+      11,
+      "Curaçau",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

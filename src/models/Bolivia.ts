@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bolivia (BO)
@@ -8,43 +9,43 @@ export class Bolivia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BOL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "68";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BL";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "591";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "591";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Sucre";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,098,580.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Bolivia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bolivia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bolívia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bolivien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "bolivia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bolivia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bolivie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bolívia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bolivia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bolivia";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bolivia";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bolivia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Boliwia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bolívie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bolívia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Bolivija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bolivija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BO",
+      "BOL",
+      "68",
+      "BL",
+      "591",
+      4,
+      "Sucre",
+      "1,098,580.0",
+      "SA",
+      "Bolivia",
+      "Bolívia",
+      "Bolivien",
+      "bolivia",
+      9,
+      "Bolivie",
+      10,
+      9,
+      9,
+      9,
+      9,
+      "Boliwia",
+      "Bolívie",
+      10,
+      "Bolivija",
+      23,
+    ]);
+  }
 }

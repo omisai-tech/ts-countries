@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Russia (RU)
@@ -8,43 +9,43 @@ export class Russia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "RU";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "RUS";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "643";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "RS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "7";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "7";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Moscow";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "17,100,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Russia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Russia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Oroszország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Russland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Rusia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Russia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Russie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Rússia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Russia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Rusland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Ryssland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Russland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Rosja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Rusko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Rusko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Rusija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Rusija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "RU",
+      "RUS",
+      "643",
+      "RS",
+      "7",
+      4,
+      "Moscow",
+      "17,100,000.0",
+      "EU",
+      "Russia",
+      "Oroszország",
+      "Russland",
+      "Rusia",
+      9,
+      "Russie",
+      "Rússia",
+      9,
+      "Rusland",
+      "Ryssland",
+      11,
+      "Rosja",
+      "Rusko",
+      21,
+      "Rusija",
+      23,
+    ]);
+  }
 }

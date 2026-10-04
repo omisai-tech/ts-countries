@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Panama (PA)
@@ -8,43 +9,43 @@ export class Panama extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PAN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "591";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "PM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "507";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "507";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Panama City";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "78,200.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Panama extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Panama";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Panama";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Panama";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Panamá";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Panama";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Panama";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Panamá";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Panama";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Panama";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Panama";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Panama";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Panama";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Panama";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Panama";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Panama";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Panama";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PA",
+      "PAN",
+      "591",
+      "PM",
+      "507",
+      4,
+      "Panama City",
+      "78,200.0",
+      "NA",
+      "Panama",
+      9,
+      9,
+      "Panamá",
+      9,
+      9,
+      12,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

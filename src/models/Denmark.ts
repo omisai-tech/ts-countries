@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Denmark (DK)
@@ -8,43 +9,43 @@ export class Denmark extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "DK";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "DNK";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "208";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "DA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "45";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "45";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Copenhagen";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "43,094.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Denmark extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Denmark";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Dánia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Dänemark";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Dinamarca";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Danimarca";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Danemark";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Dinamarca";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Denmark";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Danmark";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Danmark";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Danmark";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Dania";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Dánsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Dánsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Danska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Danska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "DK",
+      "DNK",
+      "208",
+      "DA",
+      "45",
+      4,
+      "Copenhagen",
+      "43,094.0",
+      "EU",
+      "Denmark",
+      "Dánia",
+      "Dänemark",
+      "Dinamarca",
+      "Danimarca",
+      "Danemark",
+      12,
+      9,
+      "Danmark",
+      17,
+      17,
+      "Dania",
+      "Dánsko",
+      21,
+      "Danska",
+      23,
+    ]);
+  }
 }

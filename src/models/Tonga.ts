@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Tonga (TO)
@@ -8,43 +9,43 @@ export class Tonga extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TON";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "776";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "676";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "676";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Nuku'alofa";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "748.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Tonga extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Tonga";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Tonga";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Tonga";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Tonga";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Tonga";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Tonga";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Tonga";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Tonga";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tonga";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tonga";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tonga";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Tonga";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Tonga";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Tonga";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Tonga";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Laka dvokolica";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TO",
+      "TON",
+      "776",
+      "TN",
+      "676",
+      4,
+      "Nuku'alofa",
+      "748.0",
+      "OC",
+      "Tonga",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Laka dvokolica",
+    ]);
+  }
 }

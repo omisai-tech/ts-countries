@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Somalia (SO)
@@ -8,43 +9,43 @@ export class Somalia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SOM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "706";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "252";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "252";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Mogadishu";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "637,657.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Somalia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Somalia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szomália";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Somalia";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Somalia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Somalia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Somalie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Somália";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Somalia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Somalia";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Somalia";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Somalia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Somali";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Somálsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Somálsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Somalija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Somalija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SO",
+      "SOM",
+      "706",
+      0,
+      "252",
+      4,
+      "Mogadishu",
+      "637,657.0",
+      "AF",
+      "Somalia",
+      "Szomália",
+      9,
+      9,
+      9,
+      "Somalie",
+      "Somália",
+      9,
+      9,
+      9,
+      9,
+      "Somali",
+      "Somálsko",
+      21,
+      "Somalija",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Turkey (TR)
@@ -8,43 +9,43 @@ export class Turkey extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TUR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "792";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "90";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "90";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Ankara";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "780,580.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Turkey extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Turkey";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Törökország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Türkei";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Turquía";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Turchia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Turquie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Turquia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Turkije";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tyrkiet";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Turkiet";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tyrkia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Turcja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Turecko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Turecko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Turčija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Turska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TR",
+      "TUR",
+      "792",
+      "TU",
+      "90",
+      4,
+      "Ankara",
+      "780,580.0",
+      "AS",
+      "Turkey",
+      "Törökország",
+      "Türkei",
+      "Turquía",
+      "Turchia",
+      "Turquie",
+      "Turquia",
+      "Turkije",
+      "Tyrkiet",
+      "Turkiet",
+      "Tyrkia",
+      "Turcja",
+      "Turecko",
+      21,
+      "Turčija",
+      "Turska",
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Uganda (UG)
@@ -8,43 +9,43 @@ export class Uganda extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "UG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "UGA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "800";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "UG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "256";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "256";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kampala";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "236,040.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Uganda extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Uganda";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Uganda";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Uganda";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Uganda";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Uganda";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Ouganda";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Uganda";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Uganda";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Uganda";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Uganda";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Uganda";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Uganda";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Uganda";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Uganda";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Uganda";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Uganda";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "UG",
+      "UGA",
+      "800",
+      0,
+      "256",
+      4,
+      "Kampala",
+      "236,040.0",
+      "AF",
+      "Uganda",
+      9,
+      9,
+      9,
+      9,
+      "Ouganda",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

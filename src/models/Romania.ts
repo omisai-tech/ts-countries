@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Romania (RO)
@@ -8,43 +9,43 @@ export class Romania extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "RO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ROU";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "642";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "RO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "40";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "40";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bucharest";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "237,500.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Romania extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Romania";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Románia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Rumänien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Rumania";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Romania";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Roumanie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Romênia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Romania";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Rumænien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Rumänien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Romania";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Rumunia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Rumunsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Rumunsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Romunija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Rumunija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "RO",
+      "ROU",
+      "642",
+      0,
+      "40",
+      4,
+      "Bucharest",
+      "237,500.0",
+      "EU",
+      "Romania",
+      "Románia",
+      "Rumänien",
+      "Rumania",
+      9,
+      "Roumanie",
+      "Romênia",
+      9,
+      "Rumænien",
+      11,
+      9,
+      "Rumunia",
+      "Rumunsko",
+      21,
+      "Romunija",
+      "Rumunija",
+    ]);
+  }
 }

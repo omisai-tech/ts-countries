@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Syria (SY)
@@ -8,43 +9,43 @@ export class Syria extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SY";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SYR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "760";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SY";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "963";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "963";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Damascus";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "185,180.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Syria extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Syria";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szíria";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Syrien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Siria";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Siria";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Syrie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Síria";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Syria";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Syrien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Syrien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Syria";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Syria";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Sýrie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Sýria";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sirija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sirija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SY",
+      "SYR",
+      "760",
+      0,
+      "963",
+      4,
+      "Damascus",
+      "185,180.0",
+      "AS",
+      "Syria",
+      "Szíria",
+      "Syrien",
+      "Siria",
+      12,
+      "Syrie",
+      "Síria",
+      9,
+      11,
+      11,
+      9,
+      9,
+      "Sýrie",
+      "Sýria",
+      "Sirija",
+      23,
+    ]);
+  }
 }

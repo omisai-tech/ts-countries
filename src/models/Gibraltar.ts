@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Gibraltar (GI)
@@ -8,43 +9,43 @@ export class Gibraltar extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GIB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "292";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "350";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "350";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Gibraltar";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "6.5";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Gibraltar extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Gibraltar";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Gibraltár";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Gibraltar";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Gibraltar";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Gibilterra";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Gibraltar";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Gibraltar";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Gibraltar";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Gibraltar";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Gibraltar";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Gibraltar";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Gibraltar";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Gibraltar";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Gibraltár";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Gibraltar";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Gibraltar";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GI",
+      "GIB",
+      "292",
+      0,
+      "350",
+      4,
+      "Gibraltar",
+      "6.5",
+      "EU",
+      6,
+      "Gibraltár",
+      6,
+      6,
+      "Gibilterra",
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      10,
+      6,
+      6,
+    ]);
+  }
 }

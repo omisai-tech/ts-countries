@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Niue (NU)
@@ -8,43 +9,43 @@ export class Niue extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NU";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NIU";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "570";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "683";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "683";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Alofi";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "260.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Niue extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Niue";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Niue";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Niue";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Niue";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Niue";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Nioué";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Niue";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Niue";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Niue";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Niue";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Niue";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Niue";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Niue";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Niue";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Niue";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Niue";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NU",
+      "NIU",
+      "570",
+      "NE",
+      "683",
+      4,
+      "Alofi",
+      "260.0",
+      "OC",
+      "Niue",
+      9,
+      9,
+      9,
+      9,
+      "Nioué",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

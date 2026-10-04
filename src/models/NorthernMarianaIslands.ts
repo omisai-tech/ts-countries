@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Northern Mariana Islands (MP)
@@ -8,43 +9,43 @@ export class NorthernMarianaIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MP";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MNP";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "580";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CQ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-670";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-670";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Saipan";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "477.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class NorthernMarianaIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Northern Mariana Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Észak Mariana szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Nördliche Marianneninseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Marianas del Norte";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Marianne settentrionali";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Mariannes du Nord";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Marianas do Norte";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Northern Mariana Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Nordmarianerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nordmarianerna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Nord-Marianene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Mariany Północne";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Severní Mariany";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Severné Mariány";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Severni Marianski otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sjevernomarijanski otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MP",
+      "MNP",
+      "580",
+      "CQ",
+      "1-670",
+      4,
+      "Saipan",
+      "477.0",
+      "OC",
+      "Northern Mariana Islands",
+      "Észak Mariana szigetek",
+      "Nördliche Marianneninseln",
+      "Islas Marianas del Norte",
+      "Isole Marianne settentrionali",
+      "Îles Mariannes du Nord",
+      "Ilhas Marianas do Norte",
+      9,
+      "Nordmarianerne",
+      "Nordmarianerna",
+      "Nord-Marianene",
+      "Mariany Północne",
+      "Severní Mariany",
+      "Severné Mariány",
+      "Severni Marianski otoki",
+      "Sjevernomarijanski otoci",
+    ]);
+  }
 }

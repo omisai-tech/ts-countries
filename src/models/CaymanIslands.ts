@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Cayman Islands (KY)
@@ -8,43 +9,43 @@ export class CaymanIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KY";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CYM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "136";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CJ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-345";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-345";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "George Town";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "262.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class CaymanIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Cayman Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kajmán-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Cayman Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Caimán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Cayman";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Caïmans";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Cayman";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Cayman Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Caymanøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Caymanöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Caymanøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Kajmany";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kajmanské ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kajmanské ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kajmanski otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kajmanski otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KY",
+      "CYM",
+      "136",
+      "CJ",
+      "1-345",
+      4,
+      "George Town",
+      "262.0",
+      "NA",
+      "Cayman Islands",
+      "Kajmán-szigetek",
+      "Cayman Inseln",
+      "Islas Caimán",
+      "Isole Cayman",
+      "Îles Caïmans",
+      "Ilhas Cayman",
+      9,
+      "Caymanøerne",
+      "Caymanöarna",
+      "Caymanøyene",
+      "Wyspy Kajmany",
+      "Kajmanské ostrovy",
+      21,
+      "Kajmanski otoki",
+      "Kajmanski otoci",
+    ]);
+  }
 }

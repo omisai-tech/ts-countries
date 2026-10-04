@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Singapore (SG)
@@ -8,43 +9,43 @@ export class Singapore extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SGP";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "702";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "65";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "65";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Singapore";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "692.7";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Singapore extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Singapore";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szingapúr";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Singapur";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Singapur";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Singapore";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Singapour";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Cingapura";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Singapore";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Singapore";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Singapore";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Singapore";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Singapur";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Singapur";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Singapur";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Singapur";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Singapur";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SG",
+      "SGP",
+      "702",
+      "SN",
+      "65",
+      4,
+      "Singapore",
+      "692.7",
+      "AS",
+      6,
+      "Szingapúr",
+      "Singapur",
+      11,
+      6,
+      "Singapour",
+      "Cingapura",
+      6,
+      6,
+      6,
+      6,
+      11,
+      11,
+      11,
+      11,
+      11,
+    ]);
+  }
 }

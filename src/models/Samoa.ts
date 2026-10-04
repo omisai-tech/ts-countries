@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Samoa (WS)
@@ -8,43 +9,43 @@ export class Samoa extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "WS";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "WSM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "882";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "WS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "685";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "685";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Apia";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,944.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Samoa extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Samoa";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szamoa";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Samoa";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Samoa";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Samoa";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Samoa";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Samoa";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Samoa";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Samoa";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Samoa";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Samoa";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Samoa";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Samoa";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Samoa";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Samoa";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Samoa";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "WS",
+      "WSM",
+      "882",
+      0,
+      "685",
+      4,
+      "Apia",
+      "2,944.0",
+      "OC",
+      "Samoa",
+      "Szamoa",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

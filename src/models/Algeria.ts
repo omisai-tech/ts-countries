@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Algeria (DZ)
@@ -8,43 +9,43 @@ export class Algeria extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "DZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "DZA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "12";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "213";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "213";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Algiers";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,381,740.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Algeria extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Algeria";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Algéria";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Algerien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Argelia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Algeria";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Algérie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Argélia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Algeria";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Algeriet";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Algeriet";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Algerie";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Algieria";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Alžírsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Alžírsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Alžirija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Alžir";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "DZ",
+      "DZA",
+      "12",
+      "AG",
+      "213",
+      4,
+      "Algiers",
+      "2,381,740.0",
+      "AF",
+      "Algeria",
+      "Algéria",
+      "Algerien",
+      "Argelia",
+      9,
+      "Algérie",
+      "Argélia",
+      9,
+      "Algeriet",
+      17,
+      "Algerie",
+      "Algieria",
+      "Alžírsko",
+      21,
+      "Alžirija",
+      "Alžir",
+    ]);
+  }
 }

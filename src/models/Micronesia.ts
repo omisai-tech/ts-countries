@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Micronesia (FM)
@@ -8,43 +9,43 @@ export class Micronesia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "FM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "FSM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "583";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "FM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "691";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "691";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Palikir";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "702.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Micronesia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Micronesia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Mikronézia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Mikronesien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Micronesia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Micronesia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Micronésie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Micronésia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Micronesia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Mikronesien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Mikronesien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Mikronesia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Mikronezja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Mikronésie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Mikronézia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Mikronezija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Mikronezija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "FM",
+      "FSM",
+      "583",
+      0,
+      "691",
+      4,
+      "Palikir",
+      "702.0",
+      "OC",
+      "Micronesia",
+      "Mikronézia",
+      "Mikronesien",
+      9,
+      9,
+      "Micronésie",
+      "Micronésia",
+      9,
+      11,
+      11,
+      "Mikronesia",
+      "Mikronezja",
+      "Mikronésie",
+      10,
+      "Mikronezija",
+      23,
+    ]);
+  }
 }

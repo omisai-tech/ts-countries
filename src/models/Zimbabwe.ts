@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Zimbabwe (ZW)
@@ -8,43 +9,43 @@ export class Zimbabwe extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ZW";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ZWE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "716";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "ZI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "263";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "263";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Harare";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "390,580.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Zimbabwe extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Zimbabwe";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Zimbabwe";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Zimbabwe";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Zimbabue";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Zimbabwe";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Zimbabwe";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Zimbábue";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Zimbabwe";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Zimbabwe";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Zimbabwe";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Zimbabwe";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Zimbabwe";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Zimbabwe";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Zimbabwe";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Zimbabve";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Zimbabve";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ZW",
+      "ZWE",
+      "716",
+      "ZI",
+      "263",
+      4,
+      "Harare",
+      "390,580.0",
+      "AF",
+      "Zimbabwe",
+      9,
+      9,
+      "Zimbabue",
+      9,
+      9,
+      "Zimbábue",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Zimbabve",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Morocco (MA)
@@ -8,43 +9,43 @@ export class Morocco extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MAR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "504";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "212";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "212";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Rabat";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "446,550.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Morocco extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Morocco";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Marokkó";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Marokko";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Marruecos";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Marocco";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Maroc";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Marrocos";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Morocco";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Marokko";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Marocko";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Marokko";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Maroko";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Maroko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Maroko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Maroko";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Maroko";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MA",
+      "MAR",
+      "504",
+      "MO",
+      "212",
+      4,
+      "Rabat",
+      "446,550.0",
+      "AF",
+      "Morocco",
+      "Marokkó",
+      "Marokko",
+      "Marruecos",
+      "Marocco",
+      "Maroc",
+      "Marrocos",
+      9,
+      11,
+      "Marocko",
+      11,
+      "Maroko",
+      20,
+      20,
+      20,
+      20,
+    ]);
+  }
 }

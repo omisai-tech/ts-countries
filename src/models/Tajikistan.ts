@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Tajikistan (TJ)
@@ -8,43 +9,43 @@ export class Tajikistan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TJ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TJK";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "762";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "992";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "992";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Dushanbe";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "143,100.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Tajikistan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Tajikistan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Tádzsikisztán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Tadschikistan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Tayikistán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Tagikistan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Tadjikistan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Tadjiquistão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Tajikistan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tadsjikistan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tadzjikistan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tadsjikistan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Tadżykistan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Tádžikistán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Tadžikistan";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Tadžikistan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Tadžikistan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TJ",
+      "TJK",
+      "762",
+      "TI",
+      "992",
+      4,
+      "Dushanbe",
+      "143,100.0",
+      "AS",
+      "Tajikistan",
+      "Tádzsikisztán",
+      "Tadschikistan",
+      "Tayikistán",
+      "Tagikistan",
+      "Tadjikistan",
+      "Tadjiquistão",
+      9,
+      "Tadsjikistan",
+      "Tadzjikistan",
+      17,
+      "Tadżykistan",
+      "Tádžikistán",
+      "Tadžikistan",
+      22,
+      22,
+    ]);
+  }
 }

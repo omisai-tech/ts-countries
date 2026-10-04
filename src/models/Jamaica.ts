@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Jamaica (JM)
@@ -8,43 +9,43 @@ export class Jamaica extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "JM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "JAM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "388";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "JM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-876";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-876";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kingston";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "10,991.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Jamaica extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Jamaica";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Jamaica";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Jamaika";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Jamaica";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Giamaica";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Jamaïque";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Jamaica";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Jamaica";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Jamaica";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Jamaica";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Jamaica";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Jamajka";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Jamaica";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Jamajka";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Jamajka";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Jamajka";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "JM",
+      "JAM",
+      "388",
+      0,
+      "1-876",
+      4,
+      "Kingston",
+      "10,991.0",
+      "NA",
+      "Jamaica",
+      9,
+      "Jamaika",
+      9,
+      "Giamaica",
+      "Jamaïque",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Jamajka",
+      9,
+      20,
+      20,
+      20,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Mozambique (MZ)
@@ -8,43 +9,43 @@ export class Mozambique extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MOZ";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "508";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MZ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "258";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "258";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Maputo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "801,590.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Mozambique extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Mozambique";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Mozambik";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Mosambik";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Mozambique";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Mozambico";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Mozambique";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Moçambique";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Mozambique";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Mozambique";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Moçambique";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Mosambik";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Mozambik";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Mosambik";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Mozambik";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Mozambik";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Mozambik";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MZ",
+      "MOZ",
+      "508",
+      0,
+      "258",
+      4,
+      "Maputo",
+      "801,590.0",
+      "AF",
+      "Mozambique",
+      "Mozambik",
+      "Mosambik",
+      9,
+      "Mozambico",
+      9,
+      "Moçambique",
+      9,
+      9,
+      15,
+      11,
+      10,
+      11,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

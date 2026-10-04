@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * North Korea (KP)
@@ -8,43 +9,43 @@ export class NorthKorea extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KP";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PRK";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "408";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "850";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "850";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Pyongyang";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "120,540.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class NorthKorea extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "North Korea";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Észak Kórea";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Nord Korea";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Corea del Norte";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Corea del nord";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Corée du Nord";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Coréia do Norte";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "North Korea";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Nordkorea";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nordkorea";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Nord-Korea";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Korea Północna";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Severní Korea";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Severná Kórea";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Severna Koreja";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sjeverna Koreja";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KP",
+      "PRK",
+      "408",
+      "KN",
+      "850",
+      4,
+      "Pyongyang",
+      "120,540.0",
+      "AS",
+      "North Korea",
+      "Észak Kórea",
+      "Nord Korea",
+      "Corea del Norte",
+      "Corea del nord",
+      "Corée du Nord",
+      "Coréia do Norte",
+      9,
+      "Nordkorea",
+      17,
+      "Nord-Korea",
+      "Korea Północna",
+      "Severní Korea",
+      "Severná Kórea",
+      "Severna Koreja",
+      "Sjeverna Koreja",
+    ]);
+  }
 }

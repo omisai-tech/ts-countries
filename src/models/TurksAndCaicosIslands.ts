@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Turks and Caicos Islands (TC)
@@ -8,43 +9,43 @@ export class TurksAndCaicosIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TC";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TCA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "796";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TK";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-649";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-649";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Cockburn Town";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "430.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class TurksAndCaicosIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Turks and Caicos Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Turks-és Caicos-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Turks- und Caicosinseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Turcas y Caicos";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Turks e Caicos";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "îles Turques-et-Caïques";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Turcas e Caicos";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Turks and Caicos Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Turks- og Caicosøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Turks- och Caicosöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Turks- og Caicosøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Turks i Caicos";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Ostrovy Turks a Caicos";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Ostrovy Turks a Caicos";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Otoki Turks in Caicos";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Otoci Turks i Caicos";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TC",
+      "TCA",
+      "796",
+      "TK",
+      "1-649",
+      4,
+      "Cockburn Town",
+      "430.0",
+      "NA",
+      "Turks and Caicos Islands",
+      "Turks-és Caicos-szigetek",
+      "Turks- und Caicosinseln",
+      "Islas Turcas y Caicos",
+      "Isole Turks e Caicos",
+      "îles Turques-et-Caïques",
+      "Ilhas Turcas e Caicos",
+      9,
+      "Turks- og Caicosøerne",
+      "Turks- och Caicosöarna",
+      "Turks- og Caicosøyene",
+      "Wyspy Turks i Caicos",
+      "Ostrovy Turks a Caicos",
+      21,
+      "Otoki Turks in Caicos",
+      "Otoci Turks i Caicos",
+    ]);
+  }
 }

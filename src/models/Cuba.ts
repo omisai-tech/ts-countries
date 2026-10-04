@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Cuba (CU)
@@ -8,43 +9,43 @@ export class Cuba extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CU";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CUB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "192";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "53";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "53";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Havana";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "110,860.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Cuba extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Cuba";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kuba";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kuba";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Cuba";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Cuba";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Cuba";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Cuba";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Cuba";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Cuba";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kuba";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Cuba";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kuba";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kuba";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kuba";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kuba";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kuba";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CU",
+      "CUB",
+      "192",
+      0,
+      "53",
+      4,
+      "Havana",
+      "110,860.0",
+      "NA",
+      "Cuba",
+      "Kuba",
+      10,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      10,
+      9,
+      10,
+      10,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

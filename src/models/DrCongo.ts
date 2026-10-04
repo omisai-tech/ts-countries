@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * DR Congo (CD)
@@ -8,43 +9,43 @@ export class DrCongo extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CD";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "COD";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "180";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "243";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "243";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kinshasa";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,345,410.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class DrCongo extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "DR Congo";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kongói DR";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kongolesische DR";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "República Democrática del Congo";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "DR congolese";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "RD Congolaise";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "RD Congo";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "DR Congo";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "DR Congo";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "DR Kongo";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "DR Kongo";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Demokratyczna Republika Konga";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "DR Kongo";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "DR Kongo";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "DR Kongo";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "DR Kongo";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CD",
+      "COD",
+      "180",
+      "CG",
+      "243",
+      4,
+      "Kinshasa",
+      "2,345,410.0",
+      "AF",
+      "DR Congo",
+      "Kongói DR",
+      "Kongolesische DR",
+      "República Democrática del Congo",
+      "DR congolese",
+      "RD Congolaise",
+      "RD Congo",
+      9,
+      9,
+      "DR Kongo",
+      18,
+      "Demokratyczna Republika Konga",
+      18,
+      18,
+      18,
+      18,
+    ]);
+  }
 }

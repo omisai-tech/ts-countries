@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Venezuela (VE)
@@ -8,43 +9,43 @@ export class Venezuela extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "VE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "VEN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "862";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "VE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "58";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "58";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Caracas";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "912,050.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Venezuela extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Venezuela";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Venezuela";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Venezuela";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Venezuela";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Venezuela";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Venezuela";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Venezuela";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Venezuela";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Venezuela";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Venezuela";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Venezuela";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wenezuela";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Venezuela";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Venezuela";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Venezuela";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Venezuela";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "VE",
+      "VEN",
+      "862",
+      0,
+      "58",
+      4,
+      "Caracas",
+      "912,050.0",
+      "SA",
+      "Venezuela",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Wenezuela",
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

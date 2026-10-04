@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Saint Pierre and Miquelon (PM)
@@ -8,43 +9,43 @@ export class SaintPierreAndMiquelon extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SPM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "666";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SB";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "508";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "508";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Saint-Pierre";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "242.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SaintPierreAndMiquelon extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Saint Pierre and Miquelon";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Saint Pierre és Miquelon";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Saint-Pierre und Miquelon";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "San Pedro y Miquelón";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Saint Pierre e Miquelon";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Saint-Pierre-et-Miquelon";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "São Pedro e Miquelon";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Saint Pierre and Miquelon";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Saint-Pierre og Miquelon";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Saint Pierre och Miquelon";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Saint-Pierre og Miquelon";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Saint-Pierre i Miquelon";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Saint-Pierre a Miquelon";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Saint-Pierre a Miquelon";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Saint Pierre in Miquelon";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Saint Pierre i Miquelon";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PM",
+      "SPM",
+      "666",
+      "SB",
+      "508",
+      4,
+      "Saint-Pierre",
+      "242.0",
+      "NA",
+      "Saint Pierre and Miquelon",
+      "Saint Pierre és Miquelon",
+      "Saint-Pierre und Miquelon",
+      "San Pedro y Miquelón",
+      "Saint Pierre e Miquelon",
+      "Saint-Pierre-et-Miquelon",
+      "São Pedro e Miquelon",
+      9,
+      "Saint-Pierre og Miquelon",
+      "Saint Pierre och Miquelon",
+      17,
+      "Saint-Pierre i Miquelon",
+      "Saint-Pierre a Miquelon",
+      21,
+      "Saint Pierre in Miquelon",
+      "Saint Pierre i Miquelon",
+    ]);
+  }
 }

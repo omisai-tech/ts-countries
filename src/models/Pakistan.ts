@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Pakistan (PK)
@@ -8,43 +9,43 @@ export class Pakistan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PK";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PAK";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "586";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "PK";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "92";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "92";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Islamabad";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "803,940.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Pakistan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Pakistan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Pakisztán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Pakistan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Pakistán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Pakistan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Pakistan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Paquistão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Pakistan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Pakistan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Pakistan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Pakistan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Pakistan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Pákistán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Pakistan";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Pakistan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Pakistan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PK",
+      "PAK",
+      "586",
+      0,
+      "92",
+      4,
+      "Islamabad",
+      "803,940.0",
+      "AS",
+      "Pakistan",
+      "Pakisztán",
+      9,
+      "Pakistán",
+      9,
+      9,
+      "Paquistão",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Pákistán",
+      9,
+      9,
+      9,
+    ]);
+  }
 }

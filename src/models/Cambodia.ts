@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Cambodia (KH)
@@ -8,43 +9,43 @@ export class Cambodia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KH";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "KHM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "116";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CB";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "855";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "855";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Phnom Penh";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "181,040.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Cambodia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Cambodia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kambodzsa";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kambodscha";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Camboya";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Cambogia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Cambodge";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Camboja";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Cambodia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Cambodja";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kambodja";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kambodsja";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kambodża";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kambodža";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kambodža";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kambodža";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kambodža";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KH",
+      "KHM",
+      "116",
+      "CB",
+      "855",
+      4,
+      "Phnom Penh",
+      "181,040.0",
+      "AS",
+      "Cambodia",
+      "Kambodzsa",
+      "Kambodscha",
+      "Camboya",
+      "Cambogia",
+      "Cambodge",
+      "Camboja",
+      9,
+      "Cambodja",
+      "Kambodja",
+      "Kambodsja",
+      "Kambodża",
+      "Kambodža",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

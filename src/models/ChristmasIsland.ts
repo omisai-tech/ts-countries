@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Christmas Island (CX)
@@ -8,43 +9,43 @@ export class ChristmasIsland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CX";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CXR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "162";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KT";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "61";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "61";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Flying Fish Cove";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "135.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class ChristmasIsland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Christmas Island";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Karácsony-sziget";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Weihnachtsinsel";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Isla de Navidad";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isola di Natale";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "L'île de noël";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilha do Natal";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Christmas Island";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Juleøen";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Julön";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Juleøya";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspa Bożego Narodzenia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Vánoční ostrov";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Vianočný ostrov";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Božični otok";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Božićni otok";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CX",
+      "CXR",
+      "162",
+      "KT",
+      "61",
+      4,
+      "Flying Fish Cove",
+      "135.0",
+      "OC",
+      "Christmas Island",
+      "Karácsony-sziget",
+      "Weihnachtsinsel",
+      "Isla de Navidad",
+      "Isola di Natale",
+      "L'île de noël",
+      "Ilha do Natal",
+      9,
+      "Juleøen",
+      "Julön",
+      "Juleøya",
+      "Wyspa Bożego Narodzenia",
+      "Vánoční ostrov",
+      "Vianočný ostrov",
+      "Božični otok",
+      "Božićni otok",
+    ]);
+  }
 }

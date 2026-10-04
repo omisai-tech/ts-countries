@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Canada (CA)
@@ -8,43 +9,43 @@ export class Canada extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CAN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "124";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Ottawa";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "9,984,670.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Canada extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Canada";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kanada";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kanada";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Canadá";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Canada";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Canada";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Canadá";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Canada";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Canada";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kanada";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Canada";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kanada";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kanada";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kanada";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kanada";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kanada";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CA",
+      "CAN",
+      "124",
+      0,
+      "1",
+      4,
+      "Ottawa",
+      "9,984,670.0",
+      "NA",
+      "Canada",
+      "Kanada",
+      10,
+      "Canadá",
+      9,
+      9,
+      12,
+      9,
+      9,
+      10,
+      9,
+      10,
+      10,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

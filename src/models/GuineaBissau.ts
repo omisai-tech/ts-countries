@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Guinea-Bissau (GW)
@@ -8,43 +9,43 @@ export class GuineaBissau extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GW";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GNB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "624";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "PU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "245";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "245";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bissau";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "36,120.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class GuineaBissau extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Guinea-Bissau";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bissau-Guinea";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Guinea-Bissau";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Guinea-Bisáu";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Guinea-Bissau";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Guinée-Bissau";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Guiné-Bissau";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Guinea-Bissau";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Guinea-Bissau";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Guinea-Bissau";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Guinea-Bissau";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Gwinea Bissau";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Guinea-Bissau";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Guinea-Bissau";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Gvineja Bissau";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Gvineja Bisau";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GW",
+      "GNB",
+      "624",
+      "PU",
+      "245",
+      4,
+      "Bissau",
+      "36,120.0",
+      "AF",
+      "Guinea-Bissau",
+      "Bissau-Guinea",
+      9,
+      "Guinea-Bisáu",
+      9,
+      "Guinée-Bissau",
+      "Guiné-Bissau",
+      9,
+      9,
+      9,
+      9,
+      "Gwinea Bissau",
+      9,
+      9,
+      "Gvineja Bissau",
+      "Gvineja Bisau",
+    ]);
+  }
 }

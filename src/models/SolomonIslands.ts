@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Solomon Islands (SB)
@@ -8,43 +9,43 @@ export class SolomonIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SB";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SLB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "90";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "677";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "677";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Honiara";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "28,450.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SolomonIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Solomon Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Salamon-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Salomon-Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Salomón";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Salomone";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Les îles Salomon";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Salomão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Solomon Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Salomonøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Salomonöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Salomonøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Salomona";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Šalamounovy ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Šalamúnove ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Salomonovi otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Salomonski Otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SB",
+      "SLB",
+      "90",
+      "BP",
+      "677",
+      4,
+      "Honiara",
+      "28,450.0",
+      "OC",
+      "Solomon Islands",
+      "Salamon-szigetek",
+      "Salomon-Inseln",
+      "Islas Salomón",
+      "Isole Salomone",
+      "Les îles Salomon",
+      "Ilhas Salomão",
+      9,
+      "Salomonøerne",
+      "Salomonöarna",
+      "Salomonøyene",
+      "Wyspy Salomona",
+      "Šalamounovy ostrovy",
+      "Šalamúnove ostrovy",
+      "Salomonovi otoki",
+      "Salomonski Otoci",
+    ]);
+  }
 }

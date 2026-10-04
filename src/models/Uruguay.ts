@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Uruguay (UY)
@@ -8,43 +9,43 @@ export class Uruguay extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "UY";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "URY";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "858";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "UY";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "598";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "598";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Montevideo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "176,220.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Uruguay extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Uruguay";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Uruguay";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Uruguay";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Uruguay";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Uruguay";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Uruguay";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Uruguai";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Uruguay";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Uruguay";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Uruguay";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Uruguay";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Urugwaj";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Uruguay";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Uruguaj";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Urugvaj";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Urugvaj";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "UY",
+      "URY",
+      "858",
+      0,
+      "598",
+      4,
+      "Montevideo",
+      "176,220.0",
+      "SA",
+      "Uruguay",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Uruguai",
+      9,
+      9,
+      9,
+      9,
+      "Urugwaj",
+      9,
+      "Uruguaj",
+      "Urugvaj",
+      23,
+    ]);
+  }
 }

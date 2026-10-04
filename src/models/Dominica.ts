@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Dominica (DM)
@@ -8,43 +9,43 @@ export class Dominica extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "DM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "DMA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "212";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "DO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-767";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-767";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Roseau";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "754.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Dominica extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Dominica";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Dominika";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Dominica";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Dominica";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Dominica";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Dominique";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Domínica";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Dominica";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Dominica";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Dominica";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Dominica";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Dominika";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Dominika";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Dominika";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Dominika";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Dominika";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "DM",
+      "DMA",
+      "212",
+      "DO",
+      "1-767",
+      4,
+      "Roseau",
+      "754.0",
+      "NA",
+      "Dominica",
+      "Dominika",
+      9,
+      9,
+      9,
+      "Dominique",
+      "Domínica",
+      9,
+      9,
+      9,
+      9,
+      10,
+      10,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

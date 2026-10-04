@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Liberia (LR)
@@ -8,43 +9,43 @@ export class Liberia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "LR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "LBR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "430";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "LI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "231";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "231";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Monrovia";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "111,370.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Liberia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Liberia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Libéria";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Liberia";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Liberia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Liberia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Libéria";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Libéria";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Liberia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Liberia";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Liberia";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Liberia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Liberia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Libérie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Libéria";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Liberija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Liberija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "LR",
+      "LBR",
+      "430",
+      "LI",
+      "231",
+      4,
+      "Monrovia",
+      "111,370.0",
+      "AF",
+      "Liberia",
+      "Libéria",
+      9,
+      9,
+      9,
+      10,
+      10,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Libérie",
+      10,
+      "Liberija",
+      23,
+    ]);
+  }
 }

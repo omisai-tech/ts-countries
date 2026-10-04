@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Latvia (LV)
@@ -8,43 +9,43 @@ export class Latvia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "LV";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "LVA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "428";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "LG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "371";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "371";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Riga";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "64,589.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Latvia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Latvia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Lettország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Lettland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Letonia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Lettonia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Lettonie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Letônia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Latvia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Letland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Lettland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Latvia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Łotwa";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Lotyšsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Lotyšsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Latvija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Latvija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "LV",
+      "LVA",
+      "428",
+      "LG",
+      "371",
+      4,
+      "Riga",
+      "64,589.0",
+      "EU",
+      "Latvia",
+      "Lettország",
+      "Lettland",
+      "Letonia",
+      "Lettonia",
+      "Lettonie",
+      "Letônia",
+      9,
+      "Letland",
+      11,
+      9,
+      "Łotwa",
+      "Lotyšsko",
+      21,
+      "Latvija",
+      23,
+    ]);
+  }
 }

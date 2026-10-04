@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Kenya (KE)
@@ -8,43 +9,43 @@ export class Kenya extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "KEN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "404";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "254";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "254";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Nairobi";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "582,650.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Kenya extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Kenya";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kenya";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kenia";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Kenia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Kenia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Kenya";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Quênia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Kenya";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kenya";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kenya";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kenya";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kenia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Keňa";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Keňa";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kenija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kenija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KE",
+      "KEN",
+      "404",
+      0,
+      "254",
+      4,
+      "Nairobi",
+      "582,650.0",
+      "AF",
+      "Kenya",
+      9,
+      "Kenia",
+      11,
+      11,
+      9,
+      "Quênia",
+      9,
+      9,
+      9,
+      9,
+      11,
+      "Keňa",
+      21,
+      "Kenija",
+      23,
+    ]);
+  }
 }

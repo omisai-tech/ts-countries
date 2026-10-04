@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Chile (CL)
@@ -8,43 +9,43 @@ export class Chile extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CHL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "152";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "56";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "56";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Santiago";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "756,950.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Chile extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Chile";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Chile";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Chile";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Chile";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Chile";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Chili";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Chile";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Chile";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Chile";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Chile";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Chile";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Chile";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Chile";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Čile";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Čile";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Čile";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CL",
+      "CHL",
+      "152",
+      "CI",
+      "56",
+      4,
+      "Santiago",
+      "756,950.0",
+      "SA",
+      "Chile",
+      9,
+      9,
+      9,
+      9,
+      "Chili",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Čile",
+      22,
+      22,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Burundi (BI)
@@ -8,43 +9,43 @@ export class Burundi extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BDI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "108";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BY";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "257";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "257";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Gitega";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "27,830.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Burundi extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Burundi";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Burundi";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Burundi";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Burundi";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Burundi";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Burundi";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Burundi";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Burundi";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Burundi";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Burundi";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Burundi";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Burundi";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Burundi";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Burundi";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Burundi";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Burundi";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BI",
+      "BDI",
+      "108",
+      "BY",
+      "257",
+      4,
+      "Gitega",
+      "27,830.0",
+      "AF",
+      "Burundi",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

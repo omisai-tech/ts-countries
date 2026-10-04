@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Andorra (AD)
@@ -8,43 +9,43 @@ export class Andorra extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AD";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "AND";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "20";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "376";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "376";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Andorra la Vella";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "468.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Andorra extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Andorra";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Andorra";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Andorra";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Andorra";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Andorra";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Andorre";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Andorra";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Andorra";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Andorra";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Andorra";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Andorra";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Andora";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Andorra";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Andorra";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Andora";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Andora";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AD",
+      "AND",
+      "20",
+      "AN",
+      "376",
+      4,
+      "Andorra la Vella",
+      "468.0",
+      "EU",
+      "Andorra",
+      9,
+      9,
+      9,
+      9,
+      "Andorre",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Andora",
+      9,
+      9,
+      20,
+      20,
+    ]);
+  }
 }

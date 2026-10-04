@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Saint Martin (MF)
@@ -8,43 +9,43 @@ export class SaintMartin extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MF";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MAF";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "663";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "RN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "590";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "590";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Marigot";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "53.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SaintMartin extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Saint Martin";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szent Márton";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Sankt Martin";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "San Martín";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "San Martino";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Saint Martin";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "São Martinho";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Saint Martin";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sankt Martin";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sankt Martin";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Saint Martin";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Święty Marcin";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Svatý Martin (Francie)";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Svätý Martin (fr.)";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Francoski Sveti Martin";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sveti Martin";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MF",
+      "MAF",
+      "663",
+      "RN",
+      "590",
+      4,
+      "Marigot",
+      "53.0",
+      "NA",
+      "Saint Martin",
+      "Szent Márton",
+      "Sankt Martin",
+      "San Martín",
+      "San Martino",
+      9,
+      "São Martinho",
+      9,
+      11,
+      11,
+      9,
+      "Święty Marcin",
+      "Svatý Martin (Francie)",
+      "Svätý Martin (fr.)",
+      "Francoski Sveti Martin",
+      "Sveti Martin",
+    ]);
+  }
 }

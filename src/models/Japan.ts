@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Japan (JP)
@@ -8,43 +9,43 @@ export class Japan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "JP";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "JPN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "392";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "JA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "81";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "81";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tokyo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "377,835.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Japan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Japan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Japán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Japan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Japón";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Giappone";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Japon";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Japão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Japan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Japan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Japan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Japan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Japonia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Japonsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Japonsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Japonska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Japan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "JP",
+      "JPN",
+      "392",
+      "JA",
+      "81",
+      4,
+      "Tokyo",
+      "377,835.0",
+      "AS",
+      "Japan",
+      "Japán",
+      9,
+      "Japón",
+      "Giappone",
+      "Japon",
+      "Japão",
+      9,
+      9,
+      9,
+      9,
+      "Japonia",
+      "Japonsko",
+      21,
+      "Japonska",
+      9,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Turkmenistan (TM)
@@ -8,43 +9,43 @@ export class Turkmenistan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TKM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "795";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TX";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "993";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "993";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Ashgabat";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "488,100.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Turkmenistan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Turkmenistan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Türkmenisztán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Turkmenistan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Turkmenistán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Turkmenistan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Turkménistan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Turcomenistão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Turkmenistan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Turkmenistan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Turkmenistan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Turkmenistan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Turkmenia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Turkmenistán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Turkménsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Turkmenistan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Turkmenistan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TM",
+      "TKM",
+      "795",
+      "TX",
+      "993",
+      4,
+      "Ashgabat",
+      "488,100.0",
+      "AS",
+      "Turkmenistan",
+      "Türkmenisztán",
+      9,
+      "Turkmenistán",
+      9,
+      "Turkménistan",
+      "Turcomenistão",
+      9,
+      9,
+      9,
+      9,
+      "Turkmenia",
+      12,
+      "Turkménsko",
+      9,
+      9,
+    ]);
+  }
 }

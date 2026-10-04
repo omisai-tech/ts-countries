@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Hungary (HU)
@@ -8,43 +9,43 @@ export class Hungary extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "HU";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "HUN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "348";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "HU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "36";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "36";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Budapest";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "93,030.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Hungary extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Hungary";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Magyarország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Ungarn";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Hungría";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Ungheria";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Hongrie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Hungria";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Hungary";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Ungarn";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Ungern";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Ungarn";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Węgry";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Maďarsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Maďarsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Madžarska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Mađarska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "HU",
+      "HUN",
+      "348",
+      0,
+      "36",
+      4,
+      "Budapest",
+      "93,030.0",
+      "EU",
+      "Hungary",
+      "Magyarország",
+      "Ungarn",
+      "Hungría",
+      "Ungheria",
+      "Hongrie",
+      "Hungria",
+      9,
+      11,
+      "Ungern",
+      11,
+      "Węgry",
+      "Maďarsko",
+      21,
+      "Madžarska",
+      "Mađarska",
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Tuvalu (TV)
@@ -8,43 +9,43 @@ export class Tuvalu extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TV";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TUV";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "798";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "688";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "688";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Funafuti";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "26.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Tuvalu extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Tuvalu";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Tuvalu";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Tuvalu";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Tuvalu";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Tuvalu";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Tuvalu";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Tuvalu";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Tuvalu";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tuvalu";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tuvalu";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tuvalu";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Tuvalu";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Tuvalu";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Tuvalu";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Tuvalu";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Tuvalu";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TV",
+      "TUV",
+      "798",
+      0,
+      "688",
+      4,
+      "Funafuti",
+      "26.0",
+      "OC",
+      "Tuvalu",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Botswana (BW)
@@ -8,43 +9,43 @@ export class Botswana extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BW";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BWA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "72";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "267";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "267";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Gaborone";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "600,370.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Botswana extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Botswana";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Botswana";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Botswana";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Botsuana";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Botswana";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Botswana";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Botsuana";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Botswana";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Botswana";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Botswana";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Botswana";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Botswana";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Botswana";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Botswana";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Bocvana";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bocvana";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BW",
+      "BWA",
+      "72",
+      "BC",
+      "267",
+      4,
+      "Gaborone",
+      "600,370.0",
+      "AF",
+      "Botswana",
+      9,
+      9,
+      "Botsuana",
+      9,
+      9,
+      12,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Bocvana",
+      23,
+    ]);
+  }
 }

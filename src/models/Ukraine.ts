@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Ukraine (UA)
@@ -8,43 +9,43 @@ export class Ukraine extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "UA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "UKR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "804";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "UP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "380";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "380";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kyiv";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "603,700.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Ukraine extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Ukraine";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Ukrajna";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Ukraine";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Ucrania";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Ucraina";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Ukraine";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ucrânia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Ukraine";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Ukraine";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Ukraina";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Ukraina";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Ukraina";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Ukrajina";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Ukrajina";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Ukrajina";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Ukrajina";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "UA",
+      "UKR",
+      "804",
+      "UP",
+      "380",
+      4,
+      "Kyiv",
+      "603,700.0",
+      "EU",
+      "Ukraine",
+      "Ukrajna",
+      9,
+      "Ucrania",
+      "Ucraina",
+      9,
+      "Ucrânia",
+      9,
+      9,
+      "Ukraina",
+      18,
+      18,
+      "Ukrajina",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

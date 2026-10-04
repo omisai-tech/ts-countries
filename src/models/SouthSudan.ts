@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * South Sudan (SS)
@@ -8,43 +9,43 @@ export class SouthSudan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SS";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SSD";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "728";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "OD";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "211";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "211";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Juba";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "644,329.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SouthSudan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "South Sudan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Dél Szudán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Südsudan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Sudán del Sur";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Sudan del Sud";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Soudan du sud";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Sudão do Sul";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "South Sudan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sydsudan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sydsudan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sør-Sudan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Sudan Południowy";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Jižní Súdán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Južný Sudán";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Južni Sudan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Južni Sudan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SS",
+      "SSD",
+      "728",
+      "OD",
+      "211",
+      4,
+      "Juba",
+      "644,329.0",
+      "AF",
+      "South Sudan",
+      "Dél Szudán",
+      "Südsudan",
+      "Sudán del Sur",
+      "Sudan del Sud",
+      "Soudan du sud",
+      "Sudão do Sul",
+      9,
+      "Sydsudan",
+      17,
+      "Sør-Sudan",
+      "Sudan Południowy",
+      "Jižní Súdán",
+      "Južný Sudán",
+      "Južni Sudan",
+      23,
+    ]);
+  }
 }

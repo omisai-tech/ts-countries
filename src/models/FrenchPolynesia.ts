@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * French Polynesia (PF)
@@ -8,43 +9,43 @@ export class FrenchPolynesia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PF";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PYF";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "258";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "FP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "689";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "689";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Papeete";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "4,167.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class FrenchPolynesia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "French Polynesia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Francia Polinézia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Französisch Polynesien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Polinesia francés";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Polinesia francese";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Polynésie française";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Polinésia Francesa";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "French Polynesia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Fransk Polynesien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Franska Polynesien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Fransk Polynesia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Polinezja Francuska";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Francouzská Polynésie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Francúzska Polynézia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Francoska Polinezija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Francuska Polinezija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PF",
+      "PYF",
+      "258",
+      "FP",
+      "689",
+      4,
+      "Papeete",
+      "4,167.0",
+      "OC",
+      "French Polynesia",
+      "Francia Polinézia",
+      "Französisch Polynesien",
+      "Polinesia francés",
+      "Polinesia francese",
+      "Polynésie française",
+      "Polinésia Francesa",
+      9,
+      "Fransk Polynesien",
+      "Franska Polynesien",
+      "Fransk Polynesia",
+      "Polinezja Francuska",
+      "Francouzská Polynésie",
+      "Francúzska Polynézia",
+      "Francoska Polinezija",
+      "Francuska Polinezija",
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Faroe Islands (FO)
@@ -8,43 +9,43 @@ export class FaroeIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "FO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "FRO";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "234";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "FO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "298";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "298";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Torshavn";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,399.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class FaroeIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Faroe Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Faroe Szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Färöer Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Faroe";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Faroe";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Féroé";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "ilhas Faroe";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Faroe Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Færøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Färöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Færøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Owcze";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Faerské ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Faerské ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Ferski otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Farski otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "FO",
+      "FRO",
+      "234",
+      0,
+      "298",
+      4,
+      "Torshavn",
+      "1,399.0",
+      "EU",
+      "Faroe Islands",
+      "Faroe Szigetek",
+      "Färöer Inseln",
+      "Islas Faroe",
+      "Isole Faroe",
+      "Îles Féroé",
+      "ilhas Faroe",
+      9,
+      "Færøerne",
+      "Färöarna",
+      "Færøyene",
+      "Wyspy Owcze",
+      "Faerské ostrovy",
+      21,
+      "Ferski otoki",
+      "Farski otoci",
+    ]);
+  }
 }

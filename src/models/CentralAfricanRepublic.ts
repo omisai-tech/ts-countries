@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Central African Republic (CF)
@@ -8,43 +9,43 @@ export class CentralAfricanRepublic extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CF";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CAF";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "140";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CT";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "236";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "236";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bangui";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "622,984.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class CentralAfricanRepublic extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Central African Republic";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Közép-Afrikai Köztársaság";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Zentralafrikanische Republik";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "República Centroafricana";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Repubblica Centrafricana";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "République centrafricaine";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "República Centro-Africana";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Central African Republic";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Centralafrikanske Republik";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Centralafrikanska republiken";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Den sentralafrikanske republikk";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Republika Środkowoafrykańska";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Středoafrická republika";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Stredoafrická republika";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Srednjeafriška republika";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Srednjoafrička Republika";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CF",
+      "CAF",
+      "140",
+      "CT",
+      "236",
+      4,
+      "Bangui",
+      "622,984.0",
+      "AF",
+      "Central African Republic",
+      "Közép-Afrikai Köztársaság",
+      "Zentralafrikanische Republik",
+      "República Centroafricana",
+      "Repubblica Centrafricana",
+      "République centrafricaine",
+      "República Centro-Africana",
+      9,
+      "Centralafrikanske Republik",
+      "Centralafrikanska republiken",
+      "Den sentralafrikanske republikk",
+      "Republika Środkowoafrykańska",
+      "Středoafrická republika",
+      "Stredoafrická republika",
+      "Srednjeafriška republika",
+      "Srednjoafrička Republika",
+    ]);
+  }
 }

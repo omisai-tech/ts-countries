@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Norfolk Island (NF)
@@ -8,43 +9,43 @@ export class NorfolkIsland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NF";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NFK";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "574";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NF";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "672";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "672";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kingston";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "34.6";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class NorfolkIsland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Norfolk Island";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Norfolk-sziget";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Norfolkinsel";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Isla Norfolk";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isola Norfolk";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "l'ile de Norfolk";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilha Norfolk";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Norfolk Island";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Norfolkøen";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Norfolkön";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Norfolkøya";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspa Norfolk";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Norfolkský ostrov";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Norfolkský ostrov";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Norfolški otok";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Otok Norfolk";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NF",
+      "NFK",
+      "574",
+      0,
+      "672",
+      4,
+      "Kingston",
+      "34.6",
+      "OC",
+      "Norfolk Island",
+      "Norfolk-sziget",
+      "Norfolkinsel",
+      "Isla Norfolk",
+      "Isola Norfolk",
+      "l'ile de Norfolk",
+      "Ilha Norfolk",
+      9,
+      "Norfolkøen",
+      "Norfolkön",
+      "Norfolkøya",
+      "Wyspa Norfolk",
+      "Norfolkský ostrov",
+      21,
+      "Norfolški otok",
+      "Otok Norfolk",
+    ]);
+  }
 }

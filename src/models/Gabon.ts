@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Gabon (GA)
@@ -8,43 +9,43 @@ export class Gabon extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GAB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "266";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GB";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "241";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "241";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Libreville";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "267,667.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Gabon extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Gabon";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Gabon";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Gabun";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Gabón";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Gabon";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Gabon";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Gabão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Gabon";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Gabon";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Gabon";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Gabon";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Gabon";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Gabon";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Gabon";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Gabon";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Gabon";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GA",
+      "GAB",
+      "266",
+      "GB",
+      "241",
+      4,
+      "Libreville",
+      "267,667.0",
+      "AF",
+      "Gabon",
+      9,
+      "Gabun",
+      "Gabón",
+      9,
+      9,
+      "Gabão",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Ireland (IE)
@@ -8,43 +9,43 @@ export class Ireland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "IE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "IRL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "372";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "EI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "353";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "353";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Dublin";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "70,280.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Ireland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Ireland";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Írország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Irland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Irlanda";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Irlanda";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Irlande";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Irlanda";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Ireland";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Irland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Irland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Irland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Irlandia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Irsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Írsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Irska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Irska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "IE",
+      "IRL",
+      "372",
+      "EI",
+      "353",
+      4,
+      "Dublin",
+      "70,280.0",
+      "EU",
+      "Ireland",
+      "Írország",
+      "Irland",
+      "Irlanda",
+      12,
+      "Irlande",
+      12,
+      9,
+      11,
+      11,
+      11,
+      "Irlandia",
+      "Irsko",
+      "Írsko",
+      "Irska",
+      23,
+    ]);
+  }
 }

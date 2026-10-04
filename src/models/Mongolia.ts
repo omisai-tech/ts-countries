@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Mongolia (MN)
@@ -8,43 +9,43 @@ export class Mongolia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MNG";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "496";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "976";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "976";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Ulaanbaatar";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,565,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Mongolia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Mongolia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Mongólia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Mongolei";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Mongolia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Mongolia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Mongolie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Mongólia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Mongolia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Mongoliet";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "mongoliet";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Mongolia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Mongolia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Mongolsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Mongolsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Mongolija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Mongolija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MN",
+      "MNG",
+      "496",
+      "MG",
+      "976",
+      4,
+      "Ulaanbaatar",
+      "1,565,000.0",
+      "AS",
+      "Mongolia",
+      "Mongólia",
+      "Mongolei",
+      9,
+      9,
+      "Mongolie",
+      10,
+      9,
+      "Mongoliet",
+      "mongoliet",
+      9,
+      9,
+      "Mongolsko",
+      21,
+      "Mongolija",
+      23,
+    ]);
+  }
 }

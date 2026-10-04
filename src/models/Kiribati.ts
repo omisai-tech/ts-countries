@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Kiribati (KI)
@@ -8,43 +9,43 @@ export class Kiribati extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "KIR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "296";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "686";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "686";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tarawa";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "811.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Kiribati extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Kiribati";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kiribati";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kiribati";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Kiribati";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Kiribati";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Kiribati";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Quiribáti";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Kiribati";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kiribati";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kiribati";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kiribati";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kiribati";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kiribati";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kiribati";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kiribati";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kiribati";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KI",
+      "KIR",
+      "296",
+      "KR",
+      "686",
+      4,
+      "Tarawa",
+      "811.0",
+      "OC",
+      "Kiribati",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Quiribáti",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

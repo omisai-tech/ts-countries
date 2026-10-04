@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Sri Lanka (LK)
@@ -8,43 +9,43 @@ export class SriLanka extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "LK";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "LKA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "144";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "94";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "94";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Colombo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "65,610.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SriLanka extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Sri Lanka";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Sri Lanka";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Sri Lanka";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Sri Lanka";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Sri Lanka";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Sri Lanka";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Sri Lanka";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Sri Lanka";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sri Lanka";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sri Lanka";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sri Lanka";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Sri Lanka";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Srí Lanka";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Srí Lanka";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Šrilanka";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Šri Lanka";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "LK",
+      "LKA",
+      "144",
+      "CE",
+      "94",
+      4,
+      "Colombo",
+      "65,610.0",
+      "AS",
+      "Sri Lanka",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Srí Lanka",
+      21,
+      "Šrilanka",
+      "Šri Lanka",
+    ]);
+  }
 }

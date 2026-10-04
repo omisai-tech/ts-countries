@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Comoros (KM)
@@ -8,43 +9,43 @@ export class Comoros extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "COM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "174";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "269";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "269";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Moroni";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,170.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Comoros extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Comoros";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Comore-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Komoren-Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Comoras";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Comore";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Comores";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Comores";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Comoros";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Comorerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Komorerna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Komorene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Komory";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Komory";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Komory";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Komori";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Komori";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KM",
+      "COM",
+      "174",
+      "CN",
+      "269",
+      4,
+      "Moroni",
+      "2,170.0",
+      "AF",
+      "Comoros",
+      "Comore-szigetek",
+      "Komoren-Inseln",
+      "Islas Comoras",
+      "Isole Comore",
+      "Îles Comores",
+      "Comores",
+      9,
+      "Comorerne",
+      "Komorerna",
+      "Komorene",
+      "Komory",
+      20,
+      20,
+      "Komori",
+      23,
+    ]);
+  }
 }

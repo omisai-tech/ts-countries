@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * China (CN)
@@ -8,43 +9,43 @@ export class China extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CHN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "156";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CH";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "86";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "86";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Beijing";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "9,596,960.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class China extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "China";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kína";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "China";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "China";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Cina";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Chine";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "China";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "China";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kina";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kina";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kina";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Chiny";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Čína";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Čína";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kitajska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kina";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CN",
+      "CHN",
+      "156",
+      "CH",
+      "86",
+      4,
+      "Beijing",
+      "9,596,960.0",
+      "AS",
+      "China",
+      "Kína",
+      9,
+      9,
+      "Cina",
+      "Chine",
+      9,
+      9,
+      "Kina",
+      17,
+      17,
+      "Chiny",
+      "Čína",
+      21,
+      "Kitajska",
+      17,
+    ]);
+  }
 }

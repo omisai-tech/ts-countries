@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bangladesh (BD)
@@ -8,43 +9,43 @@ export class Bangladesh extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BD";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BGD";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "50";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "880";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "880";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Dhaka";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "144,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Bangladesh extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bangladesh";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Banglades";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bangladesch";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Bangladesh";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bangladesh";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bangladesh";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bangladesh";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bangladesh";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bangladesh";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bangladesh";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bangladesh";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Bangladesz";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bangladéš";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bangladéš";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Bangladeš";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bangladeš";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BD",
+      "BGD",
+      "50",
+      "BG",
+      "880",
+      4,
+      "Dhaka",
+      "144,000.0",
+      "AS",
+      "Bangladesh",
+      "Banglades",
+      "Bangladesch",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Bangladesz",
+      "Bangladéš",
+      21,
+      "Bangladeš",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Malawi (MW)
@@ -8,43 +9,43 @@ export class Malawi extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MW";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MWI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "454";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "265";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "265";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Lilongwe";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "118,480.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Malawi extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Malawi";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Malawi";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Malawi";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Malaui";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Malawi";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Malawi";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Maláui";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Malawi";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Malawi";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Malawi";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Malawi";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Malawi";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Malawi";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Malawi";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Malavi";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Malavi";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MW",
+      "MWI",
+      "454",
+      "MI",
+      "265",
+      4,
+      "Lilongwe",
+      "118,480.0",
+      "AF",
+      "Malawi",
+      9,
+      9,
+      "Malaui",
+      9,
+      9,
+      "Maláui",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Malavi",
+      23,
+    ]);
+  }
 }

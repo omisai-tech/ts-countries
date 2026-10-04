@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Cabo Verde (CV)
@@ -8,43 +9,43 @@ export class CaboVerde extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CV";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CPV";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "132";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "238";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "238";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Praia";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "4,033.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class CaboVerde extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Cabo Verde";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Cabo Verde";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kap Verde";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Cabo Verde";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "capo Verde";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Cap-Vert";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Cabo Verde";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Cabo Verde";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kap Verde";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kap Verde";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kapp Verde";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Republika Zielonego Przylądka";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kapverdy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kapverdy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Zelenortski otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Zelenortski Otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CV",
+      "CPV",
+      "132",
+      0,
+      "238",
+      4,
+      "Praia",
+      "4,033.0",
+      "AF",
+      "Cabo Verde",
+      9,
+      "Kap Verde",
+      9,
+      "capo Verde",
+      "Cap-Vert",
+      9,
+      9,
+      11,
+      11,
+      "Kapp Verde",
+      "Republika Zielonego Przylądka",
+      "Kapverdy",
+      21,
+      "Zelenortski otoki",
+      "Zelenortski Otoci",
+    ]);
+  }
 }

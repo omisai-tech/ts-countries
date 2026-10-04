@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * South Georgia and South Sandwich Islands (GS)
@@ -8,43 +9,43 @@ export class SouthGeorgiaAndSouthSandwichIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GS";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SGS";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "239";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SX";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "500";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "500";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Grytviken";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "3,903.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SouthGeorgiaAndSouthSandwichIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AN;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "South Georgia and South Sandwich Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Dél-Georgia és a Déli Sandwich-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Süd-Georgien und die südlichen Sandwich-Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Georgia del sur y las islas Sandwich del sur";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Georgia del Sud e Isole Sandwich Meridionali";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Géorgie du Sud et îles Sandwich du Sud";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Geórgia do Sul e Sandwich do Sul";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "South Georgia and South Sandwich Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sydgeorgien og Sydsandwichøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sydgeorgien och Sydsandwichöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sør-Georgia og Sør-Sandwichøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Georgia Południowa i Sandwich Południowy";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Jižní Georgie a Jižní Sandwichovy ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Južná Georgia a Južné Sandwichove ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Južna Georgia in Južni Sendvičevi otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Južna Georgija i Južni Sendvički Otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GS",
+      "SGS",
+      "239",
+      "SX",
+      "500",
+      4,
+      "Grytviken",
+      "3,903.0",
+      "AN",
+      "South Georgia and South Sandwich Islands",
+      "Dél-Georgia és a Déli Sandwich-szigetek",
+      "Süd-Georgien und die südlichen Sandwich-Inseln",
+      "Georgia del sur y las islas Sandwich del sur",
+      "Georgia del Sud e Isole Sandwich Meridionali",
+      "Géorgie du Sud et îles Sandwich du Sud",
+      "Ilhas Geórgia do Sul e Sandwich do Sul",
+      9,
+      "Sydgeorgien og Sydsandwichøerne",
+      "Sydgeorgien och Sydsandwichöarna",
+      "Sør-Georgia og Sør-Sandwichøyene",
+      "Wyspy Georgia Południowa i Sandwich Południowy",
+      "Jižní Georgie a Jižní Sandwichovy ostrovy",
+      "Južná Georgia a Južné Sandwichove ostrovy",
+      "Južna Georgia in Južni Sendvičevi otoki",
+      "Južna Georgija i Južni Sendvički Otoci",
+    ]);
+  }
 }

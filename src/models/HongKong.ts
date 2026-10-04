@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Hong Kong (HK)
@@ -8,43 +9,43 @@ export class HongKong extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "HK";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "HKG";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "344";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "HK";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "852";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "852";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Hong Kong";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,092.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class HongKong extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Hong Kong";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Hong Kong";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Hongkong";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Hong Kong";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Hong Kong";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Hong Kong";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Hong Kong";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Hong Kong";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Hongkong";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Hongkong";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Hongkong";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Hongkong";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Hongkong";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Hongkong";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Hongkong";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Hong Kong";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "HK",
+      "HKG",
+      "344",
+      0,
+      "852",
+      4,
+      "Hong Kong",
+      "1,092.0",
+      "AS",
+      6,
+      6,
+      "Hongkong",
+      6,
+      6,
+      6,
+      6,
+      6,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      6,
+    ]);
+  }
 }

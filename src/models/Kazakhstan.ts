@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Kazakhstan (KZ)
@@ -8,43 +9,43 @@ export class Kazakhstan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "KAZ";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "398";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KZ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "7";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "7";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Nur-Sultan";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,717,300.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Kazakhstan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Kazakhstan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kazahsztán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kasachstan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Kazajstán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Kazakistan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Kazakhstan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Cazaquistão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Kazakhstan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kasakhstan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kazakstan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kasakhstan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kazachstan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kazachstán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kazachstan";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kazahstan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kazahstan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KZ",
+      "KAZ",
+      "398",
+      0,
+      "7",
+      4,
+      "Nur-Sultan",
+      "2,717,300.0",
+      "AS",
+      "Kazakhstan",
+      "Kazahsztán",
+      "Kasachstan",
+      "Kazajstán",
+      "Kazakistan",
+      9,
+      "Cazaquistão",
+      9,
+      "Kasakhstan",
+      "Kazakstan",
+      17,
+      "Kazachstan",
+      "Kazachstán",
+      20,
+      "Kazahstan",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * India (IN)
@@ -8,43 +9,43 @@ export class India extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "IN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "IND";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "356";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "IN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "91";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "91";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "New Delhi";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "3,287,590.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class India extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "India";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "India";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Indien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "India";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "India";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Inde";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Índia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "India";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Indien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Indien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "India";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Indie";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Indie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "India";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Indija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Indija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "IN",
+      "IND",
+      "356",
+      0,
+      "91",
+      4,
+      "New Delhi",
+      "3,287,590.0",
+      "AS",
+      "India",
+      9,
+      "Indien",
+      9,
+      9,
+      "Inde",
+      "Índia",
+      9,
+      11,
+      11,
+      9,
+      "Indie",
+      20,
+      9,
+      "Indija",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Martinique (MQ)
@@ -8,43 +9,43 @@ export class Martinique extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MQ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MTQ";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "474";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MB";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "596";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "596";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Fort-de-France";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,100.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Martinique extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Martinique";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Martinique";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Martinique";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Martinica";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Martinica";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Martinique";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Martinica";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Martinique";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Martinique";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Martinique";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Martinique";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Martynika";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Martinik";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Martinik";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Martinik";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Martinik";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MQ",
+      "MTQ",
+      "474",
+      "MB",
+      "596",
+      4,
+      "Fort-de-France",
+      "1,100.0",
+      "NA",
+      "Martinique",
+      9,
+      9,
+      "Martinica",
+      12,
+      9,
+      12,
+      9,
+      9,
+      9,
+      9,
+      "Martynika",
+      "Martinik",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

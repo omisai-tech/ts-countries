@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Paraguay (PY)
@@ -8,43 +9,43 @@ export class Paraguay extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PY";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PRY";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "600";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "PA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "595";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "595";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Asuncion";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "406,750.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Paraguay extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Paraguay";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Paraguay";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Paraguay";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Paraguay";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Paraguay";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Paraguay";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Paraguai";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Paraguay";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Paraguay";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Paraguay";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Paraguay";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Paragwaj";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Paraguay";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Paraguaj";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Paragvaj";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Paragvaj";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PY",
+      "PRY",
+      "600",
+      "PA",
+      "595",
+      4,
+      "Asuncion",
+      "406,750.0",
+      "SA",
+      "Paraguay",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Paraguai",
+      9,
+      9,
+      9,
+      9,
+      "Paragwaj",
+      9,
+      "Paraguaj",
+      "Paragvaj",
+      23,
+    ]);
+  }
 }

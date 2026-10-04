@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Saudi Arabia (SA)
@@ -8,43 +9,43 @@ export class SaudiArabia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SAU";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "682";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "966";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "966";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Riyadh";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,960,582.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SaudiArabia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Saudi Arabia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szaud-Arábia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Saudi-Arabien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Arabia Saudita";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Arabia Saudita";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Arabie Saoudite";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Arábia Saudita";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Saudi Arabia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Saudi-Arabien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "saudi-arabien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Saudi-Arabia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Arabia Saudyjska";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Saúdská Arábie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Saudská Arábia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Savdska Arabija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Saudijska Arabija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SA",
+      "SAU",
+      "682",
+      0,
+      "966",
+      4,
+      "Riyadh",
+      "1,960,582.0",
+      "AS",
+      "Saudi Arabia",
+      "Szaud-Arábia",
+      "Saudi-Arabien",
+      "Arabia Saudita",
+      12,
+      "Arabie Saoudite",
+      "Arábia Saudita",
+      9,
+      11,
+      "saudi-arabien",
+      "Saudi-Arabia",
+      "Arabia Saudyjska",
+      "Saúdská Arábie",
+      "Saudská Arábia",
+      "Savdska Arabija",
+      "Saudijska Arabija",
+    ]);
+  }
 }

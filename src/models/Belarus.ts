@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Belarus (BY)
@@ -8,43 +9,43 @@ export class Belarus extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BY";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BLR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "112";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "375";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "375";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Minsk";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "207,600.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Belarus extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Belarus";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Fehéroroszország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Weißrussland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Bielorrusia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bielorussia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Biélorussie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bielorrússia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Belarus";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Hviderusland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Belarus";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Hviterussland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Białoruś";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bělorusko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bielorusko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Belorusija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bjelorusija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BY",
+      "BLR",
+      "112",
+      "BO",
+      "375",
+      4,
+      "Minsk",
+      "207,600.0",
+      "EU",
+      "Belarus",
+      "Fehéroroszország",
+      "Weißrussland",
+      "Bielorrusia",
+      "Bielorussia",
+      "Biélorussie",
+      "Bielorrússia",
+      9,
+      "Hviderusland",
+      9,
+      "Hviterussland",
+      "Białoruś",
+      "Bělorusko",
+      "Bielorusko",
+      "Belorusija",
+      "Bjelorusija",
+    ]);
+  }
 }

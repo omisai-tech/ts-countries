@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Honduras (HN)
@@ -8,43 +9,43 @@ export class Honduras extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "HN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "HND";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "340";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "HO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "504";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "504";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tegucigalpa";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "112,090.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Honduras extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Honduras";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Honduras";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Honduras";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Honduras";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Honduras";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Honduras";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Honduras";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Honduras";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Honduras";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Honduras";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Honduras";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Honduras";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Honduras";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Honduras";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Honduras";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Honduras";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "HN",
+      "HND",
+      "340",
+      "HO",
+      "504",
+      4,
+      "Tegucigalpa",
+      "112,090.0",
+      "NA",
+      "Honduras",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

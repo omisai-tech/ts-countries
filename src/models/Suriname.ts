@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Suriname (SR)
@@ -8,43 +9,43 @@ export class Suriname extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SUR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "740";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "597";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "597";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Paramaribo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "163,270.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Suriname extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Suriname";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Suriname";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Surinam";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Surinam";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Suriname";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Surinam";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Suriname";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Suriname";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Surinam";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Surinam";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Surinam";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Surinam";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Surinam";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Surinam";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Surinam";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Surinam";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SR",
+      "SUR",
+      "740",
+      "NS",
+      "597",
+      4,
+      "Paramaribo",
+      "163,270.0",
+      "SA",
+      "Suriname",
+      9,
+      "Surinam",
+      11,
+      9,
+      11,
+      9,
+      9,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+    ]);
+  }
 }

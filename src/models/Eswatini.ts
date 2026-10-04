@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Eswatini (SZ)
@@ -8,43 +9,43 @@ export class Eswatini extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SWZ";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "748";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "WZ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "268";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "268";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Mbabane";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "17,363.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Eswatini extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Eswatini";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Eswatini";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Eswatini";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Esuatini";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Swaziland";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Eswatini";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Essuatíni";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Eswatini";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Eswatini";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Eswatini";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Eswatini";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Eswatini";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Svazijsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Eswatini";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Esvatini";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Esvatini";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SZ",
+      "SWZ",
+      "748",
+      "WZ",
+      "268",
+      4,
+      "Mbabane",
+      "17,363.0",
+      "AF",
+      "Eswatini",
+      9,
+      9,
+      "Esuatini",
+      "Swaziland",
+      9,
+      "Essuatíni",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Svazijsko",
+      9,
+      "Esvatini",
+      23,
+    ]);
+  }
 }

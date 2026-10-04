@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Haiti (HT)
@@ -8,43 +9,43 @@ export class Haiti extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "HT";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "HTI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "332";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "HA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "509";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "509";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Port-au-Prince";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "27,750.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Haiti extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Haiti";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Haiti";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Haiti";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Haití";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Haiti";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Haïti";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Haiti";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Haiti";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Haiti";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Haiti";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Haiti";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Haiti";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Haiti";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Haiti";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Haiti";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Haiti";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "HT",
+      "HTI",
+      "332",
+      "HA",
+      "509",
+      4,
+      "Port-au-Prince",
+      "27,750.0",
+      "NA",
+      "Haiti",
+      9,
+      9,
+      "Haití",
+      9,
+      "Haïti",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

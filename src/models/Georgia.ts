@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Georgia (GE)
@@ -8,43 +9,43 @@ export class Georgia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GEO";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "268";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "995";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "995";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tbilisi";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "69,700.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Georgia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Georgia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Grúzia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Georgia";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Georgia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Georgia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Géorgie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Geórgia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Georgia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Georgien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Georgien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Georgia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Gruzja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Gruzie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Gruzínsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Gruzija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Gruzija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GE",
+      "GEO",
+      "268",
+      "GG",
+      "995",
+      4,
+      "Tbilisi",
+      "69,700.0",
+      "AS",
+      "Georgia",
+      "Grúzia",
+      9,
+      9,
+      9,
+      "Géorgie",
+      "Geórgia",
+      9,
+      "Georgien",
+      17,
+      9,
+      "Gruzja",
+      "Gruzie",
+      "Gruzínsko",
+      "Gruzija",
+      23,
+    ]);
+  }
 }

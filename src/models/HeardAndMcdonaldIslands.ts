@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Heard and McDonald Islands (HM)
@@ -8,43 +9,43 @@ export class HeardAndMcdonaldIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "HM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "HMD";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "334";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "HM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "672";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "672";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "412.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class HeardAndMcdonaldIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AN;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Heard and McDonald Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Heard és McDonald-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Heard- und McDonald-Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Heard y McDonald";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Heard e McDonald";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Heard et McDonald";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Heard e McDonald";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Heard and McDonald Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Heard- og McDonaldøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Heard- och McDonaldöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Heard- og McDonaldøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Heard i McDonalda";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Heardovy a McDonaldovy ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Heardove a McDonaldove ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Heardovi in ​​McDonaldovi otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Otoci Heard i McDonald";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "HM",
+      "HMD",
+      "334",
+      0,
+      "672",
+      4,
+      "",
+      "412.0",
+      "AN",
+      "Heard and McDonald Islands",
+      "Heard és McDonald-szigetek",
+      "Heard- und McDonald-Inseln",
+      "Islas Heard y McDonald",
+      "Isole Heard e McDonald",
+      "Îles Heard et McDonald",
+      "Ilhas Heard e McDonald",
+      9,
+      "Heard- og McDonaldøerne",
+      "Heard- och McDonaldöarna",
+      "Heard- og McDonaldøyene",
+      "Wyspy Heard i McDonalda",
+      "Heardovy a McDonaldovy ostrovy",
+      "Heardove a McDonaldove ostrovy",
+      "Heardovi in ​​McDonaldovi otoki",
+      "Otoci Heard i McDonald",
+    ]);
+  }
 }

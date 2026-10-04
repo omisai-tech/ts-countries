@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Antigua and Barbuda (AG)
@@ -8,43 +9,43 @@ export class AntiguaAndBarbuda extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ATG";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "28";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-268";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-268";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "St. John's";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "443.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class AntiguaAndBarbuda extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Antigua and Barbuda";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Antigua és Barbuda";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Antigua und Barbuda";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Antigua y Barbuda";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Antigua e Barbuda";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Antigua-et-Barbuda";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Antígua e Barbuda";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Antigua and Barbuda";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Antigua og Barbuda";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Antigua och Barbuda";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Antigua og Barbuda";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Antigua i Barbuda";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Antigua a Barbuda";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Antigua a Barbuda";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Antigva in Barbuda";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Antigva i Barbuda";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AG",
+      "ATG",
+      "28",
+      "AC",
+      "1-268",
+      4,
+      "St. John's",
+      "443.0",
+      "NA",
+      "Antigua and Barbuda",
+      "Antigua és Barbuda",
+      "Antigua und Barbuda",
+      "Antigua y Barbuda",
+      "Antigua e Barbuda",
+      "Antigua-et-Barbuda",
+      "Antígua e Barbuda",
+      9,
+      "Antigua og Barbuda",
+      "Antigua och Barbuda",
+      17,
+      "Antigua i Barbuda",
+      "Antigua a Barbuda",
+      21,
+      "Antigva in Barbuda",
+      "Antigva i Barbuda",
+    ]);
+  }
 }

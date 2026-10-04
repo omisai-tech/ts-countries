@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Malta (MT)
@@ -8,43 +9,43 @@ export class Malta extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MT";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MLT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "470";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MT";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "356";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "356";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Valletta";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "316.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Malta extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Malta";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Málta";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Malta";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Malta";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Malta";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Malte";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Malta";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Malta";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Malta";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Malta";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Malta";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Malta";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Malta";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Malta";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Malta";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Malta";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MT",
+      "MLT",
+      "470",
+      0,
+      "356",
+      4,
+      "Valletta",
+      "316.0",
+      "EU",
+      "Malta",
+      "Málta",
+      9,
+      9,
+      9,
+      "Malte",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

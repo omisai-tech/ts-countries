@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Yemen (YE)
@@ -8,43 +9,43 @@ export class Yemen extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "YE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "YEM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "887";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "YM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "967";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "967";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Sanaa";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "527,970.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Yemen extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Yemen";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Jemen";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Jemen";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Yemen";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Yemen";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Yémen";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Iémen";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Yemen";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Yemen";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Jemen";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Jemen";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Jemen";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Jemen";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Jemen";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Jemen";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Jemen";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "YE",
+      "YEM",
+      "887",
+      "YM",
+      "967",
+      4,
+      "Sanaa",
+      "527,970.0",
+      "AS",
+      "Yemen",
+      "Jemen",
+      10,
+      9,
+      9,
+      "Yémen",
+      "Iémen",
+      9,
+      9,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Wallis and Futuna (WF)
@@ -8,43 +9,43 @@ export class WallisAndFutuna extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "WF";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "WLF";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "876";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "WF";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "681";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "681";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Mata Utu";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "274.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class WallisAndFutuna extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Wallis and Futuna";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Wallis és Futuna";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Wallis und Futuna";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Wallis y Futuna";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Wallis e Futuna";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Wallis et Futuna";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Wallis e Futuna";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Wallis and Futuna";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Wallis- og Futunaøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Wallis- och Futunaöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Wallis- og Futunaøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wallis i Futuna";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Wallis a Futuna";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Wallis a Futuna";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Wallis in Futuna";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Wallis i Futuna";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "WF",
+      "WLF",
+      "876",
+      0,
+      "681",
+      4,
+      "Mata Utu",
+      "274.0",
+      "OC",
+      "Wallis and Futuna",
+      "Wallis és Futuna",
+      "Wallis und Futuna",
+      "Wallis y Futuna",
+      "Wallis e Futuna",
+      "Wallis et Futuna",
+      13,
+      9,
+      "Wallis- og Futunaøerne",
+      "Wallis- och Futunaöarna",
+      "Wallis- og Futunaøyene",
+      "Wallis i Futuna",
+      "Wallis a Futuna",
+      21,
+      "Wallis in Futuna",
+      20,
+    ]);
+  }
 }

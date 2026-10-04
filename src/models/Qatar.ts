@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Qatar (QA)
@@ -8,43 +9,43 @@ export class Qatar extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "QA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "QAT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "634";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "QA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "974";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "974";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Doha";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "11,437.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Qatar extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Qatar";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Katar";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Katar";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Katar";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Qatar";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Qatar";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Catar";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Qatar";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Qatar";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Qatar";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Qatar";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Katar";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Katar";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Katar";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Katar";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Katar";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "QA",
+      "QAT",
+      "634",
+      0,
+      "974",
+      4,
+      "Doha",
+      "11,437.0",
+      "AS",
+      "Qatar",
+      "Katar",
+      10,
+      10,
+      9,
+      9,
+      "Catar",
+      9,
+      9,
+      9,
+      9,
+      10,
+      10,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

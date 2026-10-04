@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Luxembourg (LU)
@@ -8,43 +9,43 @@ export class Luxembourg extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "LU";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "LUX";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "442";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "LU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "352";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "352";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Luxembourg";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,586.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Luxembourg extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Luxembourg";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Luxemburg";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Luxemburg";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Luxemburgo";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Lussemburgo";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Luxembourg";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Luxemburgo";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Luxembourg";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Luxembourg";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Luxemburg";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Luxembourg";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Luksemburg";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Lucembursko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Luxembursko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Luksemburg";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Luksemburg";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "LU",
+      "LUX",
+      "442",
+      0,
+      "352",
+      4,
+      "Luxembourg",
+      "2,586.0",
+      "EU",
+      6,
+      "Luxemburg",
+      10,
+      "Luxemburgo",
+      "Lussemburgo",
+      6,
+      12,
+      6,
+      6,
+      10,
+      6,
+      "Luksemburg",
+      "Lucembursko",
+      "Luxembursko",
+      20,
+      20,
+    ]);
+  }
 }

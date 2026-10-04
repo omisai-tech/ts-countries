@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Oman (OM)
@@ -8,43 +9,43 @@ export class Oman extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "OM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "OMN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "512";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "968";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "968";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Muscat";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "212,460.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Oman extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Oman";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Omán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Oman";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Omán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Oman";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Oman";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Omã";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Oman";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Oman";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "oman";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Oman";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Oman";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Omán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Omán";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Oman";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Oman";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "OM",
+      "OMN",
+      "512",
+      "MU",
+      "968",
+      4,
+      "Muscat",
+      "212,460.0",
+      "AS",
+      "Oman",
+      "Omán",
+      9,
+      10,
+      9,
+      9,
+      "Omã",
+      9,
+      9,
+      "oman",
+      9,
+      9,
+      10,
+      10,
+      9,
+      9,
+    ]);
+  }
 }

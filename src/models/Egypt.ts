@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Egypt (EG)
@@ -8,43 +9,43 @@ export class Egypt extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "EG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "EGY";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "818";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "EG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "20";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "20";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Cairo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,001,450.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Egypt extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Egypt";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Egyiptom";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Ägypten";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Egipto";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Egitto";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Egypte";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Egito";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Egypt";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Egypten";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Egypten";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Egypt";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Egipt";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Egypt";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Egypt";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Egipt";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Egipat";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "EG",
+      "EGY",
+      "818",
+      0,
+      "20",
+      4,
+      "Cairo",
+      "1,001,450.0",
+      "AF",
+      "Egypt",
+      "Egyiptom",
+      "Ägypten",
+      "Egipto",
+      "Egitto",
+      "Egypte",
+      "Egito",
+      9,
+      "Egypten",
+      17,
+      9,
+      "Egipt",
+      9,
+      9,
+      20,
+      "Egipat",
+    ]);
+  }
 }

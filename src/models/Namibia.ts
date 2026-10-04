@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Namibia (NA)
@@ -8,43 +9,43 @@ export class Namibia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NAM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "516";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "WA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "264";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "264";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Windhoek";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "825,418.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Namibia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Namibia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Namíbia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Namibia";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Namibia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Namibia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Namibie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Namíbia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Namibia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Namibia";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Namibia";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Namibia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Namibia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Namibie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Namíbia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Namibija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Namibija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NA",
+      "NAM",
+      "516",
+      "WA",
+      "264",
+      4,
+      "Windhoek",
+      "825,418.0",
+      "AF",
+      "Namibia",
+      "Namíbia",
+      9,
+      9,
+      9,
+      "Namibie",
+      10,
+      9,
+      9,
+      9,
+      9,
+      9,
+      14,
+      10,
+      "Namibija",
+      23,
+    ]);
+  }
 }

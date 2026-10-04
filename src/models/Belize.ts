@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Belize (BZ)
@@ -8,43 +9,43 @@ export class Belize extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BLZ";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "84";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BH";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "501";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "501";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Belmopan";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "22,966.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Belize extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Belize";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Belize";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Belize";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Belice";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Belize";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bélize";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Belize";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Belize";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Belize";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Belize";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Belize";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Belize";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Belize";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Belize";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Belize";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Belize";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BZ",
+      "BLZ",
+      "84",
+      "BH",
+      "501",
+      4,
+      "Belmopan",
+      "22,966.0",
+      "NA",
+      "Belize",
+      9,
+      9,
+      "Belice",
+      9,
+      "Bélize",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

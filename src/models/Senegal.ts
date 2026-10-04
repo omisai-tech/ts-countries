@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Senegal (SN)
@@ -8,43 +9,43 @@ export class Senegal extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SEN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "686";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "221";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "221";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Dakar";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "196,190.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Senegal extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Senegal";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szenegál";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Senegal";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Senegal";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Senegal";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Sénégal";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Senegal";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Senegal";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Senegal";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Senegal";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Senegal";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Senegal";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Senegal";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Senegal";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Senegal";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Senegal";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SN",
+      "SEN",
+      "686",
+      "SG",
+      "221",
+      4,
+      "Dakar",
+      "196,190.0",
+      "AF",
+      "Senegal",
+      "Szenegál",
+      9,
+      9,
+      9,
+      "Sénégal",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

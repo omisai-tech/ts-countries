@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Burkina Faso (BF)
@@ -8,43 +9,43 @@ export class BurkinaFaso extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BF";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BFA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "854";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "UV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "226";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "226";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Ouagadougou";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "274,200.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class BurkinaFaso extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Burkina Faso";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Burkina Faso";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Burkina Faso";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Burkina Faso";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Burkina Faso";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Burkina Faso";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Burkina Faso";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Burkina Faso";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Burkina Faso";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Burkina Faso";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Burkina Faso";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Burkina Faso";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Burkina Faso";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Burkina Faso";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Burkina Faso";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Burkina Faso";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BF",
+      "BFA",
+      "854",
+      "UV",
+      "226",
+      4,
+      "Ouagadougou",
+      "274,200.0",
+      "AF",
+      "Burkina Faso",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Macao (MO)
@@ -8,43 +9,43 @@ export class Macao extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MAC";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "446";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "853";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "853";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Macao";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "254.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Macao extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Macao";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Makaó";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Macau";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Macao";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Macao";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Macao";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Macau";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Macao";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Macao";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Macao";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Macao";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Makao";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Macao";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Macao";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Macao";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Makao";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MO",
+      "MAC",
+      "446",
+      "MC",
+      "853",
+      4,
+      "Macao",
+      "254.0",
+      "AS",
+      6,
+      "Makaó",
+      "Macau",
+      6,
+      6,
+      6,
+      11,
+      6,
+      6,
+      6,
+      6,
+      "Makao",
+      6,
+      6,
+      6,
+      20,
+    ]);
+  }
 }

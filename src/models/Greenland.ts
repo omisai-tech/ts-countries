@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Greenland (GL)
@@ -8,43 +9,43 @@ export class Greenland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GRL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "304";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GL";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "299";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "299";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Nuuk";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,166,086.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Greenland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Greenland";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Grönland";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Grönland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Groenlandia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Groenlandia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Groenland";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Groenlândia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Greenland";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Grønland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Grönland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Grønland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Grenlandia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Grónsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Grónsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Grenlandija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Grenland";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GL",
+      "GRL",
+      "304",
+      0,
+      "299",
+      4,
+      "Nuuk",
+      "2,166,086.0",
+      "NA",
+      "Greenland",
+      "Grönland",
+      10,
+      "Groenlandia",
+      12,
+      "Groenland",
+      "Groenlândia",
+      9,
+      "Grønland",
+      10,
+      17,
+      "Grenlandia",
+      "Grónsko",
+      21,
+      "Grenlandija",
+      "Grenland",
+    ]);
+  }
 }

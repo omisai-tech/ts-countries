@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * The Netherlands (NL)
@@ -8,43 +9,43 @@ export class TheNetherlands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NLD";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "528";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NL";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "31";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "31";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Amsterdam";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "41,526.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class TheNetherlands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "The Netherlands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Hollandia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Niederlande";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Países Bajos";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Olanda";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Pays-Bas";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Os Países Baixos";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "The Netherlands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Holland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nederländerna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Nederland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Holandia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Nizozemsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Holandsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Nizozemska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Nizozemska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NL",
+      "NLD",
+      "528",
+      0,
+      "31",
+      4,
+      "Amsterdam",
+      "41,526.0",
+      "EU",
+      "The Netherlands",
+      "Hollandia",
+      "Niederlande",
+      "Países Bajos",
+      "Olanda",
+      "Pays-Bas",
+      "Os Países Baixos",
+      9,
+      "Holland",
+      "Nederländerna",
+      "Nederland",
+      "Holandia",
+      "Nizozemsko",
+      "Holandsko",
+      "Nizozemska",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Saint Lucia (LC)
@@ -8,43 +9,43 @@ export class SaintLucia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "LC";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "LCA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "662";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "ST";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-758";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-758";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Castries";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "616.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SaintLucia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Saint Lucia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szent Lucia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "St. Lucia";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Santa Lucía";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Santa Lucia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Sainte-Lucie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Santa Lúcia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Saint Lucia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Saint Lucia";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Saint Lucia";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Saint Lucia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Święta Łucja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Svatá Lucie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Svätá Lucia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sveta Lucija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sveta Lucija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "LC",
+      "LCA",
+      "662",
+      "ST",
+      "1-758",
+      4,
+      "Castries",
+      "616.0",
+      "NA",
+      "Saint Lucia",
+      "Szent Lucia",
+      "St. Lucia",
+      "Santa Lucía",
+      "Santa Lucia",
+      "Sainte-Lucie",
+      "Santa Lúcia",
+      9,
+      9,
+      9,
+      9,
+      "Święta Łucja",
+      "Svatá Lucie",
+      "Svätá Lucia",
+      "Sveta Lucija",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * United Kingdom (GB)
@@ -8,43 +9,43 @@ export class UnitedKingdom extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GB";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GBR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "826";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "UK";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "44";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "44";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "London";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "244,820.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class UnitedKingdom extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "United Kingdom";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Egyesült Királyság";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Großbritannien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Reino Unido";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Regno Unito";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Royaume-Uni";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Reino Unido";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "United Kingdom";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Storbritannien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Storbritannien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Storbritannia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Zjednoczone Królestwo";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Spojené království";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Spojené kráľovstvo";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Združeno kraljestvo";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Ujedinjeno Kraljevstvo";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GB",
+      "GBR",
+      "826",
+      "UK",
+      "44",
+      4,
+      "London",
+      "244,820.0",
+      "EU",
+      "United Kingdom",
+      "Egyesült Királyság",
+      "Großbritannien",
+      "Reino Unido",
+      "Regno Unito",
+      "Royaume-Uni",
+      12,
+      9,
+      "Storbritannien",
+      17,
+      "Storbritannia",
+      "Zjednoczone Królestwo",
+      "Spojené království",
+      "Spojené kráľovstvo",
+      "Združeno kraljestvo",
+      "Ujedinjeno Kraljevstvo",
+    ]);
+  }
 }

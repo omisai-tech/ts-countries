@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Peru (PE)
@@ -8,43 +9,43 @@ export class Peru extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PER";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "604";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "PE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "51";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "51";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Lima";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,285,220.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Peru extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Peru";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Peru";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Peru";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Perú";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Perù";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Pérou";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Peru";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Peru";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Peru";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Peru";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Peru";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Peru";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Peru";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Peru";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Peru";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Peru";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PE",
+      "PER",
+      "604",
+      0,
+      "51",
+      4,
+      "Lima",
+      "1,285,220.0",
+      "SA",
+      "Peru",
+      9,
+      9,
+      "Perú",
+      "Perù",
+      "Pérou",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

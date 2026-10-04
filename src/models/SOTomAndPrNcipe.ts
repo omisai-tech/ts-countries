@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * São Tomé and Príncipe (ST)
@@ -8,43 +9,43 @@ export class SOTomAndPrNcipe extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ST";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "STP";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "678";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "239";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "239";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Sao Tome";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,001.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SOTomAndPrNcipe extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "São Tomé and Príncipe";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "São Tomé és Príncipe";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "São Tomé und Príncipe";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Santo Tomé y Príncipe";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "San Tommaso e Principe";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "São Tomé et Príncipe";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "São Tomé e Príncipe";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "São Tomé and Príncipe";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "São Tomé og Príncipe";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "São Tomé och Príncipe";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "São Tomé og Príncipe";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Świętego Tomasza i Książęca";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Svatý Tomáš a Princův ostrov";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Svätý Tomáš a Princov ostrov";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sao Tomé in Principe";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sveti Toma i Prinsipe";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ST",
+      "STP",
+      "678",
+      "TP",
+      "239",
+      4,
+      "Sao Tome",
+      "1,001.0",
+      "AF",
+      "São Tomé and Príncipe",
+      "São Tomé és Príncipe",
+      "São Tomé und Príncipe",
+      "Santo Tomé y Príncipe",
+      "San Tommaso e Principe",
+      "São Tomé et Príncipe",
+      "São Tomé e Príncipe",
+      9,
+      "São Tomé og Príncipe",
+      "São Tomé och Príncipe",
+      17,
+      "Wyspy Świętego Tomasza i Książęca",
+      "Svatý Tomáš a Princův ostrov",
+      "Svätý Tomáš a Princov ostrov",
+      "Sao Tomé in Principe",
+      "Sveti Toma i Prinsipe",
+    ]);
+  }
 }

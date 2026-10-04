@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Mayotte (YT)
@@ -8,43 +9,43 @@ export class Mayotte extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "YT";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MYT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "175";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MF";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "262";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "262";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Mamoudzou";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "374.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Mayotte extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Mayotte";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Mayotte";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Mayotte";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Mayotte";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Mayotte";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Mayotte";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Maiote";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Mayotte";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Mayotte";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Mayotte";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Mayotte";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Majotta";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Mayotte";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Mayotte";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Majot";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Majot";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "YT",
+      "MYT",
+      "175",
+      "MF",
+      "262",
+      4,
+      "Mamoudzou",
+      "374.0",
+      "AF",
+      "Mayotte",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Maiote",
+      9,
+      9,
+      9,
+      9,
+      "Majotta",
+      9,
+      9,
+      "Majot",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * San Marino (SM)
@@ -8,43 +9,43 @@ export class SanMarino extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SMR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "674";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "378";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "378";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "San Marino";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "61.2";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SanMarino extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "San Marino";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "San Marino";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "San Marino";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "San Marino";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "San Marino";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Saint Marin";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "São Marino";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "San Marino";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "San Marino";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "San Marino";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "San Marino";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "San Marino";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "San Marino";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "San Maríno";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "San Marino";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "San Marino";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SM",
+      "SMR",
+      "674",
+      0,
+      "378",
+      4,
+      "San Marino",
+      "61.2",
+      "EU",
+      6,
+      6,
+      6,
+      6,
+      6,
+      "Saint Marin",
+      "São Marino",
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      "San Maríno",
+      6,
+      6,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Eritrea (ER)
@@ -8,43 +9,43 @@ export class Eritrea extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ER";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ERI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "232";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "ER";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "291";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "291";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Asmara";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "121,320.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Eritrea extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Eritrea";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Eritrea";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Eritrea";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Eritrea";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Eritrea";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Érythrée";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Eritreia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Eritrea";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Eritrea";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Eritrea";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Eritrea";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Erytrea";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Eritrea";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Eritrea";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Eritreja";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Eritreja";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ER",
+      "ERI",
+      "232",
+      0,
+      "291",
+      4,
+      "Asmara",
+      "121,320.0",
+      "AF",
+      "Eritrea",
+      9,
+      9,
+      9,
+      9,
+      "Érythrée",
+      "Eritreia",
+      9,
+      9,
+      9,
+      9,
+      "Erytrea",
+      9,
+      9,
+      "Eritreja",
+      23,
+    ]);
+  }
 }

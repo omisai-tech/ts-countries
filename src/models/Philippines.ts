@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Philippines (PH)
@@ -8,43 +9,43 @@ export class Philippines extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PH";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PHL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "608";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "RP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "63";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "63";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Manila";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "300,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Philippines extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Philippines";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Fülöp-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Philippinen";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Filipinas";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Filippine";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Philippines";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Filipinas";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Philippines";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Filippinerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Filippinerna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Filippinene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Filipiny";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Filipíny";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Filipíny";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Filipini";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Filipini";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PH",
+      "PHL",
+      "608",
+      "RP",
+      "63",
+      4,
+      "Manila",
+      "300,000.0",
+      "AS",
+      "Philippines",
+      "Fülöp-szigetek",
+      "Philippinen",
+      "Filipinas",
+      "Filippine",
+      9,
+      12,
+      9,
+      "Filippinerne",
+      "Filippinerna",
+      "Filippinene",
+      "Filipiny",
+      "Filipíny",
+      21,
+      "Filipini",
+      23,
+    ]);
+  }
 }

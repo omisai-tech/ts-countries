@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Colombia (CO)
@@ -8,43 +9,43 @@ export class Colombia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "COL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "170";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "57";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "57";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bogota";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,138,910.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Colombia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Colombia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Colombia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kolumbien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Colombia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Colombia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Colombie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Colômbia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Colombia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Colombia";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Colombia";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Colombia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kolumbia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kolumbie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kolumbia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kolumbija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kolumbija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CO",
+      "COL",
+      "170",
+      0,
+      "57",
+      4,
+      "Bogota",
+      "1,138,910.0",
+      "SA",
+      "Colombia",
+      9,
+      "Kolumbien",
+      9,
+      9,
+      "Colombie",
+      "Colômbia",
+      9,
+      9,
+      9,
+      9,
+      "Kolumbia",
+      "Kolumbie",
+      20,
+      "Kolumbija",
+      23,
+    ]);
+  }
 }

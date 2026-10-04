@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Niger (NE)
@@ -8,43 +9,43 @@ export class Niger extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NER";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "562";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "227";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "227";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Niamey";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,267,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Niger extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Niger";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Niger";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Niger";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Níger";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Niger";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Niger";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Níger";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Niger";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Niger";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Niger";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Niger";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Niger";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Niger";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Niger";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Niger";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Niger";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NE",
+      "NER",
+      "562",
+      "NG",
+      "227",
+      4,
+      "Niamey",
+      "1,267,000.0",
+      "AF",
+      "Niger",
+      9,
+      9,
+      "Níger",
+      9,
+      9,
+      12,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

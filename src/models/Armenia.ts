@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Armenia (AM)
@@ -8,43 +9,43 @@ export class Armenia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ARM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "51";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "374";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "374";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Yerevan";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "29,800.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Armenia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Armenia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Örményország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Armenien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Armenia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Armenia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Arménie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Armênia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Armenia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Armenien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Armenien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Armenia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Armenia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Arménie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Arménsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Armenija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Armenija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AM",
+      "ARM",
+      "51",
+      0,
+      "374",
+      4,
+      "Yerevan",
+      "29,800.0",
+      "AS",
+      "Armenia",
+      "Örményország",
+      "Armenien",
+      9,
+      9,
+      "Arménie",
+      "Armênia",
+      9,
+      11,
+      11,
+      9,
+      9,
+      14,
+      "Arménsko",
+      "Armenija",
+      23,
+    ]);
+  }
 }

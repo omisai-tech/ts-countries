@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * South Korea (KR)
@@ -8,43 +9,43 @@ export class SouthKorea extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "KOR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "410";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "82";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "82";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Seoul";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "98,480.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SouthKorea extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "South Korea";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Dél-Korea";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Südkorea";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Corea del Sur";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Corea del Sud";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Corée du Sud";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Coreia do Sul";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "South Korea";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sydkorea";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sydkorea";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sør-Korea";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Korea Południowa";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Jižní Korea";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Južná Kórea";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Južna Koreja";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Južna Koreja";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KR",
+      "KOR",
+      "410",
+      "KS",
+      "82",
+      4,
+      "Seoul",
+      "98,480.0",
+      "AS",
+      "South Korea",
+      "Dél-Korea",
+      "Südkorea",
+      "Corea del Sur",
+      "Corea del Sud",
+      "Corée du Sud",
+      "Coreia do Sul",
+      9,
+      "Sydkorea",
+      17,
+      "Sør-Korea",
+      "Korea Południowa",
+      "Jižní Korea",
+      "Južná Kórea",
+      "Južna Koreja",
+      23,
+    ]);
+  }
 }

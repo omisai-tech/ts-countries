@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Slovenia (SI)
@@ -8,43 +9,43 @@ export class Slovenia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SVN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "705";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "386";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "386";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Ljubljana";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "20,273.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Slovenia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Slovenia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szlovénia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Slowenien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Eslovenia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Slovenia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Slovénie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Eslovênia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Slovenia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Slovenien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Slovenien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Slovenia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Słowenia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Slovinsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Slovinsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Slovenija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Slovenija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SI",
+      "SVN",
+      "705",
+      0,
+      "386",
+      4,
+      "Ljubljana",
+      "20,273.0",
+      "EU",
+      "Slovenia",
+      "Szlovénia",
+      "Slowenien",
+      "Eslovenia",
+      9,
+      "Slovénie",
+      "Eslovênia",
+      9,
+      "Slovenien",
+      17,
+      9,
+      "Słowenia",
+      "Slovinsko",
+      21,
+      "Slovenija",
+      23,
+    ]);
+  }
 }

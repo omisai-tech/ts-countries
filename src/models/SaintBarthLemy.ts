@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Saint Barthélemy (BL)
@@ -8,43 +9,43 @@ export class SaintBarthLemy extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BLM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "652";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TB";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "590";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "590";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Gustavia";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "21.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SaintBarthLemy extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Saint Barthélemy";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szent Barthélemy";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Heiliger Bartholomäus";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "San Bartolomé";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "San Bartolomeo";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Saint Barthélemy";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "São Bartolomeu";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Saint Barthélemy";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Saint-Barthélemy";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Saint Barthélemy";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Saint-Barthélemy";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Święty Bartłomiej";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Svatý Bartoloměj";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Svätý Bartolomej";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sveti Bartolomej";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sveti Bartolomej";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BL",
+      "BLM",
+      "652",
+      "TB",
+      "590",
+      4,
+      "Gustavia",
+      "21.0",
+      "NA",
+      "Saint Barthélemy",
+      "Szent Barthélemy",
+      "Heiliger Bartholomäus",
+      "San Bartolomé",
+      "San Bartolomeo",
+      9,
+      "São Bartolomeu",
+      9,
+      "Saint-Barthélemy",
+      9,
+      17,
+      "Święty Bartłomiej",
+      "Svatý Bartoloměj",
+      "Svätý Bartolomej",
+      "Sveti Bartolomej",
+      23,
+    ]);
+  }
 }

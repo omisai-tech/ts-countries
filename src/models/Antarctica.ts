@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Antarctica (AQ)
@@ -8,43 +9,43 @@ export class Antarctica extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AQ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ATA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "10";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AY";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "672";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "672";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "14,000,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Antarctica extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AN;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Antarctica";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Antarktisz";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Antarktis";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Antártida";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Antartide";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Antarctique";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Antártica";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Antarctica";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Antarktis";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Antarktis";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Antarktis";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Antarktyda";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Antarktida";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Antarktída";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Antarktika";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Antarktika";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AQ",
+      "ATA",
+      "10",
+      "AY",
+      "672",
+      4,
+      "",
+      "14,000,000.0",
+      "AN",
+      "Antarctica",
+      "Antarktisz",
+      "Antarktis",
+      "Antártida",
+      "Antartide",
+      "Antarctique",
+      "Antártica",
+      9,
+      11,
+      11,
+      11,
+      "Antarktyda",
+      "Antarktida",
+      "Antarktída",
+      "Antarktika",
+      23,
+    ]);
+  }
 }

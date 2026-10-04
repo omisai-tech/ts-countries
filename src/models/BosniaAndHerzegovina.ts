@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bosnia and Herzegovina (BA)
@@ -8,43 +9,43 @@ export class BosniaAndHerzegovina extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BIH";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "70";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BK";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "387";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "387";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Sarajevo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "51,129.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class BosniaAndHerzegovina extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bosnia and Herzegovina";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bosznia és Hercegovina";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bosnien und Herzegowina";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Bosnia y Herzegovina";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bosnia Erzegovina";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bosnie Herzégovine";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bósnia e Herzegovina";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bosnia and Herzegovina";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bosnien-Hercegovina";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bosnien och Hercegovina";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bosnia-Hercegovina";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Bośnia i Hercegowina";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bosna a Hercegovina";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bosna a Hercegovina";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Bosna in Hercegovina";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bosna i Hercegovina";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BA",
+      "BIH",
+      "70",
+      "BK",
+      "387",
+      4,
+      "Sarajevo",
+      "51,129.0",
+      "EU",
+      "Bosnia and Herzegovina",
+      "Bosznia és Hercegovina",
+      "Bosnien und Herzegowina",
+      "Bosnia y Herzegovina",
+      "Bosnia Erzegovina",
+      "Bosnie Herzégovine",
+      "Bósnia e Herzegovina",
+      9,
+      "Bosnien-Hercegovina",
+      "Bosnien och Hercegovina",
+      "Bosnia-Hercegovina",
+      "Bośnia i Hercegowina",
+      "Bosna a Hercegovina",
+      21,
+      "Bosna in Hercegovina",
+      "Bosna i Hercegovina",
+    ]);
+  }
 }

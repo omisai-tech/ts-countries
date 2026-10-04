@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * The Gambia (GM)
@@ -8,43 +9,43 @@ export class TheGambia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GMB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "270";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "220";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "220";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Banjul";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "11,300.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class TheGambia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "The Gambia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Gambia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Gambia";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Gambia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Gambia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Gambie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "A Gâmbia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "The Gambia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Gambia";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Gambia";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Gambia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Gambia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Gambie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Gambia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Gambija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Gambija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GM",
+      "GMB",
+      "270",
+      "GA",
+      "220",
+      4,
+      "Banjul",
+      "11,300.0",
+      "AF",
+      "The Gambia",
+      "Gambia",
+      10,
+      10,
+      10,
+      "Gambie",
+      "A Gâmbia",
+      9,
+      10,
+      10,
+      10,
+      10,
+      14,
+      10,
+      "Gambija",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bahrain (BH)
@@ -8,43 +9,43 @@ export class Bahrain extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BH";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BHR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "48";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "973";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "973";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Manama";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "665.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Bahrain extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bahrain";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bahrein";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bahrain";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Bahréin";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bahrein";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bahreïn";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bahrein";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bahrain";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bahrain";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bahrain";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bahrain";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Bahrajn";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bahrajn";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bahrajn";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Bahrajn";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bahrein";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BH",
+      "BHR",
+      "48",
+      "BA",
+      "973",
+      4,
+      "Manama",
+      "665.0",
+      "AS",
+      "Bahrain",
+      "Bahrein",
+      9,
+      "Bahréin",
+      10,
+      "Bahreïn",
+      10,
+      9,
+      9,
+      9,
+      9,
+      "Bahrajn",
+      20,
+      20,
+      20,
+      10,
+    ]);
+  }
 }

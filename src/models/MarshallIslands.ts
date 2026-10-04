@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Marshall Islands (MH)
@@ -8,43 +9,43 @@ export class MarshallIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MH";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MHL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "584";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "RM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "692";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "692";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Majuro";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "181.3";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class MarshallIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Marshall Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Marshall-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Marshallinseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Marshall";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Marshall";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Iles Marshall";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Marshall";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Marshall Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Marshalløerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Marshallöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Marshalløyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Marshalla";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Marshallovy ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Marshallove ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Marshallovi otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Maršalovi Otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MH",
+      "MHL",
+      "584",
+      "RM",
+      "692",
+      4,
+      "Majuro",
+      "181.3",
+      "OC",
+      "Marshall Islands",
+      "Marshall-szigetek",
+      "Marshallinseln",
+      "Islas Marshall",
+      "Isole Marshall",
+      "Iles Marshall",
+      "Ilhas Marshall",
+      9,
+      "Marshalløerne",
+      "Marshallöarna",
+      "Marshalløyene",
+      "Wyspy Marshalla",
+      "Marshallovy ostrovy",
+      "Marshallove ostrovy",
+      "Marshallovi otoki",
+      "Maršalovi Otoci",
+    ]);
+  }
 }

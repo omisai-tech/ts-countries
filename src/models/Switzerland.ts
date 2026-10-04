@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Switzerland (CH)
@@ -8,43 +9,43 @@ export class Switzerland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CH";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CHE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "756";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SZ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "41";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "41";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bern";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "41,290.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Switzerland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Switzerland";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Svájc";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Schweiz";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Suiza";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Svizzera";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Suisse";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Suíça";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Switzerland";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Schweiz";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Schweiz";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sveits";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Szwajcaria";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Švýcarsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Švajčiarsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Švica";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Švicarska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CH",
+      "CHE",
+      "756",
+      "SZ",
+      "41",
+      4,
+      "Bern",
+      "41,290.0",
+      "EU",
+      "Switzerland",
+      "Svájc",
+      "Schweiz",
+      "Suiza",
+      "Svizzera",
+      "Suisse",
+      "Suíça",
+      9,
+      11,
+      11,
+      "Sveits",
+      "Szwajcaria",
+      "Švýcarsko",
+      "Švajčiarsko",
+      "Švica",
+      "Švicarska",
+    ]);
+  }
 }

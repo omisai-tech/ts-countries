@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Costa Rica (CR)
@@ -8,43 +9,43 @@ export class CostaRica extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CRI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "188";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "506";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "506";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "San Jose";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "51,100.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class CostaRica extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Costa Rica";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Costa Rica";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Costa Rica";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Costa Rica";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Costa Rica";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Costa Rica";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Costa Rica";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Costa Rica";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Costa Rica";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Costa Rica";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Costa Rica";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kostaryka";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kostarika";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kostarika";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kostarika";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kostarika";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CR",
+      "CRI",
+      "188",
+      "CS",
+      "506",
+      4,
+      "San Jose",
+      "51,100.0",
+      "NA",
+      "Costa Rica",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Kostaryka",
+      "Kostarika",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

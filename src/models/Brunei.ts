@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Brunei (BN)
@@ -8,43 +9,43 @@ export class Brunei extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BRN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "96";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BX";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "673";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "673";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bandar Seri Begawan";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "5,770.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Brunei extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Brunei";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Brunei";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Brunei";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Brunéi";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Brunei";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Brunéi";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Brunei";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Brunei";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Brunei";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Brunei";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Brunei";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Brunei";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Brunej";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Brunej";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Brunej";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Brunej";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BN",
+      "BRN",
+      "96",
+      "BX",
+      "673",
+      4,
+      "Bandar Seri Begawan",
+      "5,770.0",
+      "AS",
+      "Brunei",
+      9,
+      9,
+      "Brunéi",
+      9,
+      12,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Brunej",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

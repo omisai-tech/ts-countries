@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Vatican City (VA)
@@ -8,43 +9,43 @@ export class VaticanCity extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "VA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "VAT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "336";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "VT";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "39-06";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "39-06";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Vatican City";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "0.4";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class VaticanCity extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Vatican City";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Vatikán város";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Vatikanstadt";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Ciudad del Vaticano";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Città del Vaticano";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Cité du Vatican";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Cidade do Vaticano";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Vatican City";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Vatikanstaten";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Vatikanstaten";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Vatikanstaten";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Watykan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Vatikán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Vatikán";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Vatikan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Vatikan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "VA",
+      "VAT",
+      "336",
+      "VT",
+      "39-06",
+      4,
+      "Vatican City",
+      "0.4",
+      "EU",
+      6,
+      "Vatikán város",
+      "Vatikanstadt",
+      "Ciudad del Vaticano",
+      "Città del Vaticano",
+      "Cité du Vatican",
+      "Cidade do Vaticano",
+      6,
+      "Vatikanstaten",
+      17,
+      17,
+      "Watykan",
+      "Vatikán",
+      21,
+      "Vatikan",
+      23,
+    ]);
+  }
 }

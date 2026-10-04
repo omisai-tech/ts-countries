@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Belgium (BE)
@@ -8,43 +9,43 @@ export class Belgium extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BEL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "56";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "32";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "32";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Brussels";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "30,510.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Belgium extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Belgium";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Belgium";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Belgien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Bélgica";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Belgio";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Belgique";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bélgica";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Belgium";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Belgien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Belgien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Belgia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Belgia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Belgie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Belgicko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Belgija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Belgija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BE",
+      "BEL",
+      "56",
+      0,
+      "32",
+      4,
+      "Brussels",
+      "30,510.0",
+      "EU",
+      "Belgium",
+      9,
+      "Belgien",
+      "Bélgica",
+      "Belgio",
+      "Belgique",
+      12,
+      9,
+      11,
+      11,
+      "Belgia",
+      19,
+      "Belgie",
+      "Belgicko",
+      "Belgija",
+      23,
+    ]);
+  }
 }

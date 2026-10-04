@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * U.S. Outlying Islands (UM)
@@ -8,43 +9,43 @@ export class USOutlyingIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "UM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "UMI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "581";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "0.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class USOutlyingIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "U.S. Outlying Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Az Egyesült Államok külső szigetei";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Äußere Inseln der USA";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas exteriores de EE. UU.";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Esterne degli Stati Uniti";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles extérieures des États-Unis";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Distantes dos EUA";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "U.S. Outlying Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "De amerikanske ydre øer";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Amerikanska yttre öarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "De amerikanske ytre øyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Dalekie USA";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Odlehlé ostrovy USA";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Odľahlé ostrovy USA";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Oddaljeni otoki ZDA";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Udaljeni otoci SAD-a";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "UM",
+      "UMI",
+      "581",
+      "",
+      3,
+      3,
+      3,
+      "0.0",
+      "OC",
+      "U.S. Outlying Islands",
+      "Az Egyesült Államok külső szigetei",
+      "Äußere Inseln der USA",
+      "Islas exteriores de EE. UU.",
+      "Isole Esterne degli Stati Uniti",
+      "Îles extérieures des États-Unis",
+      "Ilhas Distantes dos EUA",
+      9,
+      "De amerikanske ydre øer",
+      "Amerikanska yttre öarna",
+      "De amerikanske ytre øyene",
+      "Wyspy Dalekie USA",
+      "Odlehlé ostrovy USA",
+      "Odľahlé ostrovy USA",
+      "Oddaljeni otoki ZDA",
+      "Udaljeni otoci SAD-a",
+    ]);
+  }
 }

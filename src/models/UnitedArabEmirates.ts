@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * United Arab Emirates (AE)
@@ -8,43 +9,43 @@ export class UnitedArabEmirates extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ARE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "784";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "971";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "971";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Abu Dhabi";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "82,880.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class UnitedArabEmirates extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "United Arab Emirates";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Egyesült Arab Emírségek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Vereinigte Arabische Emirate";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Emiratos Árabes Unidos";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Emirati Arabi Uniti";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Emirats Arabes Unis";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Emirados Árabes Unidos";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "United Arab Emirates";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "De Forenede Arabiske Emirater";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Förenade Arabemiraten";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "De forente arabiske emirater";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Emiraty Arabskie";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Spojené arabské emiráty";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Spojené arabské emiráty";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Združeni arabski emirati";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Ujedinjeni Arapski Emirati";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AE",
+      "ARE",
+      "784",
+      0,
+      "971",
+      4,
+      "Abu Dhabi",
+      "82,880.0",
+      "AS",
+      "United Arab Emirates",
+      "Egyesült Arab Emírségek",
+      "Vereinigte Arabische Emirate",
+      "Emiratos Árabes Unidos",
+      "Emirati Arabi Uniti",
+      "Emirats Arabes Unis",
+      "Emirados Árabes Unidos",
+      9,
+      "De Forenede Arabiske Emirater",
+      "Förenade Arabemiraten",
+      "De forente arabiske emirater",
+      "Emiraty Arabskie",
+      "Spojené arabské emiráty",
+      21,
+      "Združeni arabski emirati",
+      "Ujedinjeni Arapski Emirati",
+    ]);
+  }
 }

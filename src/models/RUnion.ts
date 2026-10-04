@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Réunion (RE)
@@ -8,43 +9,43 @@ export class RUnion extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "RE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "REU";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "638";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "RE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "262";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "262";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Saint-Denis";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,517.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class RUnion extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Réunion";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Réunion";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Réunion";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Reunión";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Riunione";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Réunion";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Reunião";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Réunion";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Réunion";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Réunion";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Réunion";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Reunion";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Réunion";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Réunion";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Reunion";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Réunion";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "RE",
+      "REU",
+      "638",
+      0,
+      "262",
+      4,
+      "Saint-Denis",
+      "2,517.0",
+      "AF",
+      "Réunion",
+      9,
+      9,
+      "Reunión",
+      "Riunione",
+      9,
+      "Reunião",
+      9,
+      9,
+      9,
+      9,
+      "Reunion",
+      9,
+      9,
+      20,
+      9,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Brazil (BR)
@@ -8,43 +9,43 @@ export class Brazil extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BRA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "76";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "55";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "55";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Brasilia";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "8,511,965.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Brazil extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Brazil";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Brazília";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Brasilien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Brasil";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Brasile";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Brésil";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Brasil";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Brazil";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Brasilien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Brasilien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Brasil";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Brazylia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Brazílie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Brazília";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Brazilija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Brazil";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BR",
+      "BRA",
+      "76",
+      0,
+      "55",
+      4,
+      "Brasilia",
+      "8,511,965.0",
+      "SA",
+      "Brazil",
+      "Brazília",
+      "Brasilien",
+      "Brasil",
+      "Brasile",
+      "Brésil",
+      12,
+      9,
+      11,
+      11,
+      12,
+      "Brazylia",
+      "Brazílie",
+      10,
+      "Brazilija",
+      9,
+    ]);
+  }
 }

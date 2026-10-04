@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * British Virgin Islands (VG)
@@ -8,43 +9,43 @@ export class BritishVirginIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "VG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "VGB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "92";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "VI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-284";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-284";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Road Town";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "153.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class BritishVirginIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "British Virgin Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Brit Virgin szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Britische Jungferninseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Vírgenes Británicas";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Vergini Britanniche";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Vierges britanniques";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Virgens Britânicas";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "British Virgin Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "De Britiske Jomfruøer";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Brittiska Jungfruöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "De britiske Jomfruøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Brytyjskie Wyspy Dziewicze";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Britské Panenské ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Britské Panenské ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Britanski Deviški otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Britanski Djevičanski otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "VG",
+      "VGB",
+      "92",
+      "VI",
+      "1-284",
+      4,
+      "Road Town",
+      "153.0",
+      "NA",
+      "British Virgin Islands",
+      "Brit Virgin szigetek",
+      "Britische Jungferninseln",
+      "Islas Vírgenes Británicas",
+      "Isole Vergini Britanniche",
+      "Îles Vierges britanniques",
+      "Ilhas Virgens Britânicas",
+      9,
+      "De Britiske Jomfruøer",
+      "Brittiska Jungfruöarna",
+      "De britiske Jomfruøyene",
+      "Brytyjskie Wyspy Dziewicze",
+      "Britské Panenské ostrovy",
+      21,
+      "Britanski Deviški otoki",
+      "Britanski Djevičanski otoci",
+    ]);
+  }
 }

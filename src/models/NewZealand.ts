@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * New Zealand (NZ)
@@ -8,43 +9,43 @@ export class NewZealand extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NZL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "554";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NZ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "64";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "64";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Wellington";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "268,680.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class NewZealand extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "New Zealand";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Új Zéland";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Neuseeland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Nueva Zelanda";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Nuova Zelanda";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Nouvelle-Zélande";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Nova Zelândia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "New Zealand";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "New Zealand";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nya Zeeland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "New Zealand";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Nowa Zelandia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Nový Zéland";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Nový Zéland";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Nova Zelandija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Novi Zeland";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NZ",
+      "NZL",
+      "554",
+      0,
+      "64",
+      4,
+      "Wellington",
+      "268,680.0",
+      "OC",
+      "New Zealand",
+      "Új Zéland",
+      "Neuseeland",
+      "Nueva Zelanda",
+      "Nuova Zelanda",
+      "Nouvelle-Zélande",
+      "Nova Zelândia",
+      9,
+      9,
+      "Nya Zeeland",
+      9,
+      "Nowa Zelandia",
+      "Nový Zéland",
+      21,
+      "Nova Zelandija",
+      "Novi Zeland",
+    ]);
+  }
 }

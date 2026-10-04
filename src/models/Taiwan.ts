@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Taiwan (TW)
@@ -8,43 +9,43 @@ export class Taiwan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TW";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TWN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "158";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TW";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "886";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "886";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Taipei";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "35,980.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Taiwan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Taiwan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Tajvan";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Taiwan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Taiwán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Taiwan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Taïwan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Taiwan";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Taiwan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Taiwan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Taiwan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Taiwan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Tajwan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Tchaj-wan";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Taiwan";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Tajvan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Tajvan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TW",
+      "TWN",
+      "158",
+      0,
+      "886",
+      4,
+      "Taipei",
+      "35,980.0",
+      "AS",
+      "Taiwan",
+      "Tajvan",
+      9,
+      "Taiwán",
+      9,
+      "Taïwan",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Tajwan",
+      "Tchaj-wan",
+      9,
+      10,
+      10,
+    ]);
+  }
 }

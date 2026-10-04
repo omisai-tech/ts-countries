@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Equatorial Guinea (GQ)
@@ -8,43 +9,43 @@ export class EquatorialGuinea extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GQ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GNQ";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "226";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "EK";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "240";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "240";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Malabo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "28,051.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class EquatorialGuinea extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Equatorial Guinea";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Egyenlítői-Guinea";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Äquatorialguinea";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Guinea Ecuatorial";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Guinea Equatoriale";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Guinée Équatoriale";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Guiné Equatorial";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Equatorial Guinea";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Ækvatorialguinea";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Ekvatorialguinea";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Ekvatorial-Guinea";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Gwinea Równikowa";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Rovníková Guinea";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Rovníková Guinea";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Ekvatorialna Gvineja";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Ekvatorijalna Gvineja";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GQ",
+      "GNQ",
+      "226",
+      "EK",
+      "240",
+      4,
+      "Malabo",
+      "28,051.0",
+      "AF",
+      "Equatorial Guinea",
+      "Egyenlítői-Guinea",
+      "Äquatorialguinea",
+      "Guinea Ecuatorial",
+      "Guinea Equatoriale",
+      "Guinée Équatoriale",
+      "Guiné Equatorial",
+      9,
+      "Ækvatorialguinea",
+      "Ekvatorialguinea",
+      "Ekvatorial-Guinea",
+      "Gwinea Równikowa",
+      "Rovníková Guinea",
+      21,
+      "Ekvatorialna Gvineja",
+      "Ekvatorijalna Gvineja",
+    ]);
+  }
 }

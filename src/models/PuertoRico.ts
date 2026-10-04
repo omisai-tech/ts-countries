@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Puerto Rico (PR)
@@ -8,43 +9,43 @@ export class PuertoRico extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PRI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "630";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "RQ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "San Juan";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "9,104.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class PuertoRico extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Puerto Rico";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Puerto Rico";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Puerto Rico";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Puerto Rico";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Porto Rico";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Porto Rico";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Porto Rico";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Puerto Rico";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Puerto Rico";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Puerto Rico";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Puerto Rico";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Portoryko";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Portoriko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Portoriko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Portoriko";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Portoriko";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PR",
+      "PRI",
+      "630",
+      "RQ",
+      "1",
+      4,
+      "San Juan",
+      "9,104.0",
+      "NA",
+      "Puerto Rico",
+      9,
+      9,
+      9,
+      "Porto Rico",
+      13,
+      13,
+      9,
+      9,
+      9,
+      9,
+      "Portoryko",
+      "Portoriko",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

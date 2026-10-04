@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Tokelau (TK)
@@ -8,43 +9,43 @@ export class Tokelau extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TK";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TKL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "772";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TL";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "690";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "690";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "10.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Tokelau extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Tokelau";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Tokelau";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Tokelau";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Tokelau";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Tokelau";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Tokélaou";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Toquelau";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Tokelau";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tokelau";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tokelauöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tokelau";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Tokelau";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Tokelau";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Tokelau";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Tokelau";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Tokelau";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TK",
+      "TKL",
+      "772",
+      "TL",
+      "690",
+      4,
+      "",
+      "10.0",
+      "OC",
+      "Tokelau",
+      9,
+      9,
+      9,
+      9,
+      "Tokélaou",
+      "Toquelau",
+      9,
+      9,
+      "Tokelauöarna",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

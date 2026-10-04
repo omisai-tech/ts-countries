@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * South Africa (ZA)
@@ -8,43 +9,43 @@ export class SouthAfrica extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ZA";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ZAF";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "710";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SF";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "27";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "27";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Pretoria";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,219,912.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SouthAfrica extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "South Africa";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Dél-Afrika";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Südafrika";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Sudáfrica";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Sud Africa";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Afrique du Sud";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "África do Sul";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "South Africa";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sydafrika";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sydafrika";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sør-Afrika";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Republika Południowej Afryki";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Jižní Afrika";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Južná Afrika";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Južna Afrika";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Južna Afrika";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ZA",
+      "ZAF",
+      "710",
+      "SF",
+      "27",
+      4,
+      "Pretoria",
+      "1,219,912.0",
+      "AF",
+      "South Africa",
+      "Dél-Afrika",
+      "Südafrika",
+      "Sudáfrica",
+      "Sud Africa",
+      "Afrique du Sud",
+      "África do Sul",
+      9,
+      "Sydafrika",
+      17,
+      "Sør-Afrika",
+      "Republika Południowej Afryki",
+      "Jižní Afrika",
+      "Južná Afrika",
+      "Južna Afrika",
+      23,
+    ]);
+  }
 }

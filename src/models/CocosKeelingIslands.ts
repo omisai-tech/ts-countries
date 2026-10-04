@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Cocos (Keeling) Islands (CC)
@@ -8,43 +9,43 @@ export class CocosKeelingIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CC";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CCK";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "166";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CK";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "61";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "61";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "West Island";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "14.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class CocosKeelingIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Cocos (Keeling) Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kókusz (Keeling)-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kokosinseln (Keelinginseln).";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Cocos (Keeling)";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Cocos (Keeling).";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Cocos (Keeling)";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Cocos (Keeling)";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Cocos (Keeling) Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kokosøerne (Keelingøerne)";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kokosöarna (Keelingöarna)";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kokosøyene (Keelingøyene)";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Kokosowe (Keelinga)";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kokosové (Keelingovy) ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kokosové (Keelingove) ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kokosovi (Keelingovi) otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kokosovi (Keelingovi) otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CC",
+      "CCK",
+      "166",
+      "CK",
+      "61",
+      4,
+      "West Island",
+      "14.0",
+      "AS",
+      "Cocos (Keeling) Islands",
+      "Kókusz (Keeling)-szigetek",
+      "Kokosinseln (Keelinginseln).",
+      "Islas Cocos (Keeling)",
+      "Isole Cocos (Keeling).",
+      "Îles Cocos (Keeling)",
+      "Ilhas Cocos (Keeling)",
+      9,
+      "Kokosøerne (Keelingøerne)",
+      "Kokosöarna (Keelingöarna)",
+      "Kokosøyene (Keelingøyene)",
+      "Wyspy Kokosowe (Keelinga)",
+      "Kokosové (Keelingovy) ostrovy",
+      "Kokosové (Keelingove) ostrovy",
+      "Kokosovi (Keelingovi) otoki",
+      "Kokosovi (Keelingovi) otoci",
+    ]);
+  }
 }

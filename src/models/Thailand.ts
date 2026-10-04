@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Thailand (TH)
@@ -8,43 +9,43 @@ export class Thailand extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TH";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "THA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "764";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TH";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "66";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "66";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bangkok";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "514,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Thailand extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Thailand";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Thaiföld";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Thailand";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Tailandia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Tailandia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Thaïlande";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Tailândia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Thailand";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Thailand";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Thailand";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Thailand";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Tajlandia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Thajsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Thajsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Tajska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Tajland";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TH",
+      "THA",
+      "764",
+      0,
+      "66",
+      4,
+      "Bangkok",
+      "514,000.0",
+      "AS",
+      "Thailand",
+      "Thaiföld",
+      9,
+      "Tailandia",
+      12,
+      "Thaïlande",
+      "Tailândia",
+      9,
+      9,
+      9,
+      9,
+      "Tajlandia",
+      "Thajsko",
+      21,
+      "Tajska",
+      "Tajland",
+    ]);
+  }
 }

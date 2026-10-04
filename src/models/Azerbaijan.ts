@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Azerbaijan (AZ)
@@ -8,43 +9,43 @@ export class Azerbaijan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "AZE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "31";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AJ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "994";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "994";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Baku";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "86,600.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Azerbaijan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Azerbaijan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Azerbajdzsán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Aserbaidschan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Azerbaiyán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Azerbaigian";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Azerbaïdjan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Azerbaijão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Azerbaijan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Aserbajdsjan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Azerbajdzjan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Aserbajdsjan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Azerbejdżan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Ázerbajdžán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Azerbajdžan";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Azerbajdžan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Azerbejdžan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AZ",
+      "AZE",
+      "31",
+      "AJ",
+      "994",
+      4,
+      "Baku",
+      "86,600.0",
+      "AS",
+      "Azerbaijan",
+      "Azerbajdzsán",
+      "Aserbaidschan",
+      "Azerbaiyán",
+      "Azerbaigian",
+      "Azerbaïdjan",
+      "Azerbaijão",
+      9,
+      "Aserbajdsjan",
+      "Azerbajdzjan",
+      17,
+      "Azerbejdżan",
+      "Ázerbajdžán",
+      "Azerbajdžan",
+      22,
+      "Azerbejdžan",
+    ]);
+  }
 }

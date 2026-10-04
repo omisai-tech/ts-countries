@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Sierra Leone (SL)
@@ -8,43 +9,43 @@ export class SierraLeone extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SLE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "694";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SL";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "232";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "232";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Freetown";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "71,740.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SierraLeone extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Sierra Leone";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Sierra Leone";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Sierra Leone";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Sierra Leona";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Sierra Leone";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Sierra Leone";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Serra Leoa";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Sierra Leone";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sierra Leone";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sierra Leone";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sierra Leone";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Sierra Leone";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Sierra Leone";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Sierra Leone";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sierra Leone";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sijera Leone";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SL",
+      "SLE",
+      "694",
+      0,
+      "232",
+      4,
+      "Freetown",
+      "71,740.0",
+      "AF",
+      "Sierra Leone",
+      9,
+      9,
+      "Sierra Leona",
+      9,
+      9,
+      "Serra Leoa",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Sijera Leone",
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Papua New Guinea (PG)
@@ -8,43 +9,43 @@ export class PapuaNewGuinea extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PNG";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "598";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "PP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "675";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "675";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Port Moresby";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "462,840.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class PapuaNewGuinea extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Papua New Guinea";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Pápua Új-Guinea";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Papua Neu-Guinea";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Papúa Nueva Guinea";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Papua Nuova Guinea";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Papouasie Nouvelle Guinée";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Papua Nova Guiné";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Papua New Guinea";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Papua Ny Guinea";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Papua Nya Guinea";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Papua Ny-Guinea";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Papua-Nowa Gwinea";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Papua Nová Guinea";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Papua-Nová Guinea";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Papua Nova Gvineja";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Papua Nova Gvineja";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PG",
+      "PNG",
+      "598",
+      "PP",
+      "675",
+      4,
+      "Port Moresby",
+      "462,840.0",
+      "OC",
+      "Papua New Guinea",
+      "Pápua Új-Guinea",
+      "Papua Neu-Guinea",
+      "Papúa Nueva Guinea",
+      "Papua Nuova Guinea",
+      "Papouasie Nouvelle Guinée",
+      "Papua Nova Guiné",
+      9,
+      "Papua Ny Guinea",
+      "Papua Nya Guinea",
+      "Papua Ny-Guinea",
+      "Papua-Nowa Gwinea",
+      "Papua Nová Guinea",
+      "Papua-Nová Guinea",
+      "Papua Nova Gvineja",
+      23,
+    ]);
+  }
 }

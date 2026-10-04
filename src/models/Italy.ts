@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Italy (IT)
@@ -8,43 +9,43 @@ export class Italy extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "IT";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ITA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "380";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "IT";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "39";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "39";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Rome";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "301,230.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Italy extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Italy";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Olaszország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Italien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Italia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Italia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Italie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Itália";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Italy";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Italien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Italien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Italia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Włochy";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Itálie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Taliansko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Italija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Italija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "IT",
+      "ITA",
+      "380",
+      0,
+      "39",
+      4,
+      "Rome",
+      "301,230.0",
+      "EU",
+      "Italy",
+      "Olaszország",
+      "Italien",
+      "Italia",
+      12,
+      "Italie",
+      "Itália",
+      9,
+      11,
+      11,
+      12,
+      "Włochy",
+      "Itálie",
+      "Taliansko",
+      "Italija",
+      23,
+    ]);
+  }
 }

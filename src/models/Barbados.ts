@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Barbados (BB)
@@ -8,43 +9,43 @@ export class Barbados extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BB";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BRB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "52";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BB";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-246";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-246";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bridgetown";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "431.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Barbados extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Barbados";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Barbados";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Barbados";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Barbados";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Barbados";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Barbade";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Barbados";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Barbados";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Barbados";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Barbados";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Barbados";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Barbados";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Barbados";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Barbados";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Barbados";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Barbados";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BB",
+      "BRB",
+      "52",
+      0,
+      "1-246",
+      4,
+      "Bridgetown",
+      "431.0",
+      "NA",
+      "Barbados",
+      9,
+      9,
+      9,
+      9,
+      "Barbade",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

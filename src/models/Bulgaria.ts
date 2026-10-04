@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bulgaria (BG)
@@ -8,43 +9,43 @@ export class Bulgaria extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BGR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "100";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "359";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "359";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Sofia";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "110,910.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Bulgaria extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bulgaria";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bulgária";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bulgarien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Bulgaria";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bulgaria";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bulgarie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bulgária";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bulgaria";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bulgarien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bulgarien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bulgaria";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Bułgaria";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bulharsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bulharsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Bolgarija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bugarska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BG",
+      "BGR",
+      "100",
+      "BU",
+      "359",
+      4,
+      "Sofia",
+      "110,910.0",
+      "EU",
+      "Bulgaria",
+      "Bulgária",
+      "Bulgarien",
+      9,
+      9,
+      "Bulgarie",
+      10,
+      9,
+      11,
+      11,
+      9,
+      "Bułgaria",
+      "Bulharsko",
+      21,
+      "Bolgarija",
+      "Bugarska",
+    ]);
+  }
 }

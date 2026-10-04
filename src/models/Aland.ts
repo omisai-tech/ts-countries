@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Aland (AX)
@@ -8,43 +9,43 @@ export class Aland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AX";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ALA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "248";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "358";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "358";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Mariehamn";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,580.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Aland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Aland";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Åland";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Ålandinseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Åland";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Åland";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Åland";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Åland";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Aland";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Åland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Åland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Åland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Aland";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Åland";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Åland";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Åland";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Åland";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AX",
+      "ALA",
+      "248",
+      "",
+      "358",
+      4,
+      "Mariehamn",
+      "1,580.0",
+      "EU",
+      "Aland",
+      "Åland",
+      "Ålandinseln",
+      "Islas Åland",
+      "Isole Åland",
+      "Îles Åland",
+      "Ilhas Åland",
+      9,
+      10,
+      10,
+      10,
+      9,
+      10,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

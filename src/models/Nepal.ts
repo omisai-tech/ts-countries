@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Nepal (NP)
@@ -8,43 +9,43 @@ export class Nepal extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NP";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NPL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "524";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "977";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "977";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kathmandu";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "140,800.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Nepal extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Nepal";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Nepál";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Nepal";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Nepal";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Nepal";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Népal";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Nepal";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Nepal";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Nepal";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nepal";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Nepal";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Nepal";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Nepál";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Nepál";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Nepal";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Nepal";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NP",
+      "NPL",
+      "524",
+      0,
+      "977",
+      4,
+      "Kathmandu",
+      "140,800.0",
+      "AS",
+      "Nepal",
+      "Nepál",
+      9,
+      9,
+      9,
+      "Népal",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      10,
+      10,
+      9,
+      9,
+    ]);
+  }
 }

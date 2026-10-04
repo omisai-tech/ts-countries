@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Trinidad and Tobago (TT)
@@ -8,43 +9,43 @@ export class TrinidadAndTobago extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TT";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TTO";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "780";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TD";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-868";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-868";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Port of Spain";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "5,128.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class TrinidadAndTobago extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Trinidad and Tobago";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Trinidad és Tobago";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Trinidad und Tobago";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Trinidad y Tobago";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Trinidad e Tobago";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Trinité-et-Tobago";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Trinidad e Tobago";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Trinidad and Tobago";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Trinidad og Tobago";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Trinidad och Tobago";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Trinidad og Tobago";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Trynidad i Tobago";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Trinidad a Tobago";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Trinidad a Tobago";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Trinidad in Tobago";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Trinidad i Tobago";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TT",
+      "TTO",
+      "780",
+      "TD",
+      "1-868",
+      4,
+      "Port of Spain",
+      "5,128.0",
+      "NA",
+      "Trinidad and Tobago",
+      "Trinidad és Tobago",
+      "Trinidad und Tobago",
+      "Trinidad y Tobago",
+      "Trinidad e Tobago",
+      "Trinité-et-Tobago",
+      13,
+      9,
+      "Trinidad og Tobago",
+      "Trinidad och Tobago",
+      17,
+      "Trynidad i Tobago",
+      "Trinidad a Tobago",
+      21,
+      "Trinidad in Tobago",
+      "Trinidad i Tobago",
+    ]);
+  }
 }

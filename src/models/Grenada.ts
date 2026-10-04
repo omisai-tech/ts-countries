@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Grenada (GD)
@@ -8,43 +9,43 @@ export class Grenada extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GD";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GRD";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "308";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GJ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-473";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-473";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "St. George's";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "344.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Grenada extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Grenada";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Grenada";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Granate";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Granada";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bomba a mano";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Grenade";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Granada";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Grenada";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Grenada";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Grenada";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Grenada";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Grenada";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Grenada";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Grenada";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Grenada";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Grenada";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GD",
+      "GRD",
+      "308",
+      "GJ",
+      "1-473",
+      4,
+      "St. George's",
+      "344.0",
+      "NA",
+      "Grenada",
+      9,
+      "Granate",
+      "Granada",
+      "Bomba a mano",
+      "Grenade",
+      12,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

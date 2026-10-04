@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Greece (GR)
@@ -8,43 +9,43 @@ export class Greece extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GRC";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "300";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "30";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "30";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Athens";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "131,940.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Greece extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Greece";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Görögország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Griechenland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Grecia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Grecia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Grèce";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Grécia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Greece";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Grækenland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Grekland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Hellas";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Grecja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Řecko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Grécko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Grčija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Grčka";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GR",
+      "GRC",
+      "300",
+      0,
+      "30",
+      4,
+      "Athens",
+      "131,940.0",
+      "EU",
+      "Greece",
+      "Görögország",
+      "Griechenland",
+      "Grecia",
+      12,
+      "Grèce",
+      "Grécia",
+      9,
+      "Grækenland",
+      "Grekland",
+      "Hellas",
+      "Grecja",
+      "Řecko",
+      "Grécko",
+      "Grčija",
+      "Grčka",
+    ]);
+  }
 }

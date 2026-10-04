@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bouvet Island (BV)
@@ -8,43 +9,43 @@ export class BouvetIsland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BV";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BVT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "74";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "47";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "47";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "49.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class BouvetIsland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AN;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bouvet Island";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bouvet-sziget";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bouvetinsel";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Isla Bouvet";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isola Bouvet";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Île Bouvet";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilha Bouvet";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bouvet Island";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bouvetøen";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bouvetön";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bouvetøya";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspa Bouveta";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bouvetův ostrov";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bouvetov ostrov";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Otok Bouvet";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Otok Bouvet";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BV",
+      "BVT",
+      "74",
+      0,
+      "47",
+      4,
+      "",
+      "49.0",
+      "AN",
+      "Bouvet Island",
+      "Bouvet-sziget",
+      "Bouvetinsel",
+      "Isla Bouvet",
+      "Isola Bouvet",
+      "Île Bouvet",
+      "Ilha Bouvet",
+      9,
+      "Bouvetøen",
+      "Bouvetön",
+      "Bouvetøya",
+      "Wyspa Bouveta",
+      "Bouvetův ostrov",
+      "Bouvetov ostrov",
+      "Otok Bouvet",
+      23,
+    ]);
+  }
 }

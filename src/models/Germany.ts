@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Germany (DE)
@@ -8,43 +9,43 @@ export class Germany extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "DE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "DEU";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "276";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "49";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "49";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Berlin";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "357,021.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Germany extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Germany";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Németország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Deutschland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Alemania";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Germania";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Allemagne";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Alemanha";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Germany";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tyskland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tyskland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tyskland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Niemcy";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Německo";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Nemecko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Nemčija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Njemačka";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "DE",
+      "DEU",
+      "276",
+      "GM",
+      "49",
+      4,
+      "Berlin",
+      "357,021.0",
+      "EU",
+      "Germany",
+      "Németország",
+      "Deutschland",
+      "Alemania",
+      "Germania",
+      "Allemagne",
+      "Alemanha",
+      9,
+      "Tyskland",
+      17,
+      17,
+      "Niemcy",
+      "Německo",
+      "Nemecko",
+      "Nemčija",
+      "Njemačka",
+    ]);
+  }
 }

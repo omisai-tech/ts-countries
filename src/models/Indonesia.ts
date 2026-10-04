@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Indonesia (ID)
@@ -8,43 +9,43 @@ export class Indonesia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ID";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "IDN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "360";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "ID";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "62";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "62";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Jakarta";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,919,440.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Indonesia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Indonesia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Indonézia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Indonesien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Indonesia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Indonesia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Indonésie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Indonésia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Indonesia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Indonesien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Indonesien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Indonesia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Indonezja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Indonésie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Indonézia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Indonezija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Indonezija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ID",
+      "IDN",
+      "360",
+      0,
+      "62",
+      4,
+      "Jakarta",
+      "1,919,440.0",
+      "AS",
+      "Indonesia",
+      "Indonézia",
+      "Indonesien",
+      9,
+      9,
+      "Indonésie",
+      "Indonésia",
+      9,
+      11,
+      11,
+      9,
+      "Indonezja",
+      14,
+      10,
+      "Indonezija",
+      23,
+    ]);
+  }
 }

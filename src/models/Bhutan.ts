@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bhutan (BT)
@@ -8,43 +9,43 @@ export class Bhutan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BT";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BTN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "64";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BT";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "975";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "975";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Thimphu";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "47,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Bhutan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bhutan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bhután";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bhutan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Bután";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bhutan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bhoutan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Butão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bhutan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bhutan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bhutan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bhutan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Bhutan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bhútán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bhután";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Butan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Butan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BT",
+      "BTN",
+      "64",
+      0,
+      "975",
+      4,
+      "Thimphu",
+      "47,000.0",
+      "AS",
+      "Bhutan",
+      "Bhután",
+      9,
+      "Bután",
+      9,
+      "Bhoutan",
+      "Butão",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Bhútán",
+      10,
+      "Butan",
+      23,
+    ]);
+  }
 }

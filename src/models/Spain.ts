@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Spain (ES)
@@ -8,43 +9,43 @@ export class Spain extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ES";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ESP";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "724";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "34";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "34";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Madrid";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "504,782.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Spain extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Spain";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Spanyolország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Spanien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "España";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Spagna";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Espagne";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Espanha";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Spain";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Spanien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Spanien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Spania";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Hiszpania";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Španělsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Španielsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Španija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Španjolska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ES",
+      "ESP",
+      "724",
+      "SP",
+      "34",
+      4,
+      "Madrid",
+      "504,782.0",
+      "EU",
+      "Spain",
+      "Spanyolország",
+      "Spanien",
+      "España",
+      "Spagna",
+      "Espagne",
+      "Espanha",
+      9,
+      11,
+      11,
+      "Spania",
+      "Hiszpania",
+      "Španělsko",
+      "Španielsko",
+      "Španija",
+      "Španjolska",
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Fiji (FJ)
@@ -8,43 +9,43 @@ export class Fiji extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "FJ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "FJI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "242";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "FJ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "679";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "679";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Suva";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "18,270.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Fiji extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Fiji";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Fidzsi-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Fidschi-Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Fiyi";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Fiji";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Fidji";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Fiji";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Fiji";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Fiji";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Fiji";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Fiji";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Fidżi";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Fidži";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Fidži";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Fidži";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Fidži";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "FJ",
+      "FJI",
+      "242",
+      0,
+      "679",
+      4,
+      "Suva",
+      "18,270.0",
+      "OC",
+      "Fiji",
+      "Fidzsi-szigetek",
+      "Fidschi-Inseln",
+      "Islas Fiyi",
+      "Isole Fiji",
+      "Îles Fidji",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Fidżi",
+      "Fidži",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

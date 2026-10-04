@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Zambia (ZM)
@@ -8,43 +9,43 @@ export class Zambia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ZM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ZMB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "894";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "ZA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "260";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "260";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Lusaka";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "752,614.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Zambia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Zambia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Zambia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Sambia";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Zambia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Zambia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Zambie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Zâmbia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Zambia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Zambia";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Zambia";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Zambia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Zambia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Zambie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Zambia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Zambija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Zambija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ZM",
+      "ZMB",
+      "894",
+      "ZA",
+      "260",
+      4,
+      "Lusaka",
+      "752,614.0",
+      "AF",
+      "Zambia",
+      9,
+      "Sambia",
+      9,
+      9,
+      "Zambie",
+      "Zâmbia",
+      9,
+      9,
+      9,
+      9,
+      9,
+      14,
+      9,
+      "Zambija",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Poland (PL)
@@ -8,43 +9,43 @@ export class Poland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "POL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "616";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "PL";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "48";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "48";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Warsaw";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "312,685.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Poland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Poland";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Lengyelország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Polen";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Polonia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Polonia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Pologne";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Polônia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Poland";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Polen";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Polen";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Polen";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Polska";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Polsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Poľsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Poljska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Poljska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PL",
+      "POL",
+      "616",
+      0,
+      "48",
+      4,
+      "Warsaw",
+      "312,685.0",
+      "EU",
+      "Poland",
+      "Lengyelország",
+      "Polen",
+      "Polonia",
+      12,
+      "Pologne",
+      "Polônia",
+      9,
+      11,
+      11,
+      11,
+      "Polska",
+      "Polsko",
+      "Poľsko",
+      "Poljska",
+      23,
+    ]);
+  }
 }

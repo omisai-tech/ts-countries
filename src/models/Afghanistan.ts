@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Afghanistan (AF)
@@ -8,43 +9,43 @@ export class Afghanistan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AF";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "AFG";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "4";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AF";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "93";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "93";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kabul";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "647,500.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Afghanistan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Afghanistan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Afganisztán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Afghanistan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Afganistán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Afghanistan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Afghanistan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Afeganistão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Afghanistan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Afghanistan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Afghanistan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Afghanistan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Afganistan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Afghánistán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Afganistan";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Afganistan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Afganistan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AF",
+      "AFG",
+      "4",
+      0,
+      "93",
+      4,
+      "Kabul",
+      "647,500.0",
+      "AS",
+      "Afghanistan",
+      "Afganisztán",
+      9,
+      "Afganistán",
+      9,
+      9,
+      "Afeganistão",
+      9,
+      9,
+      9,
+      9,
+      "Afganistan",
+      "Afghánistán",
+      20,
+      20,
+      20,
+    ]);
+  }
 }

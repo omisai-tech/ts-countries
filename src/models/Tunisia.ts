@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Tunisia (TN)
@@ -8,43 +9,43 @@ export class Tunisia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TUN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "788";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "216";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "216";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tunis";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "163,610.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Tunisia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Tunisia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Tunézia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Tunesien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Túnez";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Tunisia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Tunisie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Tunísia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Tunisia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tunesien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tunisien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tunisia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Tunezja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Tunisko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Tunisko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Tunizija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Tunis";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TN",
+      "TUN",
+      "788",
+      "TS",
+      "216",
+      4,
+      "Tunis",
+      "163,610.0",
+      "AF",
+      "Tunisia",
+      "Tunézia",
+      "Tunesien",
+      "Túnez",
+      9,
+      "Tunisie",
+      "Tunísia",
+      9,
+      11,
+      "Tunisien",
+      9,
+      "Tunezja",
+      "Tunisko",
+      21,
+      "Tunizija",
+      6,
+    ]);
+  }
 }

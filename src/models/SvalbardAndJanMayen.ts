@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Svalbard and Jan Mayen (SJ)
@@ -8,43 +9,43 @@ export class SvalbardAndJanMayen extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SJ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SJM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "744";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "47";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "47";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Longyearbyen";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "62,049.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SvalbardAndJanMayen extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Svalbard and Jan Mayen";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Svalbard és Jan Mayen";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Spitzbergen und Jan Mayen";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Svalbard y Jan Mayen";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Svalbard e Jan Mayen";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Svalbard et Jan Mayen";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Svalbard e Jan Mayen";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Svalbard and Jan Mayen";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Svalbard og Jan Mayen";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Svalbard och Jan Mayen";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Svalbard og Jan Mayen";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Svalbard i Jan Mayen";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Špicberky a Jan Mayen";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Svalbard a Jan Mayen";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Svalbard in Jan Mayen";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Svalbard i Jan Mayen";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SJ",
+      "SJM",
+      "744",
+      "SV",
+      "47",
+      4,
+      "Longyearbyen",
+      "62,049.0",
+      "EU",
+      "Svalbard and Jan Mayen",
+      "Svalbard és Jan Mayen",
+      "Spitzbergen und Jan Mayen",
+      "Svalbard y Jan Mayen",
+      "Svalbard e Jan Mayen",
+      "Svalbard et Jan Mayen",
+      13,
+      9,
+      "Svalbard og Jan Mayen",
+      "Svalbard och Jan Mayen",
+      17,
+      "Svalbard i Jan Mayen",
+      "Špicberky a Jan Mayen",
+      "Svalbard a Jan Mayen",
+      "Svalbard in Jan Mayen",
+      20,
+    ]);
+  }
 }

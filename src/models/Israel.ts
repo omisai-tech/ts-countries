@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Israel (IL)
@@ -8,43 +9,43 @@ export class Israel extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "IL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ISR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "376";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "IS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "972";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "972";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Jerusalem";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "20,770.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Israel extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Israel";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Izrael";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Israel";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Israel";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Israele";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Israël";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Israel";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Israel";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Israel";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Israel";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Israel";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Izrael";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Izrael";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Izrael";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Izrael";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Izrael";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "IL",
+      "ISR",
+      "376",
+      "IS",
+      "972",
+      4,
+      "Jerusalem",
+      "20,770.0",
+      "AS",
+      "Israel",
+      "Izrael",
+      9,
+      9,
+      "Israele",
+      "Israël",
+      9,
+      9,
+      9,
+      9,
+      9,
+      10,
+      10,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

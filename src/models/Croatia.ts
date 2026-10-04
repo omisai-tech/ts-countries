@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Croatia (HR)
@@ -8,43 +9,43 @@ export class Croatia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "HR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "HRV";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "191";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "HR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "385";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "385";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Zagreb";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "56,542.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Croatia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Croatia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Horvátország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kroatien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Croacia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Croazia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Croatie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Croácia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Croatia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kroatien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kroatien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kroatia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Chorwacja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Chorvatsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Chorvátsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Hrvaška";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Hrvatska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "HR",
+      "HRV",
+      "191",
+      0,
+      "385",
+      4,
+      "Zagreb",
+      "56,542.0",
+      "EU",
+      "Croatia",
+      "Horvátország",
+      "Kroatien",
+      "Croacia",
+      "Croazia",
+      "Croatie",
+      "Croácia",
+      9,
+      11,
+      11,
+      "Kroatia",
+      "Chorwacja",
+      "Chorvatsko",
+      "Chorvátsko",
+      "Hrvaška",
+      "Hrvatska",
+    ]);
+  }
 }

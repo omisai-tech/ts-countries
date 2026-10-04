@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * North Macedonia (MK)
@@ -8,43 +9,43 @@ export class NorthMacedonia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MK";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MKD";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "807";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MK";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "389";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "389";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Skopje";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "25,333.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class NorthMacedonia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "North Macedonia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Észak-Macedónia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Nordmazedonien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Macedonia del Norte";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Macedonia del Nord";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Macédoine du Nord";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Macedônia do Norte";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "North Macedonia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Nordmakedonien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nordmakedonien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Nord-Makedonia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Macedonia Północna";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Severní Makedonie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Severné Macedónsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Severna Makedonija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sjeverna Makedonija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MK",
+      "MKD",
+      "807",
+      0,
+      "389",
+      4,
+      "Skopje",
+      "25,333.0",
+      "EU",
+      "North Macedonia",
+      "Észak-Macedónia",
+      "Nordmazedonien",
+      "Macedonia del Norte",
+      "Macedonia del Nord",
+      "Macédoine du Nord",
+      "Macedônia do Norte",
+      9,
+      "Nordmakedonien",
+      17,
+      "Nord-Makedonia",
+      "Macedonia Północna",
+      "Severní Makedonie",
+      "Severné Macedónsko",
+      "Severna Makedonija",
+      "Sjeverna Makedonija",
+    ]);
+  }
 }

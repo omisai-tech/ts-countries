@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Seychelles (SC)
@@ -8,43 +9,43 @@ export class Seychelles extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SC";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SYC";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "690";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "248";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "248";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Victoria";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "455.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Seychelles extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Seychelles";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Seychelle-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Seychellen-Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Seychelles";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Seychelles";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Seychelles";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Seicheles";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Seychelles";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Seychellerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Seychellerna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Seychellene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Seszele";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Seychely";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Seychely";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Sejšeli";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sejšeli";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SC",
+      "SYC",
+      "690",
+      "SE",
+      "248",
+      4,
+      "Victoria",
+      "455.0",
+      "AF",
+      "Seychelles",
+      "Seychelle-szigetek",
+      "Seychellen-Inseln",
+      "Islas Seychelles",
+      "Isole Seychelles",
+      "Îles Seychelles",
+      "Seicheles",
+      9,
+      "Seychellerne",
+      "Seychellerna",
+      "Seychellene",
+      "Seszele",
+      "Seychely",
+      21,
+      "Sejšeli",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Timor-Leste (TL)
@@ -8,43 +9,43 @@ export class TimorLeste extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TLS";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "626";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TT";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "670";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "670";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Dili";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "15,007.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class TimorLeste extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Timor-Leste";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kelet-Timor";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Osttimor";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Timor Oriental";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Timor Est";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Timor oriental";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Timor-Leste";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Timor-Leste";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Timor-Leste";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Östtimor";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Øst-Timor";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Timor Wschodni";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Východní Timor";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Východný Timor";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Vzhodni Timor";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Istočni Timor";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TL",
+      "TLS",
+      "626",
+      "TT",
+      "670",
+      4,
+      "Dili",
+      "15,007.0",
+      "OC",
+      "Timor-Leste",
+      "Kelet-Timor",
+      "Osttimor",
+      "Timor Oriental",
+      "Timor Est",
+      "Timor oriental",
+      9,
+      9,
+      9,
+      "Östtimor",
+      "Øst-Timor",
+      "Timor Wschodni",
+      "Východní Timor",
+      "Východný Timor",
+      "Vzhodni Timor",
+      "Istočni Timor",
+    ]);
+  }
 }

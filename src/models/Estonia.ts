@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Estonia (EE)
@@ -8,43 +9,43 @@ export class Estonia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "EE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "EST";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "233";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "EN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "372";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "372";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tallinn";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "45,226.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Estonia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Estonia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Észtország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Estland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Estonia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Estonia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Estonie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Estônia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Estonia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Estland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Estland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Estland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Estonia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Estonsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Estónsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Estonija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Estonija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "EE",
+      "EST",
+      "233",
+      "EN",
+      "372",
+      4,
+      "Tallinn",
+      "45,226.0",
+      "EU",
+      "Estonia",
+      "Észtország",
+      "Estland",
+      9,
+      9,
+      "Estonie",
+      "Estônia",
+      9,
+      11,
+      11,
+      11,
+      9,
+      "Estonsko",
+      "Estónsko",
+      "Estonija",
+      23,
+    ]);
+  }
 }

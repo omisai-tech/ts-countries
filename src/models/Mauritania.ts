@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Mauritania (MR)
@@ -8,43 +9,43 @@ export class Mauritania extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MRT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "478";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "222";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "222";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Nouakchott";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,030,700.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Mauritania extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Mauritania";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Mauritánia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Mauretanien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Mauritania";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "La Mauritania";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Mauritanie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Mauritânia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Mauritania";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Mauretanien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Mauretanien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Mauritania";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Mauretania";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Mauritánie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Mauritánia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Mavretanija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Mauritanija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MR",
+      "MRT",
+      "478",
+      0,
+      "222",
+      4,
+      "Nouakchott",
+      "1,030,700.0",
+      "AF",
+      "Mauritania",
+      "Mauritánia",
+      "Mauretanien",
+      9,
+      "La Mauritania",
+      "Mauritanie",
+      "Mauritânia",
+      9,
+      11,
+      11,
+      9,
+      "Mauretania",
+      "Mauritánie",
+      10,
+      "Mavretanija",
+      "Mauritanija",
+    ]);
+  }
 }

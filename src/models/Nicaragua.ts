@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Nicaragua (NI)
@@ -8,43 +9,43 @@ export class Nicaragua extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NIC";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "558";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "505";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "505";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Managua";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "129,494.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Nicaragua extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Nicaragua";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Nicaragua";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Nicaragua";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Nicaragua";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Nicaragua";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Nicaragua";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Nicarágua";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Nicaragua";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Nicaragua";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nicaragua";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Nicaragua";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Nikaragua";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Nikaragua";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Nikaragua";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Nikaragva";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Nikaragva";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NI",
+      "NIC",
+      "558",
+      "NU",
+      "505",
+      4,
+      "Managua",
+      "129,494.0",
+      "NA",
+      "Nicaragua",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Nicarágua",
+      9,
+      9,
+      9,
+      9,
+      "Nikaragua",
+      20,
+      20,
+      "Nikaragva",
+      23,
+    ]);
+  }
 }

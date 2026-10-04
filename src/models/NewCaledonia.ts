@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * New Caledonia (NC)
@@ -8,43 +9,43 @@ export class NewCaledonia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NC";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NCL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "540";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "687";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "687";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Noumea";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "19,060.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class NewCaledonia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "New Caledonia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Új-Kaledónia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Neu-Kaledonien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Nueva Caledonia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Nuova Caledonia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Nouvelle Calédonie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Nova Caledônia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "New Caledonia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Ny Kaledonien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Nya Kaledonien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Ny-Caledonia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Nowa Kaledonia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Nová Kaledonie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Nová Kaledónia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Nova Kaledonija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Nova Kaledonija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NC",
+      "NCL",
+      "540",
+      0,
+      "687",
+      4,
+      "Noumea",
+      "19,060.0",
+      "OC",
+      "New Caledonia",
+      "Új-Kaledónia",
+      "Neu-Kaledonien",
+      "Nueva Caledonia",
+      "Nuova Caledonia",
+      "Nouvelle Calédonie",
+      "Nova Caledônia",
+      9,
+      "Ny Kaledonien",
+      "Nya Kaledonien",
+      "Ny-Caledonia",
+      "Nowa Kaledonia",
+      "Nová Kaledonie",
+      "Nová Kaledónia",
+      "Nova Kaledonija",
+      23,
+    ]);
+  }
 }

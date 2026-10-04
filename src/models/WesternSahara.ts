@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Western Sahara (EH)
@@ -8,43 +9,43 @@ export class WesternSahara extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "EH";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ESH";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "732";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "WI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "212";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "212";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "El-Aaiun";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "266,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class WesternSahara extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Western Sahara";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "nyugat-Szahara";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Westsahara";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Sahara Occidental";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Sahara occidentale";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Sahara occidental";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Saara Ocidental";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Western Sahara";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Vestsahara";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Västsahara";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Vest-Sahara";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Sahara Zachodnia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Západní Sahara";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Západná Sahara";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Zahodna Sahara";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Zapadna Sahara";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "EH",
+      "ESH",
+      "732",
+      "WI",
+      "212",
+      4,
+      "El-Aaiun",
+      "266,000.0",
+      "AF",
+      "Western Sahara",
+      "nyugat-Szahara",
+      "Westsahara",
+      "Sahara Occidental",
+      "Sahara occidentale",
+      "Sahara occidental",
+      "Saara Ocidental",
+      9,
+      "Vestsahara",
+      "Västsahara",
+      "Vest-Sahara",
+      "Sahara Zachodnia",
+      "Západní Sahara",
+      "Západná Sahara",
+      "Zahodna Sahara",
+      "Zapadna Sahara",
+    ]);
+  }
 }

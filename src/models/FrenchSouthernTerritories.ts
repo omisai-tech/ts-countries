@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * French Southern Territories (TF)
@@ -8,43 +9,43 @@ export class FrenchSouthernTerritories extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TF";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ATF";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "260";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "FS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "262";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "262";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Port-aux-Francais";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "7,829.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class FrenchSouthernTerritories extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AN;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "French Southern Territories";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Francia déli területek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Südfranzösische Territorien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Territorios Franceses del Sur";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Territori della Francia del sud";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Territoires du Sud français";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Territórios Franceses do Sul";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "French Southern Territories";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Franske sydlige territorier";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Franska sydterritorierna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Franske sørlige territorier";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Francuskie Terytoria Południowe";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Francouzská jižní území";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Francúzske južné územia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Francoska južna ozemlja";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Francuski južni teritoriji";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TF",
+      "ATF",
+      "260",
+      "FS",
+      "262",
+      4,
+      "Port-aux-Francais",
+      "7,829.0",
+      "AN",
+      "French Southern Territories",
+      "Francia déli területek",
+      "Südfranzösische Territorien",
+      "Territorios Franceses del Sur",
+      "Territori della Francia del sud",
+      "Territoires du Sud français",
+      "Territórios Franceses do Sul",
+      9,
+      "Franske sydlige territorier",
+      "Franska sydterritorierna",
+      "Franske sørlige territorier",
+      "Francuskie Terytoria Południowe",
+      "Francouzská jižní území",
+      "Francúzske južné územia",
+      "Francoska južna ozemlja",
+      "Francuski južni teritoriji",
+    ]);
+  }
 }

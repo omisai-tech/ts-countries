@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Madagascar (MG)
@@ -8,43 +9,43 @@ export class Madagascar extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MDG";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "450";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "261";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "261";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Antananarivo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "587,040.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Madagascar extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Madagascar";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Madagaszkár";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Madagaskar";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Madagascar";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Madagascar";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Madagascar";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Madagáscar";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Madagascar";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Madagaskar";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Madagaskar";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Madagaskar";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Madagaskar";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Madagaskar";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Madagaskar";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Madagaskar";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Madagaskar";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MG",
+      "MDG",
+      "450",
+      "MA",
+      "261",
+      4,
+      "Antananarivo",
+      "587,040.0",
+      "AF",
+      "Madagascar",
+      "Madagaszkár",
+      "Madagaskar",
+      9,
+      9,
+      9,
+      "Madagáscar",
+      9,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+    ]);
+  }
 }

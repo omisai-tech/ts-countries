@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Guinea (GN)
@@ -8,43 +9,43 @@ export class Guinea extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GIN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "324";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "224";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "224";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Conakry";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "245,857.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Guinea extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Guinea";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Guinea";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Guinea";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Guinea";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Guinea";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Guinée";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Guiné";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Guinea";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Guinea";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Guinea";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Guinea";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Gwinea";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Guinea";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Guinea";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Gvineja";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Gvineja";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GN",
+      "GIN",
+      "324",
+      "GV",
+      "224",
+      4,
+      "Conakry",
+      "245,857.0",
+      "AF",
+      "Guinea",
+      9,
+      9,
+      9,
+      9,
+      "Guinée",
+      "Guiné",
+      9,
+      9,
+      9,
+      9,
+      "Gwinea",
+      9,
+      9,
+      "Gvineja",
+      23,
+    ]);
+  }
 }

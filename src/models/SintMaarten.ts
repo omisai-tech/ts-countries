@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Sint Maarten (SX)
@@ -8,43 +9,43 @@ export class SintMaarten extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SX";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SXM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "534";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NN";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-721";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-721";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Philipsburg";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "21.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class SintMaarten extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Sint Maarten";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Sint Maarten";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Sint Maarten";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Sint Maarten";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Sint Maarten";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Sint Maarten";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Sint Maarten";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Sint Maarten";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sint Maarten";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sint Maarten";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sint Maarten";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Sint Maarten";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Svatý Martin (Nizozemsko)";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Svätý Martin (hol.)";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Nizozemski Sveti Martin";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sint Maarten";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SX",
+      "SXM",
+      "534",
+      "NN",
+      "1-721",
+      4,
+      "Philipsburg",
+      "21.0",
+      "NA",
+      "Sint Maarten",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Svatý Martin (Nizozemsko)",
+      "Svätý Martin (hol.)",
+      "Nizozemski Sveti Martin",
+      9,
+    ]);
+  }
 }

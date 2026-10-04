@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Argentina (AR)
@@ -8,43 +9,43 @@ export class Argentina extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ARG";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "32";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "54";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "54";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Buenos Aires";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "2,766,890.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Argentina extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.SA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Argentina";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Argentína";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Argentinien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Argentina";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Argentina";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Argentine";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Argentina";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Argentina";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Argentina";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Argentina";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Argentina";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Argentyna";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Argentina";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Argentína";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Argentina";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Argentina";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AR",
+      "ARG",
+      "32",
+      0,
+      "54",
+      4,
+      "Buenos Aires",
+      "2,766,890.0",
+      "SA",
+      "Argentina",
+      "Argentína",
+      "Argentinien",
+      9,
+      9,
+      "Argentine",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Argentyna",
+      9,
+      10,
+      9,
+      9,
+    ]);
+  }
 }

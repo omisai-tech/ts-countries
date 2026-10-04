@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Togo (TG)
@@ -8,43 +9,43 @@ export class Togo extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TGO";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "768";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "228";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "228";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Lome";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "56,785.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Togo extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Togo";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Menni";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Gehen";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Ir";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Andare";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Aller";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ir";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Togo";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Togo";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Togo";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Togo";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Togo";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Togo";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Togo";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Togo";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Togo";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TG",
+      "TGO",
+      "768",
+      "TO",
+      "228",
+      4,
+      "Lome",
+      "56,785.0",
+      "AF",
+      "Togo",
+      "Menni",
+      "Gehen",
+      "Ir",
+      "Andare",
+      "Aller",
+      12,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

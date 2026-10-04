@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Iceland (IS)
@@ -8,43 +9,43 @@ export class Iceland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "IS";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ISL";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "352";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "IC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "354";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "354";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Reykjavik";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "103,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Iceland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Iceland";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Izland";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Island";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islandia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Islanda";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Islande";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Islândia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Iceland";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Island";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Island";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Island";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Islandia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Island";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Island";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Islandija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Island";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "IS",
+      "ISL",
+      "352",
+      "IC",
+      "354",
+      4,
+      "Reykjavik",
+      "103,000.0",
+      "EU",
+      "Iceland",
+      "Izland",
+      "Island",
+      "Islandia",
+      "Islanda",
+      "Islande",
+      "Islândia",
+      9,
+      11,
+      11,
+      11,
+      12,
+      11,
+      11,
+      "Islandija",
+      11,
+    ]);
+  }
 }

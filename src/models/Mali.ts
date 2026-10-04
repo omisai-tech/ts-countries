@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Mali (ML)
@@ -8,43 +9,43 @@ export class Mali extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ML";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MLI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "466";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "ML";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "223";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "223";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bamako";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,240,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Mali extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Mali";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Mali";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Mali";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Malí";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Mali";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Mali";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Mali";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Mali";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Mali";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Mali";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Mali";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Mali";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Mali";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Mali";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Mali";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Mali";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ML",
+      "MLI",
+      "466",
+      0,
+      "223",
+      4,
+      "Bamako",
+      "1,240,000.0",
+      "AF",
+      "Mali",
+      9,
+      9,
+      "Malí",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

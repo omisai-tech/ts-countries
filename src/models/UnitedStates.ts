@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * United States (US)
@@ -8,43 +9,43 @@ export class UnitedStates extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "US";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "USA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "840";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "US";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Washington";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "9,629,091.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class UnitedStates extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "United States";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Egyesült Államok";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Vereinigte Staaten";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Estados Unidos";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "stati Uniti";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "États-Unis";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Estados Unidos";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "United States";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Forenede Stater";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Förenta staterna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "USA";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Stany Zjednoczone";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Spojené státy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Spojené štáty";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Združene države Amerike";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Sjedinjene Države";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "US",
+      "USA",
+      "840",
+      0,
+      "1",
+      4,
+      "Washington",
+      "9,629,091.0",
+      "NA",
+      "United States",
+      "Egyesült Államok",
+      "Vereinigte Staaten",
+      "Estados Unidos",
+      "stati Uniti",
+      "États-Unis",
+      12,
+      9,
+      "Forenede Stater",
+      "Förenta staterna",
+      1,
+      "Stany Zjednoczone",
+      "Spojené státy",
+      "Spojené štáty",
+      "Združene države Amerike",
+      "Sjedinjene Države",
+    ]);
+  }
 }

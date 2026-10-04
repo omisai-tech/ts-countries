@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Vietnam (VN)
@@ -8,43 +9,43 @@ export class Vietnam extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "VN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "VNM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "704";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "VM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "84";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "84";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Hanoi";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "329,560.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Vietnam extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Vietnam";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Vietnam";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Vietnam";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Vietnam";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Vietnam";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Viêt Nam";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Vietnã";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Vietnam";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Vietnam";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Vietnam";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Vietnam";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wietnam";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Vietnam";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Vietnam";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Vietnam";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Vijetnam";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "VN",
+      "VNM",
+      "704",
+      "VM",
+      "84",
+      4,
+      "Hanoi",
+      "329,560.0",
+      "AS",
+      "Vietnam",
+      9,
+      9,
+      9,
+      9,
+      "Viêt Nam",
+      "Vietnã",
+      9,
+      9,
+      9,
+      9,
+      "Wietnam",
+      9,
+      9,
+      9,
+      "Vijetnam",
+    ]);
+  }
 }

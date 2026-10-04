@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Montserrat (MS)
@@ -8,43 +9,43 @@ export class Montserrat extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MS";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MSR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "500";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MH";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-664";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-664";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Plymouth";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "102.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Montserrat extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Montserrat";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Montserrat";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Montserrat";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Montserrat";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Montserrat";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Montserrat";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Montserrate";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Montserrat";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Montserrat";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Montserrat";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Montserrat";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Montserrat";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Montserrat";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Montserrat";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Montserrat";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Montserrat";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MS",
+      "MSR",
+      "500",
+      "MH",
+      "1-664",
+      4,
+      "Plymouth",
+      "102.0",
+      "NA",
+      "Montserrat",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Montserrate",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

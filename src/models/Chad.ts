@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Chad (TD)
@@ -8,43 +9,43 @@ export class Chad extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TD";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TCD";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "148";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CD";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "235";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "235";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "N'Djamena";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,284,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Chad extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Chad";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Csád";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Tschad";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Chad";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Chad";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Tchad";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Chade";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Chad";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tchad";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tchad";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tsjad";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Czad";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Čad";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Čad";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Čad";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Čad";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TD",
+      "TCD",
+      "148",
+      "CD",
+      "235",
+      4,
+      "N'Djamena",
+      "1,284,000.0",
+      "AF",
+      "Chad",
+      "Csád",
+      "Tschad",
+      9,
+      9,
+      "Tchad",
+      "Chade",
+      9,
+      14,
+      14,
+      "Tsjad",
+      "Czad",
+      "Čad",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

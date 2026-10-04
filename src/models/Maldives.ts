@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Maldives (MV)
@@ -8,43 +9,43 @@ export class Maldives extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MV";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MDV";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "462";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "960";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "960";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Male";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "300.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Maldives extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Maldives";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Maldív-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Malediven";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Maldivas";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Maldive";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Maldives";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Maldivas";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Maldives";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Maldiverne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Maldiverna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Maldivene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Malediwy";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Maledivy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Maldivy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Maldivi";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Maldivi";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MV",
+      "MDV",
+      "462",
+      0,
+      "960",
+      4,
+      "Male",
+      "300.0",
+      "AS",
+      "Maldives",
+      "Maldív-szigetek",
+      "Malediven",
+      "Maldivas",
+      "Maldive",
+      9,
+      12,
+      9,
+      "Maldiverne",
+      "Maldiverna",
+      "Maldivene",
+      "Malediwy",
+      "Maledivy",
+      "Maldivy",
+      "Maldivi",
+      23,
+    ]);
+  }
 }

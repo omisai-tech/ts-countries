@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Isle of Man (IM)
@@ -8,43 +9,43 @@ export class IsleOfMan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "IM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "IMN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "833";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "IM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "44";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "44";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Douglas";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "572.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class IsleOfMan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Isle of Man";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Man-sziget";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Isle of Man";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Isla de Man";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isola di Man";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "île de Man";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilha de Man";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Isle of Man";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Isle of Man";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Isle of Man";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Isle of Man";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspa Man";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Ostrov Man";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Ostrov Man";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Otok Man";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Otok Man";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "IM",
+      "IMN",
+      "833",
+      0,
+      "44",
+      4,
+      "Douglas",
+      "572.0",
+      "EU",
+      "Isle of Man",
+      "Man-sziget",
+      9,
+      "Isla de Man",
+      "Isola di Man",
+      "île de Man",
+      "Ilha de Man",
+      9,
+      9,
+      9,
+      9,
+      "Wyspa Man",
+      "Ostrov Man",
+      21,
+      "Otok Man",
+      23,
+    ]);
+  }
 }

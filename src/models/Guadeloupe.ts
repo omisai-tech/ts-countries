@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Guadeloupe (GP)
@@ -8,43 +9,43 @@ export class Guadeloupe extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "GP";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "GLP";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "312";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "GP";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "590";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "590";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Basse-Terre";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,780.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Guadeloupe extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Guadeloupe";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Guadeloupe";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Guadeloupe";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Guadalupe";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Guadalupa";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Guadeloupe";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Guadalupe";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Guadeloupe";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Guadeloupe";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Guadeloupe";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Guadeloupe";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Gwadelupa";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Guadeloupe";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Guadeloupe";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Gvadalupe";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Gvadalupa";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "GP",
+      "GLP",
+      "312",
+      0,
+      "590",
+      4,
+      "Basse-Terre",
+      "1,780.0",
+      "NA",
+      "Guadeloupe",
+      9,
+      9,
+      "Guadalupe",
+      "Guadalupa",
+      9,
+      12,
+      9,
+      9,
+      9,
+      9,
+      "Gwadelupa",
+      9,
+      9,
+      "Gvadalupe",
+      "Gvadalupa",
+    ]);
+  }
 }

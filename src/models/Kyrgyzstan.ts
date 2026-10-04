@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Kyrgyzstan (KG)
@@ -8,43 +9,43 @@ export class Kyrgyzstan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KG";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "KGZ";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "417";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KG";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "996";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "996";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Bishkek";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "198,500.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Kyrgyzstan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Kyrgyzstan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kirgizisztán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kirgisistan";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Kirguistán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Kirghizistan";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Kirghizistan";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Quirguistão";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Kyrgyzstan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kirgisistan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kirgizistan";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kirgisistan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kirgistan";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kyrgyzstán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kirgizsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kirgizistan";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kirgistan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KG",
+      "KGZ",
+      "417",
+      0,
+      "996",
+      4,
+      "Bishkek",
+      "198,500.0",
+      "AS",
+      "Kyrgyzstan",
+      "Kirgizisztán",
+      "Kirgisistan",
+      "Kirguistán",
+      "Kirghizistan",
+      13,
+      "Quirguistão",
+      9,
+      11,
+      "Kirgizistan",
+      11,
+      "Kirgistan",
+      "Kyrgyzstán",
+      "Kirgizsko",
+      18,
+      20,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Kosovo (XK)
@@ -8,43 +9,43 @@ export class Kosovo extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "XK";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "XKX";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "0";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "#HI�NYZIK";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "#HI�NYZIK";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Pristina";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "10,908.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Kosovo extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Kosovo";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Koszovó";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kosovo";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Kosovo";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Kosovo";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Kosovo";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Kosovo";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Kosovo";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kosovo";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kosovo";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kosovo";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kosowo";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kosovo";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kosovo";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kosovo";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kosovo";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "XK",
+      "XKX",
+      "0",
+      "KV",
+      "#HI�NYZIK",
+      4,
+      "Pristina",
+      "10,908.0",
+      "EU",
+      "Kosovo",
+      "Koszovó",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Kosowo",
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

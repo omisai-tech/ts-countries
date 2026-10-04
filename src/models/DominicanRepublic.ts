@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Dominican Republic (DO)
@@ -8,43 +9,43 @@ export class DominicanRepublic extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "DO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "DOM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "214";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "DR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-809,1-829,1-849";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-809,1-829,1-849";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Santo Domingo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "48,730.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class DominicanRepublic extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Dominican Republic";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Dominikai Köztársaság";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Dominikanische Republik";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "República Dominicana";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Repubblica Dominicana";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "République dominicaine";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "República Dominicana";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Dominican Republic";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Den Dominikanske Republik";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Dominikanska republiken";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Den dominikanske republikk";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Republika Dominikańska";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Dominikánská republika";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Dominikánska republika";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Dominikanska republika";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Dominikanska Republika";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "DO",
+      "DOM",
+      "214",
+      "DR",
+      "1-809,1-829,1-849",
+      4,
+      "Santo Domingo",
+      "48,730.0",
+      "NA",
+      "Dominican Republic",
+      "Dominikai Köztársaság",
+      "Dominikanische Republik",
+      "República Dominicana",
+      "Repubblica Dominicana",
+      "République dominicaine",
+      12,
+      9,
+      "Den Dominikanske Republik",
+      "Dominikanska republiken",
+      "Den dominikanske republikk",
+      "Republika Dominikańska",
+      "Dominikánská republika",
+      "Dominikánska republika",
+      "Dominikanska republika",
+      "Dominikanska Republika",
+    ]);
+  }
 }

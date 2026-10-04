@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Albania (AL)
@@ -8,43 +9,43 @@ export class Albania extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AL";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ALB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "8";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AL";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "355";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "355";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tirana";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "28,748.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Albania extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Albania";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Albánia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Albanien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Albania";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Albania";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Albanie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Albânia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Albania";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Albanien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Albanien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Albania";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Albania";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Albánie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Albánsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Albanija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Albanija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AL",
+      "ALB",
+      "8",
+      0,
+      "355",
+      4,
+      "Tirana",
+      "28,748.0",
+      "EU",
+      "Albania",
+      "Albánia",
+      "Albanien",
+      9,
+      9,
+      "Albanie",
+      "Albânia",
+      9,
+      11,
+      11,
+      9,
+      9,
+      "Albánie",
+      "Albánsko",
+      "Albanija",
+      23,
+    ]);
+  }
 }

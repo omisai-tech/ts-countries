@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Aruba (AW)
@@ -8,43 +9,43 @@ export class Aruba extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AW";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ABW";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "533";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AA";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "297";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "297";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Oranjestad";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "193.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Aruba extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Aruba";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Aruba";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Aruba";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Aruba";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Aruba";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Aruba";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Aruba";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Aruba";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Aruba";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Aruba";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Aruba";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Aruba";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Aruba";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Aruba";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Aruba";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Aruba";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AW",
+      "ABW",
+      "533",
+      "AA",
+      "297",
+      4,
+      "Oranjestad",
+      "193.0",
+      "NA",
+      "Aruba",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+    ]);
+  }
 }

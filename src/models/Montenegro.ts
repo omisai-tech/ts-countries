@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Montenegro (ME)
@@ -8,43 +9,43 @@ export class Montenegro extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "ME";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MNE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "499";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MJ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "382";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "382";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Podgorica";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "14,026.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Montenegro extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Montenegro";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Montenegró";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Montenegro";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Montenegro";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Montenegro";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Monténégro";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Montenegro";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Montenegro";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Montenegro";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Montenegro";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Montenegro";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Czarnogóra";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Černá Hora";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Čierna Hora";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Črna gora";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Crna Gora";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "ME",
+      "MNE",
+      "499",
+      "MJ",
+      "382",
+      4,
+      "Podgorica",
+      "14,026.0",
+      "EU",
+      "Montenegro",
+      "Montenegró",
+      9,
+      9,
+      9,
+      "Monténégro",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Czarnogóra",
+      "Černá Hora",
+      "Čierna Hora",
+      "Črna gora",
+      "Crna Gora",
+    ]);
+  }
 }

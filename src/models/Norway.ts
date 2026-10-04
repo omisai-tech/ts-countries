@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Norway (NO)
@@ -8,43 +9,43 @@ export class Norway extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "NO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "NOR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "578";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "NO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "47";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "47";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Oslo";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "324,220.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Norway extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Norway";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Norvégia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Norwegen";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Noruega";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Norvegia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Norvège";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Noruega";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Norway";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Norge";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Norge";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Norge";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Norwegia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Norsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Nórsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Norveška";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Norveška";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "NO",
+      "NOR",
+      "578",
+      0,
+      "47",
+      4,
+      "Oslo",
+      "324,220.0",
+      "EU",
+      "Norway",
+      "Norvégia",
+      "Norwegen",
+      "Noruega",
+      "Norvegia",
+      "Norvège",
+      12,
+      9,
+      "Norge",
+      17,
+      17,
+      "Norwegia",
+      "Norsko",
+      "Nórsko",
+      "Norveška",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Cyprus (CY)
@@ -8,43 +9,43 @@ export class Cyprus extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CY";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CYP";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "196";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CY";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "357";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "357";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Nicosia";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "9,250.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Cyprus extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Cyprus";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Ciprus";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Zypern";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Chipre";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Cipro";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Chypre";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Chipre";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Cyprus";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Cypern";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Cypern";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kypros";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Cypr";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kypr";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Cyprus";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Ciper";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Cipar";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CY",
+      "CYP",
+      "196",
+      0,
+      "357",
+      4,
+      "Nicosia",
+      "9,250.0",
+      "EU",
+      "Cyprus",
+      "Ciprus",
+      "Zypern",
+      "Chipre",
+      "Cipro",
+      "Chypre",
+      12,
+      9,
+      "Cypern",
+      17,
+      "Kypros",
+      "Cypr",
+      "Kypr",
+      9,
+      "Ciper",
+      "Cipar",
+    ]);
+  }
 }

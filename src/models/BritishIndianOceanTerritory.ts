@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * British Indian Ocean Territory (IO)
@@ -8,43 +9,43 @@ export class BritishIndianOceanTerritory extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "IO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "IOT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "86";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "IO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "246";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "246";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Diego Garcia";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "60.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class BritishIndianOceanTerritory extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "British Indian Ocean Territory";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Brit Indiai-óceáni Terület";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Britisches Territorium des Indischen Ozeans";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Territorio Británico del Océano Índico";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Territorio britannico dell'Oceano Indiano";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Territoire britannique de l'océan Indien";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Território Britânico do Oceano Índico";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "British Indian Ocean Territory";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Britisk territorium i Det Indiske Ocean";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Brittiska territoriet i Indiska oceanen";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Det britiske territoriet i Indiahavet";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Brytyjskie Terytorium Oceanu Indyjskiego";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Britské indickooceánské území";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Britské indickooceánske územie";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Britansko ozemlje v Indijskem oceanu";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Britanski teritorij Indijskog oceana";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "IO",
+      "IOT",
+      "86",
+      0,
+      "246",
+      4,
+      "Diego Garcia",
+      "60.0",
+      "AS",
+      "British Indian Ocean Territory",
+      "Brit Indiai-óceáni Terület",
+      "Britisches Territorium des Indischen Ozeans",
+      "Territorio Británico del Océano Índico",
+      "Territorio britannico dell'Oceano Indiano",
+      "Territoire britannique de l'océan Indien",
+      "Território Britânico do Oceano Índico",
+      9,
+      "Britisk territorium i Det Indiske Ocean",
+      "Brittiska territoriet i Indiska oceanen",
+      "Det britiske territoriet i Indiahavet",
+      "Brytyjskie Terytorium Oceanu Indyjskiego",
+      "Britské indickooceánské území",
+      "Britské indickooceánske územie",
+      "Britansko ozemlje v Indijskem oceanu",
+      "Britanski teritorij Indijskog oceana",
+    ]);
+  }
 }

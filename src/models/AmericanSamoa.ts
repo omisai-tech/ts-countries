@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * American Samoa (AS)
@@ -8,43 +9,43 @@ export class AmericanSamoa extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AS";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "ASM";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "16";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AQ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-684";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-684";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Pago Pago";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "199.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class AmericanSamoa extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "American Samoa";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Amerikai Szamoa";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Amerikanischen Samoa-Inseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Samoa Americana";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Samoa americane";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Samoa américaines";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Samoa Americana";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "American Samoa";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Amerikansk Samoa";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Amerikanska Samoa";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Amerikansk Samoa";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Samoa Amerykańskie";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Americká Samoa";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Americká Samoa";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Ameriška Samoa";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Američka Samoa";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AS",
+      "ASM",
+      "16",
+      "AQ",
+      "1-684",
+      4,
+      "Pago Pago",
+      "199.0",
+      "OC",
+      "American Samoa",
+      "Amerikai Szamoa",
+      "Amerikanischen Samoa-Inseln",
+      "Samoa Americana",
+      "Samoa americane",
+      "Samoa américaines",
+      12,
+      9,
+      "Amerikansk Samoa",
+      "Amerikanska Samoa",
+      17,
+      "Samoa Amerykańskie",
+      "Americká Samoa",
+      21,
+      "Ameriška Samoa",
+      "Američka Samoa",
+    ]);
+  }
 }

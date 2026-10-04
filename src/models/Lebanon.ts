@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Lebanon (LB)
@@ -8,43 +9,43 @@ export class Lebanon extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "LB";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "LBN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "422";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "LE";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "961";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "961";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Beirut";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "10,400.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Lebanon extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Lebanon";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Libanon";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Libanon";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Líbano";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Libano";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Liban";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Líbano";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Lebanon";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Libanon";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Libanon";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Libanon";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Liban";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Libanon";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Libanon";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Libanon";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Libanon";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "LB",
+      "LBN",
+      "422",
+      "LE",
+      "961",
+      4,
+      "Beirut",
+      "10,400.0",
+      "AS",
+      "Lebanon",
+      "Libanon",
+      10,
+      "Líbano",
+      "Libano",
+      "Liban",
+      12,
+      9,
+      10,
+      10,
+      10,
+      14,
+      10,
+      10,
+      10,
+      10,
+    ]);
+  }
 }

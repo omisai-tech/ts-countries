@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bermuda (BM)
@@ -8,43 +9,43 @@ export class Bermuda extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BMU";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "60";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BD";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-441";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-441";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Hamilton";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "53.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Bermuda extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bermuda";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bermuda";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bermuda";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "islas Bermudas";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bermude";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bermudes";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bermudas";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bermuda";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bermuda";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bermuda";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bermuda";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Bermudy";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bermudy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bermudy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Bermudi";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bermuda";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BM",
+      "BMU",
+      "60",
+      "BD",
+      "1-441",
+      4,
+      "Hamilton",
+      "53.0",
+      "NA",
+      "Bermuda",
+      9,
+      9,
+      "islas Bermudas",
+      "Bermude",
+      "Bermudes",
+      "Bermudas",
+      9,
+      9,
+      9,
+      9,
+      "Bermudy",
+      20,
+      20,
+      "Bermudi",
+      9,
+    ]);
+  }
 }

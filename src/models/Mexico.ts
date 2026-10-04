@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Mexico (MX)
@@ -8,43 +9,43 @@ export class Mexico extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MX";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MEX";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "484";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MX";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "52";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "52";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Mexico City";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,972,550.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Mexico extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Mexico";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Mexikó";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Mexiko";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "México";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Messico";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Mexique";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "México";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Mexico";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Mexico";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Mexiko";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Mexico";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Meksyk";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Mexiko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Mexiko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Mehika";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Meksiko";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MX",
+      "MEX",
+      "484",
+      0,
+      "52",
+      4,
+      "Mexico City",
+      "1,972,550.0",
+      "NA",
+      "Mexico",
+      "Mexikó",
+      "Mexiko",
+      "México",
+      "Messico",
+      "Mexique",
+      12,
+      9,
+      9,
+      11,
+      9,
+      "Meksyk",
+      11,
+      11,
+      "Mehika",
+      "Meksiko",
+    ]);
+  }
 }

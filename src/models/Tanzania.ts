@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Tanzania (TZ)
@@ -8,43 +9,43 @@ export class Tanzania extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "TZ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "TZA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "834";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "TZ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "255";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "255";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Dodoma";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "945,087.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Tanzania extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Tanzania";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Tanzánia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Tansania";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Tanzania";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Tanzania";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Tanzanie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Tanzânia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Tanzania";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Tanzania";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Tanzania";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Tanzania";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Tanzania";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Tanzanie";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Tanzánia";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Tanzanija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Tanzanija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "TZ",
+      "TZA",
+      "834",
+      0,
+      "255",
+      4,
+      "Dodoma",
+      "945,087.0",
+      "AF",
+      "Tanzania",
+      "Tanzánia",
+      "Tansania",
+      9,
+      9,
+      "Tanzanie",
+      "Tanzânia",
+      9,
+      9,
+      9,
+      9,
+      9,
+      14,
+      10,
+      "Tanzanija",
+      23,
+    ]);
+  }
 }

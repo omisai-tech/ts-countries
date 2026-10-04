@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Jordan (JO)
@@ -8,43 +9,43 @@ export class Jordan extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "JO";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "JOR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "400";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "JO";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "962";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "962";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Amman";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "92,300.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Jordan extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Jordan";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Jordánia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Jordanien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Jordania";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Giordania";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Jordanie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Jordânia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Jordan";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Jordan";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Jordanien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Jordan";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Jordania";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Jordánsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Jordánsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Jordanija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Jordan";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "JO",
+      "JOR",
+      "400",
+      0,
+      "962",
+      4,
+      "Amman",
+      "92,300.0",
+      "AS",
+      "Jordan",
+      "Jordánia",
+      "Jordanien",
+      "Jordania",
+      "Giordania",
+      "Jordanie",
+      "Jordânia",
+      9,
+      9,
+      11,
+      9,
+      12,
+      "Jordánsko",
+      21,
+      "Jordanija",
+      9,
+    ]);
+  }
 }

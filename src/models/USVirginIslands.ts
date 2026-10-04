@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * U.S. Virgin Islands (VI)
@@ -8,43 +9,43 @@ export class USVirginIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "VI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "VIR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "850";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "VQ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-340";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-340";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Charlotte Amalie";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "352.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class USVirginIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "U.S. Virgin Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Amerikai Virgin-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "US Jungferninseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Vírgenes de EE.UU";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Vergini americane";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Vierges américaines";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Virgens dos EUA";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "U.S. Virgin Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "De Amerikanske Jomfruøer";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Amerikanska Jungfruöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "De amerikanske Jomfruøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Dziewicze Stanów Zjednoczonych";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Americké Panenské ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Americké Panenské ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Ameriški Deviški otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Američki Djevičanski otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "VI",
+      "VIR",
+      "850",
+      "VQ",
+      "1-340",
+      4,
+      "Charlotte Amalie",
+      "352.0",
+      "NA",
+      "U.S. Virgin Islands",
+      "Amerikai Virgin-szigetek",
+      "US Jungferninseln",
+      "Islas Vírgenes de EE.UU",
+      "Isole Vergini americane",
+      "Îles Vierges américaines",
+      "Ilhas Virgens dos EUA",
+      9,
+      "De Amerikanske Jomfruøer",
+      "Amerikanska Jungfruöarna",
+      "De amerikanske Jomfruøyene",
+      "Wyspy Dziewicze Stanów Zjednoczonych",
+      "Americké Panenské ostrovy",
+      21,
+      "Ameriški Deviški otoki",
+      "Američki Djevičanski otoci",
+    ]);
+  }
 }

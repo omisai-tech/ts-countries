@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * El Salvador (SV)
@@ -8,43 +9,43 @@ export class ElSalvador extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SV";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SLV";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "222";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "ES";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "503";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "503";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "San Salvador";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "21,040.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class ElSalvador extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "El Salvador";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "El Salvador";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "El Salvador";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "El Salvador";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "El Salvador";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Le Salvador";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "El Salvador";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "El Salvador";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "El Salvador";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "El Salvador";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "El Salvador";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Salwador";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Salvador";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Salvádor";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Salvador";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Salvador";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SV",
+      "SLV",
+      "222",
+      "ES",
+      "503",
+      4,
+      "San Salvador",
+      "21,040.0",
+      "NA",
+      "El Salvador",
+      9,
+      9,
+      9,
+      9,
+      "Le Salvador",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Salwador",
+      "Salvador",
+      "Salvádor",
+      21,
+      21,
+    ]);
+  }
 }

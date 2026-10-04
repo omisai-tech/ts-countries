@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Anguilla (AI)
@@ -8,43 +9,43 @@ export class Anguilla extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "AI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "AIA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "660";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "AV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-264";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-264";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "The Valley";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "102.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Anguilla extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Anguilla";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Anguilla";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Anguilla";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Anguila";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Anguilla";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Anguilla";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Anguila";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Anguilla";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Anguilla";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Anguilla";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Anguilla";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Anguilla";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Anguilla";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Anguilla";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Angvila";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Angvila";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "AI",
+      "AIA",
+      "660",
+      "AV",
+      "1-264",
+      4,
+      "The Valley",
+      "102.0",
+      "NA",
+      "Anguilla",
+      9,
+      9,
+      "Anguila",
+      9,
+      9,
+      12,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Angvila",
+      23,
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Myanmar (MM)
@@ -8,43 +9,43 @@ export class Myanmar extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MM";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MMR";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "104";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BM";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "95";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "95";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Nay Pyi Taw";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "678,500.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Myanmar extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Myanmar";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Mianmar";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Myanmar";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Birmania";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Myanmar";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Birmanie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Mianmar";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Myanmar";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Myanmar";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Myanmar";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Myanmar";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Myanmar";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Myanmar";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Mjanmarsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Mjanmar";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Mjanmar";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MM",
+      "MMR",
+      "104",
+      "BM",
+      "95",
+      4,
+      "Nay Pyi Taw",
+      "678,500.0",
+      "AS",
+      "Myanmar",
+      "Mianmar",
+      9,
+      "Birmania",
+      9,
+      "Birmanie",
+      10,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Mjanmarsko",
+      "Mjanmar",
+      23,
+    ]);
+  }
 }

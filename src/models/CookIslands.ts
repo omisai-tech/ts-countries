@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Cook Islands (CK)
@@ -8,43 +9,43 @@ export class CookIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CK";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "COK";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "184";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "CW";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "682";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "682";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Avarua";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "240.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class CookIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Cook Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Cook-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Cookinseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Cook";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Cook";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "les Îles Cook";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Cook";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Cook Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Cookøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Cooköarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Cookøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Cooka";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Cookovy ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Cookove ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Cookovi otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Cookovi otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CK",
+      "COK",
+      "184",
+      "CW",
+      "682",
+      4,
+      "Avarua",
+      "240.0",
+      "OC",
+      "Cook Islands",
+      "Cook-szigetek",
+      "Cookinseln",
+      "Islas Cook",
+      "Isole Cook",
+      "les Îles Cook",
+      "Ilhas Cook",
+      9,
+      "Cookøerne",
+      "Cooköarna",
+      "Cookøyene",
+      "Wyspy Cooka",
+      "Cookovy ostrovy",
+      "Cookove ostrovy",
+      "Cookovi otoki",
+      "Cookovi otoci",
+    ]);
+  }
 }

@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Pitcairn Islands (PN)
@@ -8,43 +9,43 @@ export class PitcairnIslands extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "PN";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "PCN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "612";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "PC";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "870";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "870";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Adamstown";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "47.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class PitcairnIslands extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.OC;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Pitcairn Islands";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Pitcairn-szigetek";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Pitcairninseln";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Islas Pitcairn";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Isole Pitcairn";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Îles Pitcairn";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Ilhas Pitcairn";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Pitcairn Islands";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Pitcairnøerne";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Pitcairnöarna";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Pitcairnøyene";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wyspy Pitcairn";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Pitcairnovy ostrovy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Pitcairnove ostrovy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Pitcairnovi otoki";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Pitcairnovi otoci";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "PN",
+      "PCN",
+      "612",
+      "PC",
+      "870",
+      4,
+      "Adamstown",
+      "47.0",
+      "OC",
+      "Pitcairn Islands",
+      "Pitcairn-szigetek",
+      "Pitcairninseln",
+      "Islas Pitcairn",
+      "Isole Pitcairn",
+      "Îles Pitcairn",
+      "Ilhas Pitcairn",
+      9,
+      "Pitcairnøerne",
+      "Pitcairnöarna",
+      "Pitcairnøyene",
+      "Wyspy Pitcairn",
+      "Pitcairnovy ostrovy",
+      "Pitcairnove ostrovy",
+      "Pitcairnovi otoki",
+      "Pitcairnovi otoci",
+    ]);
+  }
 }

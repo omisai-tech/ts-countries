@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Libya (LY)
@@ -8,43 +9,43 @@ export class Libya extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "LY";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "LBY";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "434";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "LY";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "218";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "218";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tripoli";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,759,540.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Libya extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Libya";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Líbia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Libyen";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Libia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Libia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Libye";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Líbia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Libya";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Libyen";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Libyen";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Libya";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Libia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Libye";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Líbya";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Libija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Libija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "LY",
+      "LBY",
+      "434",
+      0,
+      "218",
+      4,
+      "Tripoli",
+      "1,759,540.0",
+      "AF",
+      "Libya",
+      "Líbia",
+      "Libyen",
+      "Libia",
+      12,
+      "Libye",
+      10,
+      9,
+      11,
+      11,
+      9,
+      12,
+      14,
+      "Líbya",
+      "Libija",
+      23,
+    ]);
+  }
 }

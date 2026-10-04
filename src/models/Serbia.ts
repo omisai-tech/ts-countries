@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Serbia (RS)
@@ -8,43 +9,43 @@ export class Serbia extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "RS";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SRB";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "688";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "RI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "381";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "381";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Belgrade";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "88,361.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Serbia extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Serbia";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Szerbia";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Serbien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Serbia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Serbia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Serbie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Sérvia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Serbia";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Serbien";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Serbien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Serbia";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Serbia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Srbsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Srbsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Srbija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Srbija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "RS",
+      "SRB",
+      "688",
+      "RI",
+      "381",
+      4,
+      "Belgrade",
+      "88,361.0",
+      "EU",
+      "Serbia",
+      "Szerbia",
+      "Serbien",
+      9,
+      9,
+      "Serbie",
+      "Sérvia",
+      9,
+      11,
+      11,
+      9,
+      9,
+      "Srbsko",
+      21,
+      "Srbija",
+      23,
+    ]);
+  }
 }

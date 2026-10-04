@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Iran (IR)
@@ -8,43 +9,43 @@ export class Iran extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "IR";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "IRN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "364";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "IR";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "98";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "98";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Tehran";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "1,648,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Iran extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Iran";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Irán";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Iran";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Irán";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Iran";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "L'Iran";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Irã";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Iran";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Iran";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Iran";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Iran";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Iran";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Írán";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Irán";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Iran";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Iran";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "IR",
+      "IRN",
+      "364",
+      0,
+      "98",
+      4,
+      "Tehran",
+      "1,648,000.0",
+      "AS",
+      "Iran",
+      "Irán",
+      9,
+      10,
+      9,
+      "L'Iran",
+      "Irã",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Írán",
+      10,
+      9,
+      9,
+    ]);
+  }
 }

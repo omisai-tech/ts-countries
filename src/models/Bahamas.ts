@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Bahamas (BS)
@@ -8,43 +9,43 @@ export class Bahamas extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "BS";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "BHS";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "44";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "BF";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "1-242";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "1-242";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Nassau";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "13,940.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Bahamas extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.NA;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Bahamas";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Bahamák";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Bahamas";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "bahamas";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Bahamas";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Bahamas";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Bahamas";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Bahamas";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Bahamas";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Bahamas";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Bahamas";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Bahamy";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Bahamy";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Bahamy";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Bahami";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Bahami";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "BS",
+      "BHS",
+      "44",
+      "BF",
+      "1-242",
+      4,
+      "Nassau",
+      "13,940.0",
+      "NA",
+      "Bahamas",
+      "Bahamák",
+      9,
+      "bahamas",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Bahamy",
+      20,
+      20,
+      "Bahami",
+      23,
+    ]);
+  }
 }

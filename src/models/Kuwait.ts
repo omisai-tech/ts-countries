@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Kuwait (KW)
@@ -8,43 +9,43 @@ export class Kuwait extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "KW";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "KWT";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "414";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "KU";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "965";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "965";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Kuwait City";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "17,820.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Kuwait extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AS;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Kuwait";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Kuvait";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Kuwait";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Kuwait";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Kuwait";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Koweit";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Kuwait";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Kuwait";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Kuwait";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Kuwait";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Kuwait";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Kuwejt";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Kuvajt";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Kuvajt";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Kuvajt";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Kuvajt";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "KW",
+      "KWT",
+      "414",
+      "KU",
+      "965",
+      4,
+      "Kuwait City",
+      "17,820.0",
+      "AS",
+      "Kuwait",
+      "Kuvait",
+      9,
+      9,
+      9,
+      "Koweit",
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Kuwejt",
+      "Kuvajt",
+      21,
+      21,
+      21,
+    ]);
+  }
 }

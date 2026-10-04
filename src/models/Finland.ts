@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Finland (FI)
@@ -8,43 +9,43 @@ export class Finland extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "FI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "FIN";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "246";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "FI";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "358";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "358";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Helsinki";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "337,030.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Finland extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Finland";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Finnország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Finnland";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Finlandia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Finlandia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Finlande";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Finlândia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Finland";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Finland";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Finland";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Finland";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Finlandia";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Finsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Fínsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Finska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Finska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "FI",
+      "FIN",
+      "246",
+      0,
+      "358",
+      4,
+      "Helsinki",
+      "337,030.0",
+      "EU",
+      "Finland",
+      "Finnország",
+      "Finnland",
+      "Finlandia",
+      12,
+      "Finlande",
+      "Finlândia",
+      9,
+      9,
+      9,
+      9,
+      12,
+      "Finsko",
+      "Fínsko",
+      "Finska",
+      23,
+    ]);
+  }
 }

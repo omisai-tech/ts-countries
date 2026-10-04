@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Moldova (MD)
@@ -8,43 +9,43 @@ export class Moldova extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "MD";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "MDA";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "498";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "MD";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "373";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "373";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Chisinau";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "33,843.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Moldova extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Moldova";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Moldova";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Moldawien";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Moldavia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Moldavia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Moldavie";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Moldávia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Moldova";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Moldova";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Moldavien";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Moldova";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Moldova";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Moldavsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Moldavsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Moldavija";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Moldavija";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "MD",
+      "MDA",
+      "498",
+      0,
+      "373",
+      4,
+      "Chisinau",
+      "33,843.0",
+      "EU",
+      "Moldova",
+      9,
+      "Moldawien",
+      "Moldavia",
+      12,
+      "Moldavie",
+      "Moldávia",
+      9,
+      9,
+      "Moldavien",
+      9,
+      9,
+      "Moldavsko",
+      21,
+      "Moldavija",
+      23,
+    ]);
+  }
 }

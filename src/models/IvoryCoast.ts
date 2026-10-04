@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Ivory Coast (CI)
@@ -8,43 +9,43 @@ export class IvoryCoast extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "CI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "CIV";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "384";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "IV";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "225";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "225";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Yamoussoukro";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "322,460.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class IvoryCoast extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Ivory Coast";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Elefántcsontpart";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Elfenbeinküste";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Costa de Marfil";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Costa d'Avorio";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Côte d'Ivoire";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Costa do Marfim";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Ivory Coast";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Elfenbenskysten";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Elfenbenskusten";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Elfenbenskysten";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Wybrzeże Kości Słoniowej";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Pobřeží slonoviny";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Pobrežie Slonoviny";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Slonokoščena obala";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Obala Bjelokosti";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "CI",
+      "CIV",
+      "384",
+      "IV",
+      "225",
+      4,
+      "Yamoussoukro",
+      "322,460.0",
+      "AF",
+      "Ivory Coast",
+      "Elefántcsontpart",
+      "Elfenbeinküste",
+      "Costa de Marfil",
+      "Costa d'Avorio",
+      "Côte d'Ivoire",
+      "Costa do Marfim",
+      9,
+      "Elfenbenskysten",
+      "Elfenbenskusten",
+      17,
+      "Wybrzeże Kości Słoniowej",
+      "Pobřeží slonoviny",
+      "Pobrežie Slonoviny",
+      "Slonokoščena obala",
+      "Obala Bjelokosti",
+    ]);
+  }
 }

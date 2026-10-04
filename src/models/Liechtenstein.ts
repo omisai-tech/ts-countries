@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Liechtenstein (LI)
@@ -8,43 +9,43 @@ export class Liechtenstein extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "LI";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "LIE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "438";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "LS";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "423";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "423";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Vaduz";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "160.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Liechtenstein extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Liechtenstein";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Liechtenstein";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Liechtenstein";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Liechtenstein";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Liechtenstein";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Liechtenstein";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Liechtenstein";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Liechtenstein";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Liechtenstein";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Liechtenstein";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Liechtenstein";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Liechtenstein";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Lichtenštejnsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Lichtenštajnsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Lihtenštajn";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Lihtenštajn";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "LI",
+      "LIE",
+      "438",
+      "LS",
+      "423",
+      4,
+      "Vaduz",
+      "160.0",
+      "EU",
+      "Liechtenstein",
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      "Lichtenštejnsko",
+      "Lichtenštajnsko",
+      "Lihtenštajn",
+      23,
+    ]);
+  }
 }

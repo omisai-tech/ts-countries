@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Sweden (SE)
@@ -8,43 +9,43 @@ export class Sweden extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "SE";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "SWE";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "752";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "SW";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "46";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "46";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Stockholm";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "449,964.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Sweden extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.EU;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Sweden";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Svédország";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Schweden";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Suecia";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Svezia";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Suède";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Suécia";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Sweden";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Sverige";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Sverige";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Sverige";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Szwecja";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Švédsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Švédsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Švedska";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Švedska";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "SE",
+      "SWE",
+      "752",
+      "SW",
+      "46",
+      4,
+      "Stockholm",
+      "449,964.0",
+      "EU",
+      "Sweden",
+      "Svédország",
+      "Schweden",
+      "Suecia",
+      "Svezia",
+      "Suède",
+      "Suécia",
+      9,
+      "Sverige",
+      17,
+      17,
+      "Szwecja",
+      "Švédsko",
+      21,
+      "Švedska",
+      23,
+    ]);
+  }
 }

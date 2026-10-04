@@ -1,5 +1,6 @@
 import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * Djibouti (DJ)
@@ -8,43 +9,43 @@ export class Djibouti extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "DJ";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "DJI";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "262";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "DJ";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "253";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "253";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "Djibouti";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "23,000.0";
+  declare area: string;
 
   /**
    * Continent
@@ -57,85 +58,116 @@ export class Djibouti extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.AF;
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "Djibouti";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "Dzsibuti";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "Dschibuti";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "Yibuti";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "Gibuti";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "Djibouti";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "Djibuti";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "Djibouti";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "Djibouti";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "Djibouti";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "Djibouti";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "Dżibuti";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "Džibutsko";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "Džibutsko";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "Džibuti";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "Džibuti";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, [
+      "DJ",
+      "DJI",
+      "262",
+      0,
+      "253",
+      4,
+      "Djibouti",
+      "23,000.0",
+      "AF",
+      6,
+      "Dzsibuti",
+      "Dschibuti",
+      "Yibuti",
+      "Gibuti",
+      6,
+      "Djibuti",
+      6,
+      6,
+      6,
+      6,
+      "Dżibuti",
+      "Džibutsko",
+      21,
+      "Džibuti",
+      23,
+    ]);
+  }
 }
