@@ -4,6 +4,8 @@ Thank you for your interest in contributing! 🎉
 
 ## Development Setup
 
+Use Node.js 22.12+ on the 22.x line, 24.x, or 26+ for Vitest 5 and the development tools.
+
 1. **Fork and clone the repository**
 
    ```bash
@@ -14,14 +16,14 @@ Thank you for your interest in contributing! 🎉
 2. **Install dependencies**
 
    ```bash
-      # BUN
-      bun add @omisai/countries
-      # NPM
-      npm install @omisai/countries
-      # PNPM
-      pnpm add @omisai/countries
-      # YARN
-      yarn add @omisai/countries
+   # Bun
+   bun install --frozen-lockfile
+   # npm
+   npm ci
+   # pnpm
+   pnpm install
+   # Yarn
+   yarn install
    ```
 
 3. **Generate country classes**
@@ -32,7 +34,7 @@ Thank you for your interest in contributing! 🎉
 
 4. **Run tests**
    ```bash
-   bun test
+   bun run test
    ```
 
 ## Development Workflow
@@ -47,7 +49,7 @@ Thank you for your interest in contributing! 🎉
 
 2. Make your changes and ensure:
    - Code follows TypeScript best practices
-   - All tests pass: `bun test`
+   - All tests pass: `bun run test`
    - Type checking passes: `bun run typecheck`
    - Linting passes: `bun run lint`
    - Formatting passes: `bun run format:check`
@@ -92,7 +94,7 @@ npm run test:coverage
 npm run test:watch
 
 # Bun (if installed)
-bun test tests/*.test.ts
+bun run test
 ```
 
 ### Building
@@ -112,7 +114,7 @@ If you need to update the `countries.csv` file:
 
 1. Ensure the CSV format remains consistent
 2. Run the compiler: `bun run compile`
-3. Verify all tests pass: `bun test`
+3. Verify all tests pass: `bun run test`
 4. Check a few generated country files manually
 
 ## Pull Request Process
@@ -138,7 +140,6 @@ If you need to update the `countries.csv` file:
 Run `bun run format` to apply oxfmt formatting and `bun run lint:fix` to apply
 oxlint's automatic fixes. The configuration files `.oxfmtrc.json` and `.oxlintrc.json`
 are shared by local commands and CI. Country generation also formats its output.
-Use Node.js 20.19+ or 22.12+ when running these development tools with Node.js.
 
 - Use TypeScript strict mode
 - Follow existing code patterns
