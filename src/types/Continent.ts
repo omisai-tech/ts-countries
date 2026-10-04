@@ -15,11 +15,11 @@ export enum Continent {
  * Continent names mapping
  */
 export const ContinentNames: Record<Continent, string> = {
-  [Continent.AF]: "Africa",
-  [Continent.AN]: "Antarctica",
-  [Continent.AS]: "Asia",
-  [Continent.EU]: "Europe",
-  [Continent.NA]: "North America",
-  [Continent.OC]: "Oceania",
-  [Continent.SA]: "South America",
+  AF: "Africa",
+  AN: "Antarctica",
+  AS: "Asia",
+  EU: "Europe",
+  NA: "North America",
+  OC: "Oceania",
+  SA: "South America",
 };
