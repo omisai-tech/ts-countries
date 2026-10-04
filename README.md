@@ -12,6 +12,7 @@ TypeScript package for country data with classes and interfaces generated from I
 - Multi-language support (EN, HU, DE, ES, IT, FR, PT, NL, DA, SV, NO, PL, CS, SK, SL, HR)
 - TypeScript with full type definitions
 - Individual class for each country
+- Tree-shakeable ESM exports
 - ISO 3166-1 codes (alpha-2, alpha-3, numeric)
 - FIPS code (Federal Information Processing Standard)
 - Telephone country codes
@@ -82,6 +83,20 @@ console.log(japanData);
 Country names are available as properties and through `getName()` in English (`en`), Hungarian (`hu`), German (`de`), Spanish (`es`), Italian (`it`), French (`fr`), Portuguese (`pt`), Dutch (`nl`), Danish (`da`), Swedish (`sv`), Norwegian (`no`), Polish (`pl`), Czech (`cs`), Slovak (`sk`), Slovenian (`sl`), and Croatian (`hr`). Values are preserved from the source CSV, including the formatting of `area`. `toJSON()` includes all country properties.
 
 Use `callingCode` for the telephone country code. The legacy `dial` property contains the same CSV value and is deprecated; it will be removed in the next major version.
+
+## Tree Shaking
+
+Use named ESM imports and preserve ESM syntax until your bundler processes the code:
+
+```typescript
+import { Hungary } from "@omisai/countries";
+
+console.log(new Hungary().getName());
+```
+
+Production bundlers can remove unused country classes and shared exports, including `ContinentNames`. A selected country retains its data and the shared code it uses. The package declares no import-time side effects, so completely unused imports can also be removed.
+
+Tree shaking happens in your bundler. Direct Node.js or Bun imports load the package as built; CommonJS (`require`) optimizations depend on the consumer's bundler. Enumerating all exports through a module namespace keeps those exports in the bundle.
 
 ## Project Structure
 
