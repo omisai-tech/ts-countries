@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { parse } from "csv-parse/sync";
+import { Continent } from "./src/types/Continent";
 
 const csvFilePath = "countries.csv";
 const destinationDirectory = "src/models/";
@@ -26,13 +27,6 @@ function getClassName(str: string): string {
   return cleaned || "UnknownCountry";
 }
 
-/**
- * Escape quotes in strings for TypeScript
- */
-function escapeString(str: string): string {
-  return str.replace(/"/g, '\\"');
-}
-
 // Read and parse CSV file
 const csvContent = fs.readFileSync(csvFilePath, "utf-8");
 const records = parse(csvContent, {
@@ -51,8 +45,8 @@ records.forEach((data: string[], index: number) => {
     fipCode,
     callingCode,
     capital,
-    area,
-    population,
+    area, // Population is not part of the public country data.
+    ,
     continent,
     en,
     hu,
@@ -74,8 +68,50 @@ records.forEach((data: string[], index: number) => {
 
   const className = getClassName(en);
 
+  if (!Object.values(Continent).includes(continent as Continent)) {
+    throw new Error(`Unknown continent ${continent} for ${className}`);
+  }
+
+  const values = [
+    alpha2,
+    alpha3,
+    numeric,
+    fipCode,
+    callingCode,
+    callingCode,
+    capital,
+    area,
+    continent,
+    en,
+    hu,
+    de,
+    es,
+    it,
+    fr,
+    pt,
+    nl,
+    da,
+    sv,
+    no,
+    pl,
+    cs,
+    sk,
+    sl,
+    hr,
+  ];
+  const seen = new Map<string, number>();
+  const compactValues = values.map((value, fieldIndex) => {
+    const previous = seen.get(value);
+    if (previous !== undefined && String(previous).length < JSON.stringify(value).length) {
+      return previous;
+    }
+    seen.set(value, fieldIndex);
+    return value;
+  });
+
   const classContent = `import { Country } from "../Country";
-import { Continent } from "../types/Continent";
+import type { Continent } from "../types/Continent";
+import { initializeCountry } from "../internal/countryData";
 
 /**
  * ${en} (${alpha2})
@@ -84,43 +120,43 @@ export class ${className} extends Country {
   /**
    * ISO 3166-1 alpha-2 code
    */
-  alpha2 = "${escapeString(alpha2)}";
+  declare alpha2: string;
 
   /**
    * ISO 3166-1 alpha-3 code
    */
-  alpha3 = "${escapeString(alpha3)}";
+  declare alpha3: string;
 
   /**
    * ISO 3166-1 numeric code
    */
-  numeric = "${escapeString(numeric)}";
+  declare numeric: string;
 
   /**
    * FIPS code
    * Federal Information Processing Standard
    */
-  fipCode = "${escapeString(fipCode)}";
+  declare fipCode: string;
 
   /**
    * Telephone country code
    */
-  callingCode = "${escapeString(callingCode)}";
+  declare callingCode: string;
 
   /**
    * @deprecated Will be removed in the next major version. Use callingCode instead.
    */
-  dial = "${escapeString(callingCode)}";
+  declare dial: string;
 
   /**
    * Capital city
    */
-  capital = "${escapeString(capital)}";
+  declare capital: string;
 
   /**
    * Total area in square kilometers
    */
-  area = "${escapeString(area)}";
+  declare area: string;
 
   /**
    * Continent
@@ -133,87 +169,92 @@ export class ${className} extends Country {
    * OC: Oceania
    * SA: South America
    */
-  continent = Continent.${continent};
+  declare continent: Continent;
 
   /**
    * English name of the country
    */
-  en = "${escapeString(en)}";
+  declare en: string;
 
   /**
    * Hungarian name of the country
    */
-  hu = "${escapeString(hu)}";
+  declare hu: string;
 
   /**
    * German name of the country
    */
-  de = "${escapeString(de)}";
+  declare de: string;
 
   /**
    * Spanish name of the country
    */
-  es = "${escapeString(es)}";
+  declare es: string;
 
   /**
    * Italian name of the country
    */
-  it = "${escapeString(it)}";
+  declare it: string;
 
   /**
    * French name of the country
    */
-  fr = "${escapeString(fr)}";
+  declare fr: string;
 
   /**
    * Portuguese name of the country
    */
-  pt = "${escapeString(pt)}";
+  declare pt: string;
 
   /**
    * Dutch name of the country
    */
-  nl = "${escapeString(nl)}";
+  declare nl: string;
 
   /**
    * Danish name of the country
    */
-  da = "${escapeString(da)}";
+  declare da: string;
 
   /**
    * Swedish name of the country
    */
-  sv = "${escapeString(sv)}";
+  declare sv: string;
 
   /**
    * Norwegian name of the country
    */
-  no = "${escapeString(no)}";
+  declare no: string;
 
   /**
    * Polish name of the country
    */
-  pl = "${escapeString(pl)}";
+  declare pl: string;
 
   /**
    * Czech name of the country
    */
-  cs = "${escapeString(cs)}";
+  declare cs: string;
 
   /**
    * Slovak name of the country
    */
-  sk = "${escapeString(sk)}";
+  declare sk: string;
 
   /**
    * Slovenian name of the country
    */
-  sl = "${escapeString(sl)}";
+  declare sl: string;
 
   /**
    * Croatian name of the country
    */
-  hr = "${escapeString(hr)}";
+  declare hr: string;
+
+  constructor() {
+    super();
+    initializeCountry(this, ${JSON.stringify(compactValues)});
+  }
 }
 `;
 
@@ -225,7 +266,9 @@ export class ${className} extends Country {
   }
 });
 
-console.log(`\n✅ Successfully generated ${records.length} TypeScript country class files in ${destinationDirectory}`);
+console.log(
+  `\n✅ Successfully generated ${records.length} TypeScript country class files in ${destinationDirectory}`,
+);
 
 // Generate index file for easy imports
 const indexContent = records
