@@ -1,19 +1,12 @@
 {
-    "extends": "../tsconfig.json",
-    "compilerOptions": {
-        "module": "ESNext",
-        "moduleResolution": "bundler",
-        "rootDir": "..",
-        "noEmit": true,
-        "types": [
-            "node"
-        ]
-    },
-    "include": [
-        "**/*.test.ts"
-    ],
-    "exclude": [
-        "../node_modules",
-        "../dist"
-    ]
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "rootDir": "..",
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["**/*.test.ts"],
+  "exclude": ["../node_modules", "../dist"]
 }
