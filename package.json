@@ -3,6 +3,7 @@
     "version": "1.1.0",
     "description": "JS/TS package for country data with classes and interfaces",
     "type": "module",
+    "sideEffects": false,
     "license": "MIT",
     "repository": "omisai-tech/ts-countries",
     "bugs": "https://github.com/omisai-tech/ts-countries/issues",
@@ -32,7 +33,7 @@
         "test": "vitest run",
         "test:watch": "vitest",
         "test:coverage": "vitest run --coverage",
-        "typecheck": "tsc --noEmit",
+        "typecheck": "tsc --noEmit && tsc --project tests/tsconfig.json",
         "validate": "bun scripts/validate.mjs",
         "prepublishOnly": "bun run build && bun run test"
     },
