@@ -149,7 +149,7 @@ export class Kazakhstan extends Country {
       0,
       "7",
       4,
-      "Nur-Sultan",
+      "Astana",
       "2,717,300.0",
       "AS",
       "Kazakhstan",
