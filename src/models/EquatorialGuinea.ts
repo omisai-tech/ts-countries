@@ -149,7 +149,7 @@ export class EquatorialGuinea extends Country {
       "EK",
       "240",
       4,
-      "Malabo",
+      "Ciudad de la Paz",
       "28,051.0",
       "AF",
       "Equatorial Guinea",
