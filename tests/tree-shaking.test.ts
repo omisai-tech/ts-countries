@@ -4,12 +4,20 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { runInNewContext } from "node:vm";
-import { createHash } from "node:crypto";
 import { rolldown } from "rolldown";
 import configs from "../rolldown.config";
+import * as sourceCountries from "../src/index";
 
 const projectRoot = fileURLToPath(new URL("..", import.meta.url));
 const pkg = JSON.parse(readFileSync(join(projectRoot, "package.json"), "utf8"));
+// Source instances provide the current dataset independently of bundle serialization.
+const sourceCountryData = Object.values(sourceCountries)
+  .filter(
+    (value): value is new () => sourceCountries.Country =>
+      typeof value === "function" && value !== sourceCountries.Country,
+  )
+  .map((CountryType) => ({ ...new CountryType() }))
+  .sort((left, right) => left.alpha2.localeCompare(right.alpha2));
 let fixtureDirectory: string;
 
 beforeAll(async () => {
@@ -155,12 +163,8 @@ describe("Built package tree shaking", () => {
       console.log(data);
     `);
 
-    expect(logs[0][0]).toHaveLength(250);
-    // Snapshot of all 25 public properties for every country before compaction.
-    // Update intentionally when the source country data changes.
-    expect(createHash("sha256").update(JSON.stringify(logs[0][0])).digest("hex")).toBe(
-      "48ece8de75e5b998b03b19f15ef26cbea3862502547c4d5a680f3308939fea26",
-    );
+    expect(logs[0][0]).toHaveLength(sourceCountryData.length);
+    expect(logs[0][0]).toEqual(sourceCountryData);
     expect(Buffer.byteLength(code)).toBeLessThan(80_000);
   });
 
