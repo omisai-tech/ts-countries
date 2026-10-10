@@ -51,15 +51,15 @@
     "prepublishOnly": "bun run build && bun run test"
   },
   "devDependencies": {
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.6.5",
     "@vitest/coverage-v8": "^5.0.3",
-    "csv-parse": "^7.0.2",
+    "csv-parse": "^7.0.3",
     "oxfmt": "^0.71.0",
-    "oxlint": "^1.86.0",
-    "rolldown": "^1.2.11",
-    "tsx": "^4.19.2",
+    "oxlint": "^1.87.0",
+    "rolldown": "^1.2.13",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2",
-    "vite": "^7.3.2",
+    "vite": "^7.3.7",
     "vitest": "^5.0.3"
   },
   "engines": {
